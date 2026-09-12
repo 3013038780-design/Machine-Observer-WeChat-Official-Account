@@ -10,7 +10,9 @@
 
 ## 一、个人用户：游戏、创作与本地 AI
 
-### [GeForce RTX 50 Series](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/) [GeForce RTX 笔记本](https://www.nvidia.com/en-us/geforce/laptops/50-series/)
+### [GeForce RTX 50 Series](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/)
+
+个人用户也可以选择搭载 GeForce RTX 笔记本 GPU 的整机，用于游戏、创作和本地 AI。[GeForce RTX 笔记本](https://www.nvidia.com/en-us/geforce/laptops/50-series/)
 
 这里先分清两个容易混用的词。**GPU 是 Graphics Processing Unit，即图形处理器；显卡则是包含 GPU、显存、供电等组件的板卡。** GPU 负责计算，显卡将这些组件装在一起，供电脑使
 
