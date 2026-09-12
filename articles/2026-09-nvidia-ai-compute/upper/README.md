@@ -1,11 +1,14 @@
 # 算力生意（上）：英伟达的产品版图
 
-当前状态：v1拟稿，待作者审阅；尚未标记为定稿或发表。
+当前状态：v2 口吻重写稿，待审阅，尚未定稿或发表。
 
-- [HTML预览](article-v1.html)：浏览器打开，复制渲染后的文章内容到135。
-- [正文HTML片段](article-v1-fragment.html)：全部样式内联，供需要源码导入的流程使用。
-- [Markdown源稿](article-v1.md)：保留正文与来源编号。
-- [数字核查](../research/fact-check.md)与[信源记录](../research/sources.md)。
-- [排版检查](qa/README.md)：包含手机与桌面截图。
+- [v2 HTML 预览](article-v2.html)
+- [v2 正文 HTML 片段](article-v2-fragment.html)
+- [v2 Markdown](article-v2.md)
+- [v1 历史稿](article-v1.html)
+- [数字核查](../research/fact-check.md)、[v2 数字复核清单](../research/numeric-inventory-v2.json)与[信源](../research/sources.md)
+- [v2 排版检查](qa-v2/README.md)
 
-价格区分2025官方发布起价与2026-09-12查询的销售页样本，CDW快照日期另列。Rubin采用最新财务披露更新出货状态；有冲突的带宽数字未进入横向比较。
+v2 从官方商城两款产品的价差切入，沿任务限制展开产品线，删除培训材料式术语铺陈与采购问答。完整消费显卡价目表后置。事实沿用 2026-09-12 已核查材料；本轮没有重新获取动态报价，不将其描述为新的价格快照。
+
+重建 v2：`python3 articles/2026-09-nvidia-ai-compute/upper/build.py --version v2`。

@@ -4,6 +4,11 @@ import html
 import importlib.util
 import json
 import re
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--version", choices=["v1", "v2"], default="v2")
+version = parser.parse_args().version
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
@@ -13,7 +18,7 @@ spec.loader.exec_module(renderer)
 theme = json.loads((ROOT / 'assets/theme.json').read_text())
 sources = json.loads((HERE.parent / 'research/sources.json').read_text())
 source_map = {s['id']: s for s in sources}
-md = (HERE / 'article-v1.md').read_text()
+md = (HERE / f'article-{version}.md').read_text()
 title = md.splitlines()[0].removeprefix('# ')
 body = renderer.render('\n'.join(md.splitlines()[1:]), theme)
 
@@ -64,7 +69,7 @@ body = re.sub(r'<table.*?</table>', compact_table, body, flags=re.S)
 header = '''<section style="margin:0 0 30px;padding:24px 0 0;border-top:4px solid #B91C1C;">
 <p style="margin:0;font-size:12px;line-height:1.6;letter-spacing:2px;color:#B91C1C;">旁观机器 · MACHINE OBSERVER</p>
 <h1 style="font-size:22px;font-weight:700;color:#B91C1C;text-align:center;line-height:1.5;letter-spacing:0.5px;margin:36px 0 30px;">算力生意（上）：<br>英伟达的产品版图</h1>
-<p style="margin:0 0 26px;text-align:center;color:#888888;font-size:14px;line-height:1.75;letter-spacing:0.5px;">从个人显卡到机柜系统<br>读懂型号、用途，以及价格的边界</p>
+<p style="margin:0 0 26px;text-align:center;color:#888888;font-size:14px;line-height:1.75;letter-spacing:0.5px;">从个人显卡到机柜系统<br>不同的工作，为什么需要不同的 GPU</p>
 <p style="margin:0;padding:13px 0;border-top:1px solid #EAEAEA;border-bottom:1px solid #EAEAEA;font-size:12px;line-height:1.7;letter-spacing:1px;color:#888888;">资料核查 / 2026.09.12</p>
 </section>'''
 
@@ -81,13 +86,13 @@ footer = '<p style="margin:28px 0 12px;text-align:center;color:#B91C1C;font-size
 
 container_style = theme['container'] + 'box-sizing:border-box;max-width:640px;margin:0 auto;'
 article = f'<section style="{container_style}">\n{header}\n{body}\n{refs}\n{footer}\n</section>'
-(HERE / 'article-v1-fragment.html').write_text(article)
+(HERE / f'article-{version}-fragment.html').write_text(article)
 document = ('<!doctype html>\n<html lang="zh-CN"><head><meta charset="utf-8">'
             '<meta name="viewport" content="width=device-width,initial-scale=1">'
             f'<title>{html.escape(title)}</title></head>'
             '<body style="margin:0;background:#ffffff;padding:24px 0;">'
             f'{article}</body></html>\n')
-(HERE / 'article-v1.html').write_text(document)
+(HERE / f'article-{version}.html').write_text(document)
 assert '〔' not in document, 'Unresolved citation'
 assert '<style' not in document and '<script' not in document
 print(f'Built {chapter.number} sections, {table_index} compact tables, {len(sources)} linked sources.')
