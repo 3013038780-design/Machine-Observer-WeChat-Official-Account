@@ -1,8 +1,10 @@
+[最新纯文字试稿 v11](article-v11.md) · [文字与事实复核](../research/draft-v11-review.md)
+
 [最新研究报告](../research/portfolio-review-2026-09-12/report.md) · [候选大纲 v11](outline-v11.md) · [信源与阅读边界](../research/portfolio-review-2026-09-12/sources.md)
 
 # 算力生意（上）：英伟达的产品版图
 
-当前：v8结构已被用户否定，进入重写。先审核[研究后的候选大纲](outline-v11.md)，再审核纯文字稿，之后才排版。以下HTML均为历史版本。
+当前：v8结构已被用户否定，进入重写。用户已授权按[研究后的大纲](outline-v11.md)试写，目前审核纯文字稿v11，之后才排版。以下HTML均为历史版本。
 
 - [v8 HTML预览](article-v8.html) · [正文HTML片段](article-v8-fragment.html) · [Markdown](article-v8.md)
 - [选定首图原文件](../../../assets/brand/2026-09-12-header-v2/03-retro-terminal.png)

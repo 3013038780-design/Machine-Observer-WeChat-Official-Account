@@ -1,6 +1,6 @@
 # 英伟达产品与算力服务：上下篇策划
 
-状态：已完成用于重建大纲的产品生态调查，见 research/portfolio-review-2026-09-12/report.md。当前审核 upper/outline-v11.md；v9、v10为历史未批准方案。先大纲，再纯文字，最后排版。旧稿不是定稿。
+状态：已完成用于重建大纲的产品生态调查，见 research/portfolio-review-2026-09-12/report.md。用户同意按v11大纲试写，已生成 upper/article-v11.md 纯文字稿待审；v9、v10为历史未批准方案。先大纲，再纯文字，最后排版。旧稿不是定稿。
 
 ## 编辑要求
 
