@@ -1,0 +1,312 @@
+[
+  {
+    "id": "01",
+    "title": "CUDA 计算平台",
+    "url": "https://developer.nvidia.com/cuda",
+    "published_or_updated": "动态官方文档",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "CUDA 的角色、计算软件基础",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "02",
+    "title": "GeForce 官方规格对照",
+    "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/compare/",
+    "published_or_updated": "动态官方规格",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "桌面 RTX 50 系列型号、显存、带宽、功耗与合作厂商版本差异",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "03",
+    "title": "RTX PRO 6000 家族规格",
+    "url": "https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-family/",
+    "published_or_updated": "动态官方规格",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "96 GB ECC；工作站600 W、Max-Q300 W、服务器400–600 W；散热形态",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "04",
+    "title": "RTX PRO 6000 服务器版",
+    "url": "https://www.nvidia.com/en-us/data-center/rtx-pro-6000-blackwell-server-edition/",
+    "published_or_updated": "动态官方产品页",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "AI、图形、模拟等服务器任务",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "05",
+    "title": "HGX AI Factory 组件与配置",
+    "url": "https://docs.nvidia.com/enterprise-reference-architectures/hgx-ai-factory/latest/components.html",
+    "published_or_updated": "latest 官方文档",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "H200/B200/B300单GPU容量与带宽；HGX B300 8 GPU；平台构成",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "06",
+    "title": "Jetson 开发套件",
+    "url": "https://developer.nvidia.com/embedded/jetson-developer-kits",
+    "published_or_updated": "动态官方文档",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "机器人与边缘设备开发产品",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "07",
+    "title": "DGX 平台",
+    "url": "https://www.nvidia.com/en-us/data-center/dgx-platform/",
+    "published_or_updated": "动态官方产品页",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "系统、软件、支持方案；DGX Spark/Station整机分类",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "08",
+    "title": "GB300 NVL72",
+    "url": "https://www.nvidia.com/en-us/data-center/gb300-nvl72/",
+    "published_or_updated": "动态官方规格",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "72 Blackwell Ultra GPU、36 Grace CPU、液冷、联系销售入口",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "09",
+    "title": "KV 缓存与推理内存",
+    "url": "https://developer.nvidia.com/blog/optimizing-inference-for-long-context-and-large-batch-sizes-with-nvfp4-kv-cache/",
+    "published_or_updated": "官方技术博客",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "模型权重以外的KV缓存开销；上下文与批量对容量/带宽的影响",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "10",
+    "title": "GPU 性能基础",
+    "url": "https://docs.nvidia.com/deeplearning/performance/dl-performance-gpu-background/index.html",
+    "published_or_updated": "官方基础技术文档",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "计算、内存带宽与延迟瓶颈；基础原理不作为当前硬件评测",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "11",
+    "title": "TensorRT 推理工具",
+    "url": "https://developer.nvidia.com/tensorrt",
+    "published_or_updated": "动态官方文档",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "推理优化、量化与软件性能",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "12",
+    "title": "RTX PRO 6000 工作站版",
+    "url": "https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000/",
+    "published_or_updated": "动态官方规格",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "96 GB GDDR7 ECC、专业任务，工作站版600W",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "13",
+    "title": "L4 产品规格",
+    "url": "https://www.nvidia.com/en-us/data-center/l4/",
+    "published_or_updated": "动态官方规格",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "24 GB显存、72 W最大TDP、半高单槽；视频/AI/图形",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "14",
+    "title": "L40S 产品规格",
+    "url": "https://www.nvidia.com/en-us/data-center/l40s/",
+    "published_or_updated": "动态官方规格",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "48 GB GDDR6 ECC、350 W、图形/推理；无NVLink支持",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "15",
+    "title": "NeMo 微调与部署",
+    "url": "https://docs.nvidia.com/nemo/automodel/latest/recipes-e2e-examples/sft-peft",
+    "published_or_updated": "latest 官方文档",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "微调与预训练模型及部署的关系",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "16",
+    "title": "H100 官方规格（新加坡英文页）",
+    "url": "https://www.nvidia.com/en-sg/data-center/h100/",
+    "published_or_updated": "动态官方规格",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "H100 SXM80GB、3.35TB/s；NVL94GB、PCIe；稀疏指标脚注",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "17",
+    "title": "Rubin 架构技术说明",
+    "url": "https://developer.nvidia.com/blog/inside-nvidia-rubin-gpu-architecture-powering-the-era-of-agentic-ai/",
+    "published_or_updated": "2026-07-21",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "288GB HBM4；22TB/s和3.6TB/s与当前美国产品页冲突，不采用带宽值",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "18",
+    "title": "2027 财年第二季度 10-Q",
+    "url": "https://investor.nvidia.com/files/doc_financials/2027/NVDA-2027-Q2-10Q-Final-including-exhibits.pdf",
+    "published_or_updated": "2026-08，文件标注08-27",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "PDF物理第25页/页码25：Rubin FY2027 Q3已开始生产出货；Blackwell与Rubin并行供货",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "19",
+    "title": "Vera Rubin NVL72 美国产品页",
+    "url": "https://www.nvidia.com/en-us/data-center/vera-rubin-nvl72/",
+    "published_or_updated": "动态官方规格",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "单GPU288GB HBM4；单GPU19.2TB/s与技术博客22TB/s不一致，带宽不入比较",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "20",
+    "title": "MGX 模块化架构",
+    "url": "https://www.nvidia.com/en-us/data-center/products/mgx/",
+    "published_or_updated": "动态官方产品页",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "服务器/机柜参考架构；CPU、GPU、网络、供电与散热配合",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "21",
+    "title": "NCCL 通信库",
+    "url": "https://developer.nvidia.com/nccl",
+    "published_or_updated": "动态官方文档",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "多GPU与多节点通信，支持训练与推理",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "22",
+    "title": "英伟达网络产品说明",
+    "url": "https://perspectives.nvidia.com/networking/",
+    "published_or_updated": "2026-08-25更新",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "NVLink、Quantum InfiniBand、Spectrum-X、BlueField的系统角色",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "23",
+    "title": "NVSwitch 支持与互联",
+    "url": "https://docs.nvidia.com/ai-enterprise/release-8/latest/infra-software/vgpu/features/nvswitch.html",
+    "published_or_updated": "2026-09-02更新",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "NVSwitch与NVLink；支持依赖平台。vGPU可用容量与物理标称不同",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "24",
+    "title": "RTX 5090 至 5070 发布公告",
+    "url": "https://nvidianews.nvidia.com/news/nvidia-blackwell-geforce-rtx-50-series-opens-new-world-of-ai-computer-graphics",
+    "published_or_updated": "2025-01-06",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "历史美国发布起价5090 1999、5080 999、5070Ti749、5070 549美元",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "25",
+    "title": "RTX 5060 家族发布公告",
+    "url": "https://www.nvidia.com/en-us/geforce/news/rtx-5060-desktop-family-laptop-5060-coming-soon/",
+    "published_or_updated": "2025-04-15",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "历史发布起价5060Ti 8GB379、16GB429；5060 299美元",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "26",
+    "title": "RTX 5050 发布公告",
+    "url": "https://www.nvidia.com/en-us/geforce/news/rtx-5050-desktop-gpu-and-laptops/",
+    "published_or_updated": "2025-06-24",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "历史桌面发布起价249美元",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "27",
+    "title": "RTX 5090 官方商城报价",
+    "url": "https://marketplace.nvidia.com/en-us/consumer/graphics-cards/nvidia-geforce-rtx-5090/",
+    "published_or_updated": "动态销售页",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "1999.00美元，Out of Stock；MPN NVGFT590",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "28",
+    "title": "RTX PRO 6000 官方商城报价",
+    "url": "https://marketplace.nvidia.com/en-us/enterprise/laptops-workstations/nvidia-rtx-pro-6000-blackwell-workstation-edition/",
+    "published_or_updated": "动态销售页",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "16000.00美元，Out Of Stock；MPN900-5G144-2500-000",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "29",
+    "title": "B&H RTX PRO 6000 OEM 报价",
+    "url": "https://www.bhphotovideo.com/c/product/1895402-REG/nvidia_900_5g144_2200_000_rtx_pro_6000_blackwell.html",
+    "published_or_updated": "动态销售页",
+    "accessed": "2026-09-12",
+    "publisher": "B&H",
+    "supports": "17999.99美元，In Stock；MPN900-5G144-2200-000-01",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "30",
+    "title": "CDW PNY H200 NVL 套件报价",
+    "url": "https://www.cdw.com/product/pny-nvidia-h200-graphic-card-141-gb-hbm3e-full-height/8418524",
+    "published_or_updated": "页面快照2026-09-08",
+    "accessed": "2026-09-12",
+    "publisher": "CDW",
+    "supports": "33731.99美元；NVH200NVLTCGPU-KIT；不可从加入购物车按钮推断有货",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "31",
+    "title": "Micron：HBM 内存原理",
+    "url": "https://www.micron.com/products/memory/hbm",
+    "published_or_updated": "动态内存厂商说明",
+    "accessed": "2026-09-12",
+    "publisher": "Micron",
+    "supports": "HBM的3D堆叠结构，容量与带宽维度",
+    "reading": "已读取相关正文/规格/报价，非仅标题"
+  }
+]

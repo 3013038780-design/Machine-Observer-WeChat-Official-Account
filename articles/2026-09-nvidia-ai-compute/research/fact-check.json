@@ -1,0 +1,260 @@
+[
+  {
+    "id": "G-5050",
+    "claim": "GeForce RTX 5050：显存8 GB；历史发布起价$249",
+    "sources": [
+      "02",
+      "26"
+    ],
+    "scope": "桌面版；2025官方发布价，非当前成交价",
+    "checked": "2026-09-12",
+    "result": "已与所列来源核对"
+  },
+  {
+    "id": "G-5060",
+    "claim": "GeForce RTX 5060：显存8 GB；历史发布起价$299",
+    "sources": [
+      "02",
+      "25"
+    ],
+    "scope": "桌面版；2025官方发布价，非当前成交价",
+    "checked": "2026-09-12",
+    "result": "已与所列来源核对"
+  },
+  {
+    "id": "G-5060 Ti 8GB",
+    "claim": "GeForce RTX 5060 Ti 8GB：显存8 GB；历史发布起价$379",
+    "sources": [
+      "02",
+      "25"
+    ],
+    "scope": "桌面版；2025官方发布价，非当前成交价",
+    "checked": "2026-09-12",
+    "result": "已与所列来源核对"
+  },
+  {
+    "id": "G-5060 Ti 16GB",
+    "claim": "GeForce RTX 5060 Ti 16GB：显存16 GB；历史发布起价$429",
+    "sources": [
+      "02",
+      "25"
+    ],
+    "scope": "桌面版；2025官方发布价，非当前成交价",
+    "checked": "2026-09-12",
+    "result": "已与所列来源核对"
+  },
+  {
+    "id": "G-5070",
+    "claim": "GeForce RTX 5070：显存12 GB；历史发布起价$549",
+    "sources": [
+      "02",
+      "24"
+    ],
+    "scope": "桌面版；2025官方发布价，非当前成交价",
+    "checked": "2026-09-12",
+    "result": "已与所列来源核对"
+  },
+  {
+    "id": "G-5070 Ti",
+    "claim": "GeForce RTX 5070 Ti：显存16 GB；历史发布起价$749",
+    "sources": [
+      "02",
+      "24"
+    ],
+    "scope": "桌面版；2025官方发布价，非当前成交价",
+    "checked": "2026-09-12",
+    "result": "已与所列来源核对"
+  },
+  {
+    "id": "G-5080",
+    "claim": "GeForce RTX 5080：显存16 GB；历史发布起价$999",
+    "sources": [
+      "02",
+      "24"
+    ],
+    "scope": "桌面版；2025官方发布价，非当前成交价",
+    "checked": "2026-09-12",
+    "result": "已与所列来源核对"
+  },
+  {
+    "id": "G-5090",
+    "claim": "GeForce RTX 5090：显存32 GB；历史发布起价$1999",
+    "sources": [
+      "02",
+      "24"
+    ],
+    "scope": "桌面版；2025官方发布价，非当前成交价",
+    "checked": "2026-09-12",
+    "result": "已与所列来源核对"
+  },
+  {
+    "id": "D-H100 SXM",
+    "claim": "H100 SXM：80 GB，3.35 TB/s",
+    "sources": [
+      "16"
+    ],
+    "scope": "单GPU标称规格；不是性能排名或可用显存承诺",
+    "checked": "2026-09-12",
+    "result": "已与所列来源核对"
+  },
+  {
+    "id": "D-H200 SXM",
+    "claim": "H200 SXM：141 GB HBM3e，4.8 TB/s",
+    "sources": [
+      "05"
+    ],
+    "scope": "单GPU标称规格；不是性能排名或可用显存承诺",
+    "checked": "2026-09-12",
+    "result": "已与所列来源核对"
+  },
+  {
+    "id": "D-B200 SXM",
+    "claim": "B200 SXM：180 GB HBM3e，最高8 TB/s",
+    "sources": [
+      "05"
+    ],
+    "scope": "单GPU标称规格；不是性能排名或可用显存承诺",
+    "checked": "2026-09-12",
+    "result": "已与所列来源核对"
+  },
+  {
+    "id": "D-B300 SXM",
+    "claim": "B300 SXM：288 GB HBM3e，最高8 TB/s",
+    "sources": [
+      "05"
+    ],
+    "scope": "单GPU标称规格；不是性能排名或可用显存承诺",
+    "checked": "2026-09-12",
+    "result": "已与所列来源核对"
+  },
+  {
+    "id": "P-PRO",
+    "claim": "RTX PRO 6000各版96GB GDDR7 ECC；工作站600W、Max-Q300W、服务器400–600W",
+    "sources": [
+      "03",
+      "12"
+    ],
+    "scope": "特定型号/形态，不混用",
+    "checked": "2026-09-12",
+    "result": "已与所列来源核对"
+  },
+  {
+    "id": "D-L4",
+    "claim": "L4显存24GB、最大TDP72W、半高单槽",
+    "sources": [
+      "13"
+    ],
+    "scope": "标称；不是实测耗电",
+    "checked": "2026-09-12",
+    "result": "已与所列来源核对"
+  },
+  {
+    "id": "D-L40S",
+    "claim": "L40S显存48GB GDDR6 ECC、最大功耗350W",
+    "sources": [
+      "14"
+    ],
+    "scope": "标称；不是实测耗电",
+    "checked": "2026-09-12",
+    "result": "已与所列来源核对"
+  },
+  {
+    "id": "S-HGX",
+    "claim": "HGX B300底板8个GPU",
+    "sources": [
+      "05"
+    ],
+    "scope": "多GPU底板，不是完整服务器报价",
+    "checked": "2026-09-12",
+    "result": "已与所列来源核对"
+  },
+  {
+    "id": "S-GB300",
+    "claim": "GB300 NVL72包含72 Blackwell Ultra GPU和36 Grace CPU，液冷",
+    "sources": [
+      "08"
+    ],
+    "scope": "机柜级系统",
+    "checked": "2026-09-12",
+    "result": "已与所列来源核对"
+  },
+  {
+    "id": "S-Rubin",
+    "claim": "Rubin单GPU288GB HBM4",
+    "sources": [
+      "17",
+      "19"
+    ],
+    "scope": "两来源容量一致；带宽冲突排除",
+    "checked": "2026-09-12",
+    "result": "已与所列来源核对"
+  },
+  {
+    "id": "T-Rubin",
+    "claim": "2026年8月季度报告：Rubin在FY2027 Q3开始生产出货",
+    "sources": [
+      "18"
+    ],
+    "scope": "财年非自然年；不证明即时现货",
+    "checked": "2026-09-12",
+    "result": "已与所列来源核对"
+  },
+  {
+    "id": "Q-RTX5090",
+    "claim": "官方商城1999.00美元、缺货、NVGFT590",
+    "sources": [
+      "27"
+    ],
+    "scope": "2026-09-12查询到的页面挂牌样本；不保证交易/库存",
+    "checked": "2026-09-12",
+    "result": "已与所列来源核对"
+  },
+  {
+    "id": "Q-PRO-official",
+    "claim": "官方商城16000.00美元、缺货、900-5G144-2500-000",
+    "sources": [
+      "28"
+    ],
+    "scope": "2026-09-12查询到的页面挂牌样本；不保证交易/库存",
+    "checked": "2026-09-12",
+    "result": "已与所列来源核对"
+  },
+  {
+    "id": "Q-PRO-BH",
+    "claim": "B&H17999.99美元、有货、900-5G144-2200-000-01",
+    "sources": [
+      "29"
+    ],
+    "scope": "2026-09-12查询到的页面挂牌样本；不保证交易/库存",
+    "checked": "2026-09-12",
+    "result": "已与所列来源核对"
+  },
+  {
+    "id": "Q-H200-CDW",
+    "claim": "CDW33731.99美元，NVH200NVLTCGPU-KIT；快照2026-09-08",
+    "sources": [
+      "30"
+    ],
+    "scope": "2026-09-12查询到的页面挂牌样本；不保证交易/库存",
+    "checked": "2026-09-12",
+    "result": "已与所列来源核对"
+  },
+  {
+    "id": "C-weights",
+    "claim": "700亿参数×4bit÷8=350亿字节=35GB",
+    "sources": [
+      "09",
+      "11"
+    ],
+    "scope": "编辑设定的数学例子；十进制GB；不含额外开销，不是实测",
+    "checked": "2026-09-12",
+    "result": "已与所列来源核对",
+    "calculation": {
+      "parameters": 70000000000,
+      "bits_per_parameter": 4,
+      "bits_per_byte": 8,
+      "bytes_per_GB": 1000000000,
+      "result_GB": 35
+    }
+  }
+]
