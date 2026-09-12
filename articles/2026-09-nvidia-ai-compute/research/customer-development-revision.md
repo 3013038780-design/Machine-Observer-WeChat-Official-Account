@@ -30,3 +30,11 @@
 - https://www.alibabacloud.com/help/en/egs/quick-reference ：租用 GPU 实例后远程管理、部署、维护等操作。
 
 未据此推断所有模型服务都使用英伟达 GPU；自管云服务器与托管服务的责任不同。
+
+## 订单客服示例 · 2026-09-13
+
+订单内容和回复为教学假设，不代表真实企业案例。产品示例为百炼千问 API 与 ECS GPU 自部署 Qwen。
+
+- https://help.aliyun.com/zh/model-studio/what-is-model-studio/ ：现成模型服务。
+- https://help.aliyun.com/zh/model-studio/qwen-function-calling ：应用执行工具并提供结果、模型据此生成回复；正文用简化数据流，不展开工具调用协议。
+- https://help.aliyun.com/zh/ecs/user-guide/deploy-qwen3-235b-a22b-on-gpu-accelerated-instances ：云端自部署，亦提供 API；所列模型仅作部署实例，不作最新型号或配置推荐。
