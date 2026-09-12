@@ -367,5 +367,19 @@
     "url": "https://www.hp.com/us-en/tech-takes/workstations/comparison/workstation-vs-desktop-business.html",
     "accessed": "2026-09-12",
     "read_scope_and_limit": "支持软件用途或专业电脑定位；不引用性能、价格或最低配置。"
+  },
+  {
+    "id": "S22",
+    "title": "联想整机配置示例",
+    "url": "https://psref.lenovo.com/Product/ThinkStation/ThinkStation_P5",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "支持RTX PRO整机配置或DGX Spark独立GPU连接支持边界；无新增价格、性能数字。"
+  },
+  {
+    "id": "S23",
+    "title": "DGX Spark 硬件支持说明",
+    "url": "https://docs.nvidia.com/dgx/dgx-spark-porting-guide/porting/software-requirements.html",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "支持RTX PRO整机配置或DGX Spark独立GPU连接支持边界；无新增价格、性能数字。"
   }
 ]

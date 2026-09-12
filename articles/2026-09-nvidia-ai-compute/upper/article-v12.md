@@ -84,7 +84,9 @@ RTX PRO 的价值包括部分型号提供的大显存，以及专业软件认证
 
 假设一个团队要开发文档识别应用。研究员需要准备数据、选择模型并评估效果；程序员需要把模型接入应用，让文件输入、计算执行和结果返回连成完整流程。这是一个说明分工的例子，实际团队可能由同一个人承担多项工作。
 
-他们首先需要计算资源。较小的实验可以在本地电脑或工作站上进行，也可以使用 DGX Spark 这样的桌面 AI 计算机。**DGX Spark 是整台设备，RTX PRO 则是 GPU 产品家族**，两者不能按“哪张卡更强”来比较。[DGX Spark](https://www.nvidia.com/en-us/products/workstations/dgx-spark/)
+他们首先需要能够运行实验的电脑。企业既可以购买已经配好 RTX PRO 显卡的整机，也可以为兼容的台式电脑单独购买、安装显卡；后者需要确认主板插槽、机箱空间、电源和散热满足所选显卡的要求。[联想整机配置示例](https://psref.lenovo.com/Product/ThinkStation/ThinkStation_P5) [RTX PRO 显卡规格](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000/)
+
+DGX Spark 是另一种选择：它是一台已经内置 CPU 和 GPU 的小型 AI 电脑，使用自身集成的计算部件。官方支持范围不包括加装独立 GPU，因此不能将它理解为购买后再配一张 RTX PRO 的主机。[DGX Spark](https://www.nvidia.com/en-us/products/workstations/dgx-spark/) [DGX Spark 硬件支持说明](https://docs.nvidia.com/dgx/dgx-spark-porting-guide/porting/software-requirements.html)
 
 DGX Spark 还采用 CPU 与 GPU 共享的统一内存。它能容纳多大的任务，与任务运行得多快，是不同问题。LMSYS 对早期 DGX Spark 的测试就提示，较大的内存空间不意味着所有模型都能高速运行；带宽和软件实现同样重要。[NVIDIA DGX Spark with SGLang](https://www.lmsys.org/blog/2025-10-13-nvidia-dgx-spark/)
 
