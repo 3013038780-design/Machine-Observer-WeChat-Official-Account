@@ -418,5 +418,55 @@
     "accessed": "2026-09-12",
     "supports": "响应延迟和吞吐的取舍；按真实输入/输出/缓存测试；超过拐点排队和延迟变差；不采用无署名会议摘录",
     "reading": "已读作者、日期及对应分析/建议正文"
+  },
+  {
+    "id": "43",
+    "title": "Intel：GPU、CPU与显卡的区别",
+    "url": "https://www.intel.com/content/www/us/en/products/docs/processors/what-is-a-gpu.html",
+    "publisher": "Intel",
+    "published_or_updated": "官方基础说明，2026-09-12读取",
+    "accessed": "2026-09-12",
+    "supports": "CPU/GPU英文全称、并行计算、GPU与板卡区别",
+    "reading": "已读取对应正文或术语条目"
+  },
+  {
+    "id": "44",
+    "title": "Intel：RAM与处理器",
+    "url": "https://www.intel.com/content/www/us/en/learn/what-is-ram-vs-processor.html",
+    "publisher": "Intel",
+    "published_or_updated": "官方基础说明，2026-09-12读取",
+    "accessed": "2026-09-12",
+    "supports": "RAM英文及程序运行、CPU与内存分工",
+    "reading": "已读取对应正文或术语条目"
+  },
+  {
+    "id": "45",
+    "title": "Kingston：内存与存储的区别",
+    "url": "https://www.kingston.com/en/blog/pc-performance/difference-between-memory-storage",
+    "publisher": "Kingston",
+    "published_or_updated": "官方基础说明，2026-09-12读取",
+    "accessed": "2026-09-12",
+    "supports": "系统内存临时性与SSD/HDD长期存储区别",
+    "reading": "已读取对应正文或术语条目"
+  },
+  {
+    "id": "46",
+    "title": "Intel：集成与独立图形的区别",
+    "url": "https://www.intel.com/content/www/us/en/support/articles/000057824/graphics.html",
+    "publisher": "Intel",
+    "published_or_updated": "官方基础说明，2026-09-12读取",
+    "accessed": "2026-09-12",
+    "supports": "集成GPU使用共享内存，独立GPU专用内存",
+    "reading": "已读取对应正文或术语条目"
+  },
+  {
+    "id": "47",
+    "title": "IBM Redbooks：AI基础设施术语表",
+    "url": "https://redbooks.ibm.com/docs/MD260021/MD260021.html",
+    "publisher": "IBM",
+    "published_or_updated": "官方基础说明，2026-09-12读取",
+    "accessed": "2026-09-12",
+    "supports": "仅采用VRAM英文全称与GPU内存定义，不采用性能营销倍数",
+    "reading": "已读取对应正文或术语条目"
   }
 ]

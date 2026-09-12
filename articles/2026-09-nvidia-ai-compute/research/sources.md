@@ -216,3 +216,11 @@
 - 40 · [Puget Systems：专业 GPU 内容创作横评](https://www.pugetsystems.com/labs/articles/2025-professional-gpu-content-creation-roundup/)，Puget Systems，2025-12-18。Evan Lagergren；After Effects平面合成/跟踪对高端GPU回报有限，三维工作差异更明显；只转述明确测试环境，不采用旧价与性能倍数。读取于2026-09-12。
 - 41 · [Dell：专业与消费 GPU 的工作负载选择](https://www.dell.com/en-us/blog/professional-vs-consumer-gpus-the-card-for-your-workflow/)，Dell，2026-03。Trey Morton；工作站性能与技术营销背景；GeForce适合部分实时工作，专业驱动和容量对应RTX PRO价值；标注整机厂商视角。读取于2026-09-12。
 - 42 · [CoreWeave：推理扩容与并发选择](https://docs.coreweave.com/products/inference/scaling)，CoreWeave，动态官方部署文档。响应延迟和吞吐的取舍；按真实输入/输出/缓存测试；超过拐点排队和延迟变差；不采用无署名会议摘录。读取于2026-09-12。
+
+## v6 基础科普来源
+
+- 43 · [Intel：GPU、CPU与显卡的区别](https://www.intel.com/content/www/us/en/products/docs/processors/what-is-a-gpu.html)，Intel。CPU/GPU英文全称、并行计算、GPU与板卡区别。核查2026-09-12。
+- 44 · [Intel：RAM与处理器](https://www.intel.com/content/www/us/en/learn/what-is-ram-vs-processor.html)，Intel。RAM英文及程序运行、CPU与内存分工。核查2026-09-12。
+- 45 · [Kingston：内存与存储的区别](https://www.kingston.com/en/blog/pc-performance/difference-between-memory-storage)，Kingston。系统内存临时性与SSD/HDD长期存储区别。核查2026-09-12。
+- 46 · [Intel：集成与独立图形的区别](https://www.intel.com/content/www/us/en/support/articles/000057824/graphics.html)，Intel。集成GPU使用共享内存，独立GPU专用内存。核查2026-09-12。
+- 47 · [IBM Redbooks：AI基础设施术语表](https://redbooks.ibm.com/docs/MD260021/MD260021.html)，IBM。仅采用VRAM英文全称与GPU内存定义，不采用性能营销倍数。核查2026-09-12。
