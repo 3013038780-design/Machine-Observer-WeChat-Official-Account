@@ -318,5 +318,33 @@
     "url": "https://www.nvidia.com/en-us/products/workstations/professional-laptops/",
     "accessed": "2026-09-12",
     "read_scope_and_limit": "核查笔记本GPU产品形态；正文仅简短补充，无新增规格与价格。"
+  },
+  {
+    "id": "S15",
+    "title": "Seedance API 服务",
+    "url": "https://developer.volcengine.com/articles/7628567056649125942",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "官方服务发布说明；仅采用远程API提供生成能力，不推断后台GPU品牌或型号。"
+  },
+  {
+    "id": "S16",
+    "title": "Qwen3官方仓库",
+    "url": "https://github.com/QwenLM/Qwen3",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "公开权重、本地CPU/GPU运行说明及用途；作为熟悉的示例，不称为最新代际。"
+  },
+  {
+    "id": "S17",
+    "title": "DeepSeek-R1官方仓库",
+    "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "模型与蒸馏版本、运行说明；不将较小模型等同完整在线产品。"
+  },
+  {
+    "id": "S18",
+    "title": "SDXL官方模型卡",
+    "url": "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "开放模型文件与图片生成使用代码；不声称任意电脑均可顺畅运行。"
   }
 ]

@@ -22,11 +22,35 @@ GPU 擅长把适合拆分的运算分配给许多计算单元同时处理。画�
 
 但显卡不会独自完成全部工作。CPU，即 Central Processing Unit，中央处理器，运行通用程序、组织执行流程；系统内存保存程序正在使用的数据；硬盘或固态硬盘长期保存程序和文件。剪辑视频时，素材需要被读取、处理和输出，GPU 加速的是其中适合它的环节。[Intel：RAM 与处理器](https://www.intel.com/content/www/us/en/learn/what-is-ram-vs-processor.html) [Kingston：内存与存储](https://www.kingston.com/en/blog/pc-performance/difference-between-memory-storage)
 
-软件配套也从这里出现。驱动帮助操作系统和应用使用显卡；NVIDIA Studio 则围绕创作应用提供工具与驱动支持。对于剪辑师和设计师，这些配套的意义是让熟悉的软件用上 GPU，而不只是再多一个产品名称。[NVIDIA Studio 创作者平台](https://www.nvidia.com/en-us/studio/)
+软件中的任务由 CPU、GPU 等部件分工处理，并非所有操作都会因为显卡升级而变快。驱动帮助操作系统和应用使用显卡；**NVIDIA Studio 是面向创作者的软硬件配套体系**，包含创作工具、Studio 驱动和相关设备支持。剪辑师仍在使用 Premiere、达芬奇等软件，Studio 提供的是背后的配套，并不是另一款剪辑软件。[NVIDIA Studio 创作者平台](https://www.nvidia.com/en-us/studio/)
 
-### 想在电脑上运行 AI，为什么要看显存
+### 使用 AI，计算发生在云端还是自己电脑上
 
-个人用户也可以把模型放在本地运行，用来生成内容、处理资料或尝试开发。这时，限制任务的不只是 GPU 的计算速度，还有数据能否放得下、读取是否足够快。
+通过在线服务调用 Seedance 生成视频时，电脑负责提交文字、上传素材和播放结果，模型生成视频的主要计算由云端服务完成。给自己的电脑换一张更贵的显卡，通常不会直接让云端生成得更快。视频下载后，如果在本地剪辑，部分特效、渲染和导出工作才可能由自己的 GPU 加速。[火山引擎：Seedance API 服务](https://developer.volcengine.com/articles/7628567056649125942)
+
+另一种方式，是下载模型文件，让模型在自己的电脑上运行。这里指的是提供可下载权重、允许相应部署方式的模型；常被统称为“开源模型”，具体使用范围仍要看许可证。熟悉的例子包括：
+
+| 模型例子 | 本地可以做什么 |
+|---|---|
+| 通义千问 Qwen，例如 Qwen3 的较小版本 | 对话、文本处理与代码辅助 |
+| DeepSeek-R1 的蒸馏版本 | 推理、数学和代码等任务；蒸馏版是学习较大模型能力的较小模型 |
+| Stable Diffusion，例如 SDXL | 根据文字生成图片，搭建本地图片制作流程 |
+
+这些模型均有官方提供的权重和运行说明。它们是本地部署的例子，不表示每个版本都适合普通电脑，也不意味着下载较小版本就能获得完整在线服务的能力。[Qwen 官方说明](https://github.com/QwenLM/Qwen3) [DeepSeek-R1 官方说明](https://github.com/deepseek-ai/DeepSeek-R1) [SDXL 官方模型页](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0)
+
+### 直接用 ChatGPT 或 Kimi，不好吗
+
+对于日常问答、写作和资料整理，使用现成在线服务往往更省事。本地部署主要服务于更具体的要求：希望资料留在自己的设备上、需要离线使用，或希望自行固定模型版本、调整运行方式和开发应用。
+
+例如，团队处理不便外传的内部资料，可以在模型和相关工具都本地运行、不调用外部服务的前提下，让处理过程留在内部设备中。开发者做实验时，也可能希望反复修改同一个模型版本，或在许可证允许的范围内进行微调。
+
+这些选择都有代价：模型和必要软件要先下载、配置，之后还要维护；本地设备能够运行的较小模型，其能力和速度未必达到在线服务的水平。长期批量处理任务有时值得使用自有设备，但硬件、电费和维护都要计入成本，不能直接认定本地更便宜。自动化和文档处理本身也不要求本地部署，云端服务同样可以承担。
+
+**选择本地部署以后，计算才直接落到自己的设备上。** 有些模型也能通过 CPU 运行，GPU 可以加速适合它的计算；具体效果取决于模型、软件支持和硬件配置。[Qwen 本地运行说明](https://github.com/QwenLM/Qwen3)
+
+### 本地运行，为什么要看显存
+
+模型交给本机运行以后，限制任务的不只是 GPU 的计算速度，还有数据能否放得下、读取是否足够快。
 
 独立显卡上的显存主要供 GPU 使用。它可以存放画面数据，也可以存放模型运行所需的数据。**显存容量回答“能放多少”，显存带宽回答“单位时间能传多少”。** 系统内存与显存则服务不同的访问路径，不能简单相加后当成同一块高速空间。[IBM：AI 基础设施术语](https://redbooks.ibm.com/docs/MD260021/MD260021.html)
 
@@ -174,3 +198,6 @@ Omniverse 提供三维与物理仿真应用所需的库、接口和服务；Isaa
 | RTX PRO 6000 Blackwell Workstation Edition | 16,000 美元 | 专业工作站显卡 |
 
 来源：[GeForce RTX 5090 marketplace](https://marketplace.nvidia.com/en-us/consumer/graphics-cards/nvidia-geforce-rtx-5090/) [RTX PRO 6000 Blackwell Workstation Edition marketplace](https://marketplace.nvidia.com/en-us/enterprise/laptops-workstations/nvidia-rtx-pro-6000-blackwell-workstation-edition/)。这两项只能展示具体商品的公开价格，不能据此推算服务器或机柜成本。数据中心设备应按完整配置取得报价；本次核查未获得这些系统可直接套用的官方公开出厂价。
+
+
+附注：Studio 的官方资料介绍了创作应用、工具与设备支持，本次未查到可靠的最新活跃用户数，本文不据此判断实际使用人数。
