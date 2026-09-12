@@ -1,0 +1,19 @@
+# 企业开发与算力运营衔接修订
+
+日期：2026-09-13。状态：文字待审。
+
+主线：企业开发文字客服助手→训练/微调与推理的区别→任务影响硬件配置→软件分工→并发与服务规模扩大。下一节继续解释大规模设备与运营，不把推理作为算力中心独占任务。
+
+保留全部产品解释。Nemotron 放在选模型时；CUDA 作为跨任务的计算基础；NeMo 对应模型定制；语言模型推理对应 TensorRT-LLM；NIM 对应部署服务；AI Enterprise 对应企业软件与支持。并非固定必选流水线。
+
+## 本轮复核来源（2026-09-12 至 09-13）
+
+- https://www.nvidia.com/en-us/data-center/a100/ ：官方同时列出训练与推理用途，作为交叉用途实例，不作最新选购推荐。
+- https://www.nvidia.com/en-us/data-center/l40s/ ：AI、图形与视频用途交叉。
+- https://developer.nvidia.com/topics/ai/nemotron ：模型资源与使用方式。
+- https://docs.nvidia.com/nemo/ ：开发、定制、评估工具。
+- https://developer.nvidia.com/tensorrt ：推理优化工具系列，TensorRT-LLM 面向语言模型。
+- https://docs.api.nvidia.com/nim/docs/introduction ：推理服务与调用接口，屏蔽部分运行组件复杂性。
+- https://www.nvidia.com/en-us/data-center/products/ai-enterprise/ ：商业软件套件、企业支持与安全维护。
+
+客服助手为编辑假设案例，不是已验证项目或硬件配置建议。具体模型版本、硬件兼容性与性能不作未经测试的保证。既有 DGX Spark 与 CUDA 引用保留。

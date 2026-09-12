@@ -80,25 +80,33 @@ RTX PRO 的价值包括部分型号提供的大显存，以及专业软件认证
 
 因此，企业选型需要把项目要求与实际表现放在一起看：先确认能否容纳项目、能否满足软件和维护要求，再比较完成具体工作的效率。
 
-### 研究员与程序员：从计算资源到开发工具
+### 研究员与程序员：开发一个 AI 客服助手，需要哪些产品
 
-假设一家企业要在本地开发一套发票识别程序：员工上传发票照片后，程序自动提取日期、金额等信息，整理成报销表格。为了实现这个流程，研究员需要用发票样本反复测试和改进识别模型，程序员则要把模型接入程序，让照片输入和表格输出衔接起来。
+假设一家企业要在自己的设备上开发一个文字客服助手，让模型根据客户的问题生成回复。团队先选一个可以本地运行的语言模型，再测试回答质量、调整模型，并把它接入客服程序。英伟达除了提供硬件，也提供可供开发者选用的模型，例如 Nemotron 系列；模型的具体版本和使用条件需要与项目匹配。[Nemotron 模型](https://developer.nvidia.com/topics/ai/nemotron)
 
-为完成这些本地实验，团队需要配置相应的计算设备。企业既可以购买已经配好 RTX PRO 显卡的电脑，也可以为兼容的台式电脑单独购买、安装显卡。DGX Spark 是英伟达推出的一款小型桌面 AI 电脑，已经内置 CPU 和 GPU，可用于本地模型开发、测试和运行，是团队的另一种设备选择。[联想整机配置示例](https://psref.lenovo.com/Product/ThinkStation/ThinkStation_P5) [DGX Spark](https://www.nvidia.com/en-us/products/workstations/dgx-spark/)
+**调整模型和使用模型，是这个项目中不同的计算任务。** 如果团队用整理好的客服问答样本调整模型参数，让它更好地遵循企业的回复格式与处理要求，这属于训练；在已有模型基础上继续训练，称为微调。模型收到一个新问题并生成回答，则是在进行推理。研发人员在电脑上测试一句回复，已经发生了推理；上线后为客户生成回答，仍然是推理。团队还需要准备数据、评估效果和维护程序，训练与推理并不涵盖项目的全部工作。[NeMo 开发文档](https://docs.nvidia.com/nemo/)
 
-DGX Spark 还采用 CPU 与 GPU 共享的统一内存。它能容纳多大的任务，与任务运行得多快，是不同问题。LMSYS 对早期 DGX Spark 的测试就提示，较大的内存空间不意味着所有模型都能高速运行；带宽和软件实现同样重要。[NVIDIA DGX Spark with SGLang](https://www.lmsys.org/blog/2025-10-13-nvidia-dgx-spark/)
+### 任务决定设备配置，训练与推理没有固定的显卡分界
 
-有了硬件，还需要让程序调用它。**CUDA 是英伟达的并行计算平台与编程模型；CUDA Toolkit 是其中用于开发的工具包，包含编译、调试和加速库等工具。** 加速库可以理解为已经实现好的计算功能，开发者能够调用它们，减少从头编写底层程序的工作。[CUDA Toolkit](https://developer.nvidia.com/cuda/toolkit)
+微调时，设备除了运行模型，还要保存调整参数所需的数据；推理时，设备需要装下模型并及时生成结果。模型大小、采用的训练方法、输入内容长度以及同时处理的请求数量，都会影响所需的内存和计算能力。因此，设备选型要先看具体工作量，不能仅凭“训练”或“推理”两个词决定买哪张卡。
 
-研究员或程序员既可以直接编写相关代码，也可以通过支持 GPU 的框架和应用间接使用 CUDA。CUDA 不属于某一种客户，也不限于一台工作站；它可以出现在个人电脑、企业服务器和云端的开发环境里。
+对于能够在本机完成的实验，企业既可以购买已经配好 RTX PRO 显卡的电脑，也可以为兼容的台式电脑单独购买、安装显卡。DGX Spark 是英伟达推出的一款小型桌面 AI 电脑，已经内置 CPU 和 GPU，可用于本地模型开发、测试和运行，是团队的另一种设备选择。[联想整机配置示例](https://psref.lenovo.com/Product/ThinkStation/ThinkStation_P5) [DGX Spark](https://www.nvidia.com/en-us/products/workstations/dgx-spark/)
 
-CUDA 提供使用 GPU 的基础工具，团队还需要软件来完成模型开发与部署。例如，为了让模型适应具体业务，研发人员可能需要用数据调整模型参数，这一过程称为训练；在已有模型基础上继续训练，则称为微调。英伟达的 NeMo 就提供模型开发与定制工具，帮助团队完成这类工作。
+DGX Spark 采用 CPU 与 GPU 共享的统一内存。它能容纳多大的任务，与任务运行得多快，是不同问题。LMSYS 对早期 DGX Spark 的测试就提示，较大的内存空间不意味着所有模型都能高速运行；带宽和软件实现同样重要。[NVIDIA DGX Spark with SGLang](https://www.lmsys.org/blog/2025-10-13-nvidia-dgx-spark/)
 
-模型准备好后，需要接入应用、处理用户的新输入，这个运行过程称为推理。TensorRT 用于优化推理执行，NIM 则将模型运行所需的组件封装成便于部署的服务，帮助开发者把模型接入应用。企业若还需要相应的软件支持与维护，可以进一步考虑 NVIDIA AI Enterprise。[AI 开发与部署工具](https://www.nvidia.com/en-us/ai/)
+**不同 GPU 的设计各有侧重，用途也有交叉。** 例如，数据中心的 A100 同时支持训练与推理，L40S 则兼顾 AI、图形与视频任务。更大规模的模型或更多并发请求，可能需要服务器乃至多台设备协作；这些配置将在下一节展开。[A100](https://www.nvidia.com/en-us/data-center/a100/) [L40S](https://www.nvidia.com/en-us/data-center/l40s/)
 
-模型本身又是一类资源，例如 Nemotron 系列。于是，一个研发团队使用的可能同时包括：**一台计算机、机器里的 GPU、CUDA 等工具，以及要开发或运行的模型。** 这些产品处在不同层级，却服务同一个项目。[DGX Cloud](https://www.nvidia.com/en-us/data-center/dgx-cloud/)
+### 软件分别解决调用硬件、调整模型和提供服务的问题
 
-团队把应用做出来以后，如果要让更多人持续使用，问题就会从“本机能否完成实验”扩大到“整套服务能否稳定运行”。
+硬件承担计算，开发软件帮助程序员组织这些计算。**CUDA 是英伟达的并行计算平台与编程模型；CUDA Toolkit 是相应的开发工具包**，包含编译、调试工具，以及可以直接调用的计算功能。开发者可以直接使用这些工具，也可以通过支持 CUDA 的模型开发框架间接使用 GPU。这套基础能力贯穿训练和推理，也可以用于个人电脑、企业服务器与云端。[CUDA Toolkit](https://developer.nvidia.com/cuda/toolkit)
+
+在这套基础之上，团队可以按项目需要选择更具体的工具。客服助手若需要微调，**NeMo 这套模型开发工具**可以帮助研发人员完成受支持模型的定制与评估。它与前面提到的 Nemotron 有区别：Nemotron 提供模型，NeMo 提供开发和改进模型的工具。[NeMo](https://docs.nvidia.com/nemo/)
+
+当模型已经能够生成合适的回复，下一步是让它高效运行并接入客服程序。**TensorRT 是优化模型推理的软件工具系列**，其中 TensorRT-LLM 面向大语言模型，帮助优化生成回答时的计算执行。**NIM 则提供预先打包好的模型推理服务**：把受支持模型所需的运行组件组织好，并提供程序调用接口。程序员部署相应服务后，客服程序就可以向它发送问题、接收回答。[TensorRT](https://developer.nvidia.com/tensorrt) [NIM](https://www.nvidia.com/en-us/ai-data-science/products/nim-microservices/)
+
+这些工具可以协作，但不是每个项目都必须依次使用的固定套装；部分 NIM 服务内部就会使用 TensorRT-LLM 等推理引擎。企业如果需要生产环境中的软件支持、安全更新与维护，还可以考虑 NVIDIA AI Enterprise 企业软件平台。[NIM 文档](https://docs.api.nvidia.com/nim/docs/introduction) [NVIDIA AI Enterprise](https://www.nvidia.com/en-us/data-center/products/ai-enterprise/)
+
+至此，团队使用的产品有了明确分工：模型提供生成回答的能力，电脑中的 GPU 执行计算，开发与部署软件让模型能够被调整、运行并接入应用。客服助手进入正式使用后，如果越来越多客户同时提问，团队就需要进一步考虑服务器容量、响应速度和持续运行。这也把问题带到了下一节：如何组织更大规模的计算资源。
 
 ## 三、云厂商与算力运营商：组织大规模计算
 
@@ -112,7 +120,7 @@ CUDA 提供使用 GPU 的基础工具，团队还需要软件来完成模型开�
 
 数据中心 GPU 通常需要放在相应的系统配置中理解：内存容量、带宽、设备间互连和软件配套共同影响任务表现。一些产品采用 HBM，即 High Bandwidth Memory，高带宽内存，通过堆叠等技术支持大量数据传输。HBM 描述内存技术，不是 GPU 的另一个档次。[Micron：HBM](https://www.micron.com/products/memory/hbm)
 
-训练和推理也不能严格按型号字母划线。A100 同时支持训练与推理，L40S 还覆盖图形、视频与 AI 等工作。运营者需要看实际任务，再决定怎样配置资源。[NVIDIA A100](https://www.nvidia.com/en-us/data-center/a100/) [NVIDIA L40S](https://www.nvidia.com/en-us/data-center/l40s/)
+承接前面的客服助手，运营团队此时面对的仍然是推理，但需要服务更多同时在线的用户。训练任务也可能因模型和数据规模扩大而进入计算集群。两种任务都要考虑设备容量、计算速度与成本，具体配置则取决于各自的工作量。
 
 比如，一个服务希望尽快回答单个请求，另一个服务希望同时处理更多请求，二者的运行安排可能不同。CoreWeave 的部署文档就要求根据真实请求测试并发设置，权衡响应速度与整体处理量。[CoreWeave：推理扩容](https://docs.coreweave.com/products/inference/scaling)
 
