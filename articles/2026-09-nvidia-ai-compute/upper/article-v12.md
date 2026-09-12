@@ -82,11 +82,9 @@ RTX PRO 的价值包括部分型号提供的大显存，以及专业软件认证
 
 ### 研究员与程序员：从计算资源到开发工具
 
-假设一家企业要在自己的电脑上开发一套发票识别程序，将员工上传的发票照片自动整理成报销表格。研发人员需要识别照片中的文字，提取日期、金额等信息，再填入对应字段。
+假设一家企业要在本地开发一套发票识别程序：员工上传发票照片后，程序自动提取日期、金额等信息，整理成报销表格。为了实现这个流程，研究员需要用发票样本反复测试和改进识别模型，程序员则要把模型接入程序，让照片输入和表格输出衔接起来。
 
-研究员用发票样本测试和改进识别模型，程序员则将照片上传、模型运行和表格生成连接起来。团队需要一台能够运行这些实验的电脑，以及编写、调试程序所需的开发工具。
-
-对于需要 GPU 加速的本地开发项目，企业既可以购买已经配好 RTX PRO 显卡的整机，也可以为兼容的台式电脑单独购买、安装显卡；后者需要确认主板插槽、机箱空间、电源和散热满足所选显卡的要求。[联想整机配置示例](https://psref.lenovo.com/Product/ThinkStation/ThinkStation_P5) [RTX PRO 显卡规格](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000/)
+这些开发工作都需要在电脑上运行。随着测试样本增加或模型变得复杂，模型计算可能成为耗时的环节；采用支持 GPU 加速的运行软件后，团队可以将其中适合并行处理的计算交给 GPU。因此，电脑里的 GPU 就与模型测试效率产生了直接联系。RTX PRO 是团队可以考虑的一类专业 GPU，既可以在购买电脑时由厂商配好，也可以单独购买后装入兼容的台式电脑。[CUDA 开发工具说明](https://developer.nvidia.com/cuda/toolkit) [联想整机配置示例](https://psref.lenovo.com/Product/ThinkStation/ThinkStation_P5)
 
 DGX Spark 是另一种选择：它是一台已经内置 CPU 和 GPU 的小型 AI 电脑，使用自身集成的计算部件。官方支持范围不包括加装独立 GPU，因此不能将它理解为购买后再配一张 RTX PRO 的主机。[DGX Spark](https://www.nvidia.com/en-us/products/workstations/dgx-spark/) [DGX Spark 硬件支持说明](https://docs.nvidia.com/dgx/dgx-spark-porting-guide/porting/software-requirements.html)
 
