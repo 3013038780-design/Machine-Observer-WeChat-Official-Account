@@ -98,7 +98,7 @@ RTX PRO 的价值包括部分型号提供的大显存，以及专业软件认证
 
 **调整模型和使用模型，是这个项目中不同的计算任务。** 如果团队用整理好的客服问答样本调整模型参数，让它更好地遵循企业的回复格式与处理要求，这属于训练；在已有模型基础上继续训练，称为微调。模型收到一个新问题并生成回答，则是在进行推理。研发人员在电脑上测试一句回复，已经发生了推理；上线后为客户生成回答，仍然是推理。团队还需要准备数据、评估效果和维护程序，训练与推理并不涵盖项目的全部工作。[NeMo 开发文档](https://docs.nvidia.com/nemo/)
 
-### 软件分别解决调用硬件、调整模型和提供服务的问题
+#### 开发工具怎样配合模型工作
 
 为了开发这个客服助手，研发人员需要能够调整和运行所选模型的软件。若计划使用英伟达 GPU 加速计算，就会接触到 CUDA 及其相关工具。**CUDA 是英伟达的并行计算平台与编程模型；CUDA Toolkit 是相应的开发工具包**，包含编译、调试工具，以及可以直接调用的计算功能。开发者可以直接使用这些工具，也可以通过支持 CUDA 的模型开发框架间接使用 GPU。这套基础能力贯穿训练和推理，也可以用于个人电脑、企业服务器与云端。[CUDA Toolkit](https://developer.nvidia.com/cuda/toolkit)
 
@@ -108,7 +108,7 @@ RTX PRO 的价值包括部分型号提供的大显存，以及专业软件认证
 
 这些工具可以协作，但不是每个项目都必须依次使用的固定套装；部分 NIM 服务内部就会使用 TensorRT-LLM 等推理引擎。企业如果需要生产环境中的软件支持、安全更新与维护，还可以考虑 NVIDIA AI Enterprise 企业软件平台。[NIM 文档](https://docs.api.nvidia.com/nim/docs/introduction) [NVIDIA AI Enterprise](https://www.nvidia.com/en-us/data-center/products/ai-enterprise/)
 
-### 根据模型与软件要求配置设备
+#### 根据模型与软件要求配置设备
 
 明确模型和软件方案后，团队需要检查现有电脑能否支持，再决定是否升级设备。软件与硬件也需要结合预算和实测结果反复调整。
 
@@ -140,11 +140,11 @@ DGX Spark 采用 CPU 与 GPU 共享的统一内存。它能容纳多大的任务
 
 比如，一个服务希望尽快回答单个请求，另一个服务希望同时处理更多请求，二者的运行安排可能不同。CoreWeave 的部署文档就要求根据真实请求测试并发设置，权衡响应速度与整体处理量。[CoreWeave：推理扩容](https://docs.coreweave.com/products/inference/scaling)
 
-增加 GPU 数量有时能扩大容量，但如果计算之间需要频繁交换数据，连接速度也会影响效果。
-
 针对不同服务要求，专用加速硬件也在发展。英伟达已公布 Groq 3 LPX 量产信息，其中的 LPU 是面向推理的专用处理器，LPX 是系统名称。它展示了针对特定计算需求设计硬件的方向；具体表现仍应在相应任务和部署条件下比较。[Groq 3 LPX Now in Full Production](https://nvidianews.nvidia.com/news/nvidia-groq-3-lpx-now-in-full-production-with-world-class-speed-for-agentic-ai)
 
-### 运维团队面对的是完整系统
+### 从计算部件到完整系统
+
+服务商确定需要承担的任务后，还要把计算部件组合成能够协同工作的系统。增加 GPU 数量可以扩大部分任务的处理能力，但设备之间交换数据的速度也会影响效果。
 
 CPU 在这里继续负责通用程序、数据与执行流程。英伟达的 Grace、Vera 是 CPU 产品；BlueField 则属于 DPU，Data Processing Unit，数据处理单元，承担部分网络、存储和安全处理工作。它们与 GPU 各有分工。[Data Center](https://www.nvidia.com/en-us/data-center/) [HGX AI Factory: Components](https://docs.nvidia.com/enterprise-reference-architectures/hgx-ai-factory/latest/components.html)
 
@@ -152,31 +152,25 @@ CPU 在这里继续负责通用程序、数据与执行流程。英伟达的 Gra
 
 对于运维团队，这些名字对应一个很实际的问题：GPU 算完自己的部分以后，能否及时取得其他设备的数据？等待越多，计算资源就越难被充分利用。这也使**显存带宽、GPU 互连带宽、服务器网络带宽**成为不同指标，分别描述不同位置的数据传输能力。
 
-系统采购中常见的 HGX、MGX、DGX，也各有含义。**HGX 是多 GPU 计算平台**，服务器厂商围绕它配置 CPU、内存、存储等，形成完整设备。
-
-**MGX 是模块化系统参考架构**，为厂商设计和组合系统提供基础。
-
-**DGX 是英伟达的系统家族**，DGX SuperPOD 则涉及更大规模的集成方案。[HGX AI Factory: Components](https://docs.nvidia.com/enterprise-reference-architectures/hgx-ai-factory/latest/components.html) [MGX](https://www.nvidia.com/en-us/data-center/products/mgx/) [DGX Platform](https://www.nvidia.com/en-us/data-center/dgx-platform/)
+这些部件怎样组成整机，也有不同产品形态。**HGX 是多 GPU 计算平台**，服务器厂商围绕它配置 CPU、内存、存储等，形成完整设备；**MGX 是模块化系统参考架构**，为厂商设计和组合系统提供基础；**DGX 是英伟达的系统家族**，DGX SuperPOD 则涉及更大规模的集成方案。[HGX AI Factory: Components](https://docs.nvidia.com/enterprise-reference-architectures/hgx-ai-factory/latest/components.html) [MGX](https://www.nvidia.com/en-us/data-center/products/mgx/) [DGX Platform](https://www.nvidia.com/en-us/data-center/dgx-platform/)
 
 再看 GB200：它将 Grace CPU 与 Blackwell GPU 组合成计算单元；GB200 NVL72 将这些计算单元与互连组织成机柜级系统。**GPU 是部件，计算单元是组合，服务器与机柜系统则包含更完整的配置。** 部件越来越多，系统对供电、散热和运行维护的要求也随之增加。[GB200 NVL72](https://www.nvidia.com/en-us/data-center/gb200-nvl72/)
 
-假设前面开发客服助手的企业准备扩充计算设备，收到了三份采购方案。
-
-**第一份只报一张 GPU 卡。** 企业买到的是计算部件，还要有能够安装它的电脑或服务器，并确认电源、散热和安装空间是否合适。如果没有兼容的设备，买卡之外还要另配整机。
-
-**第二份报一台配有 GPU 的服务器。** 清单列出了 GPU、CPU、系统内存、硬盘、网卡、电源和散热组件。企业需要逐项核对实际安装的型号与数量；产品介绍中的“最多支持几张 GPU”，不代表报价已经包含这些卡。系统、驱动和模型是否安装好，也要看交付约定。[服务器配置示例](https://www.dell.com/support/manuals/en-us/poweredge-r760xa/r760xa_ism_pub/technical-specifications?guid=guid-94e9da8c-ba80-4275-9c3b-2790a62dccfb&lang=en-us)
-
-**第三份报一套机柜系统。** 清单可能包括多台计算设备、互连设备、机柜配电和部分冷却组件。此时既要看柜内包含什么，也要看机房能否接纳它：供电容量是否足够，热量如何排出，网络如何接入。柜内已有电源或冷却组件，不等于机房条件已经配齐。[数据中心部署规划](https://docs.nvidia.com/dgx-superpod/design-guides/dgx-superpod-data-center-design-h100/latest/planning.html)
-
-这三份方案交付的范围不同，不能直接按总价比较。企业需要先明确客服服务的实际负载，再核对各方案还缺哪些设备、安装部署和软件服务，并计入后续的电费、维护与场地成本，才能判断完成同一项工作的整体投入。
-
-### 服务规模扩大，软件配套也在延伸
+### 让设备持续提供服务
 
 研发阶段的工具会继续进入生产环境，但运营团队还需要管理任务、监测设备、处理故障。计算能力最终通过整套硬件和软件交付给使用者，而不是把多张 GPU 放在一起就自然成为服务。
 
 云上的产品还要看实际提供者与服务范围。截至本文核查日，DGX Cloud 官方页面将其描述为英伟达内部的 AI 开发与运行环境，并介绍与云伙伴及相关运维软件的关系。它不能仅凭“Cloud”这个名字，就与所有云厂商的对外服务直接等同。[DGX Cloud](https://www.nvidia.com/en-us/data-center/dgx-cloud/)
 
-客户可以通过不同形式取得这些能力：使用远端计算资源、自行部署模型，或调用已经部署好的服务。
+### 一份采购报价，包含了多少交付工作
+
+硬件、软件和运行条件明确后，采购范围才有依据。假设一家算力服务商准备扩充资源：如果只是给兼容的现有服务器增加 GPU，供应商可以单独报卡的价格；如果要新增计算节点，采购对象就是配有 GPU 的完整服务器，报价需要列明 GPU、CPU、系统内存、硬盘、网卡、电源等实际配置。**“最多支持几张 GPU”是扩展能力，不等于本次已经装了几张。** 系统、驱动和模型的安装是否包含在交付中，也需要单独确认。[服务器配置示例](https://www.dell.com/support/manuals/en-us/poweredge-r760xa/r760xa_ism_pub/technical-specifications?guid=guid-94e9da8c-ba80-4275-9c3b-2790a62dccfb&lang=en-us)
+
+如果扩容采用整套机柜系统，报价还可能包括柜内互连、配电和部分冷却组件。服务商仍需确认机房能否提供足够的电力、冷却和网络连接；柜内已有的组件，并不等于机房设施也包含在报价中。[数据中心部署规划](https://docs.nvidia.com/dgx-superpod/design-guides/dgx-superpod-data-center-design-h100/latest/planning.html)
+
+因此，这些价格对应不同的采购范围。比较方案时，需要按相同的服务需求，补齐尚未包含的设备、安装部署和软件服务，再计入场地、电费与维护成本。对于租用资源的客户，这些后台工作由服务商承担相应部分；对于服务商，它们都是把设备变成可持续交付的算力所需的投入。
+
+以上讨论的计算集中发生在机房。另一些客户则需要让计算跟随产品，进入机器人、工业设备和汽车。
 
 ## 四、设备与汽车厂商：把计算能力装进产品
 
