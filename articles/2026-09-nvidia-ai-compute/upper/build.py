@@ -8,7 +8,7 @@ import argparse
 import base64
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--version", choices=["v1", "v2", "v3", "v4"], default="v4")
+parser.add_argument("--version", choices=["v1", "v2", "v3", "v4", "v5"], default="v5")
 version = parser.parse_args().version
 
 HERE = Path(__file__).resolve().parent
@@ -16,7 +16,7 @@ ROOT = HERE.parents[2]
 spec = importlib.util.spec_from_file_location('wechat_renderer', ROOT / 'scripts/render.py')
 renderer = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(renderer)
-theme_file = 'theme.json' if version == 'v4' else 'theme-red-v1.json'
+theme_file = 'theme.json' if version in ('v4', 'v5') else 'theme-red-v1.json'
 theme = json.loads((ROOT / 'assets' / theme_file).read_text())
 sources = json.loads((HERE.parent / 'research/sources.json').read_text())
 source_map = {s['id']: s for s in sources}
@@ -25,6 +25,9 @@ title = md.splitlines()[0].removeprefix('# ')
 used_ids = set(re.findall(r'〔(\d{2})〕', md))
 sources = [s for s in sources if s['id'] in used_ids]
 body = renderer.render('\n'.join(md.splitlines()[1:]), theme)
+
+if version == 'v5':
+    body = re.sub(r'(<blockquote[^>]*style=")([^"]*)(")', lambda m: m[1] + m[2].replace('font-size:15px', 'font-size:16px') + m[3], body, count=1)
 
 # The inherited renderer wraps h2 in p. Remove that invalid wrapper here.
 body = re.sub(r'<p style="margin:0;">(<h2.*?</h2>)</p>', r'\1', body, flags=re.S)
@@ -77,10 +80,10 @@ header = '''<section style="margin:0 0 30px;padding:24px 0 0;border-top:4px soli
 <p style="margin:0;padding:13px 0;border-top:1px solid #EAEAEA;border-bottom:1px solid #EAEAEA;font-size:12px;line-height:1.7;letter-spacing:1px;color:#888888;">资料核查 / 2026.09.12</p>
 </section>'''
 
-if version in ('v3', 'v4'):
+if version in ('v3', 'v4', 'v5'):
     header = header.replace('从个人显卡到机柜系统<br>不同的工作，为什么需要不同的 GPU', '从游戏、专业工作到 AI 与机器人<br>产品如何分工，价格为何不同')
 
-if version == 'v4':
+if version in ('v4', 'v5'):
     banner = ROOT / 'assets/brand/2026-09-12-header-v2/03-retro-terminal.png'
     banner_data = base64.b64encode(banner.read_bytes()).decode('ascii')
     header = re.sub(r'<p style="margin:0;font-size:12px;line-height:1.6;letter-spacing:2px;color:#B91C1C;">.*?</p>',
@@ -100,7 +103,7 @@ footer = '<p style="margin:28px 0 12px;text-align:center;color:#B91C1C;font-size
 
 container_style = theme['container'] + 'box-sizing:border-box;max-width:640px;margin:0 auto;'
 article = f'<section style="{container_style}">\n{header}\n{body}\n{refs}\n{footer}\n</section>'
-if version == 'v4':
+if version in ('v4', 'v5'):
     palette = {'#B91C1C':'#17633F','#C0392B':'#287A51','#E5C4C0':'#C7DDCF','#FDF6F5':'#F2F7F3','#996b65':'#527563'}
     for original, replacement in palette.items():
         article = article.replace(original, replacement)
