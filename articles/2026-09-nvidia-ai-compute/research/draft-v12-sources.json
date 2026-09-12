@@ -346,5 +346,26 @@
     "url": "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0",
     "accessed": "2026-09-12",
     "read_scope_and_limit": "开放模型文件与图片生成使用代码；不声称任意电脑均可顺畅运行。"
+  },
+  {
+    "id": "S19",
+    "title": "Revit 官方介绍",
+    "url": "https://www.autodesk.com/products/revit/overview",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "支持软件用途或专业电脑定位；不引用性能、价格或最低配置。"
+  },
+  {
+    "id": "S20",
+    "title": "SOLIDWORKS 官方介绍",
+    "url": "https://www.solidworks.com/product/solidworks-design",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "支持软件用途或专业电脑定位；不引用性能、价格或最低配置。"
+  },
+  {
+    "id": "S21",
+    "title": "惠普：工作站与普通电脑",
+    "url": "https://www.hp.com/us-en/tech-takes/workstations/comparison/workstation-vs-desktop-business.html",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "支持软件用途或专业电脑定位；不引用性能、价格或最低配置。"
   }
 ]

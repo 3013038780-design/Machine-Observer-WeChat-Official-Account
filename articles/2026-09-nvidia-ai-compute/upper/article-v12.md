@@ -68,7 +68,9 @@ GPU 擅长把适合拆分的运算分配给许多计算单元同时处理。画�
 
 ### 设计师与工程师：项目变大，设备要求随之变化
 
-建筑设计、工程建模和影视制作可能涉及大型场景、复杂素材与指定的专业软件。工作站就是面向这类专业工作的计算机；RTX PRO 则是可以用于其中的专业 GPU 产品家族，并有面向其他部署形态的版本。需要携带设备工作的团队，还可以选择搭载 RTX PRO 笔记本 GPU 的移动工作站。[专业笔记本与移动工作站](https://www.nvidia.com/en-us/products/workstations/professional-laptops/)
+建筑师用 Revit 建立建筑模型，机械工程师用 SOLIDWORKS 设计零件和装配结构。随着项目规模扩大，他们需要根据工作要求配置电脑，兼顾处理能力、内存容量和软件运行的稳定性。[Revit 官方介绍](https://www.autodesk.com/products/revit/overview) [SOLIDWORKS 官方介绍](https://www.solidworks.com/product/solidworks-design)
+
+面向这类用途销售的专业电脑，也常被称为“工作站”，既有台式主机，也有笔记本。RTX PRO 则是可以装在这类电脑里的专业 GPU；需要经常携带设备的用户，也可以选择搭载 RTX PRO 笔记本 GPU 的电脑。[专业电脑与普通电脑的区别](https://www.hp.com/us-en/tech-takes/workstations/comparison/workstation-vs-desktop-business.html) [专业笔记本](https://www.nvidia.com/en-us/products/workstations/professional-laptops/)
 
 RTX PRO 的价值包括部分型号提供的大显存，以及专业软件认证、企业驱动与支持。认证意味着针对专业应用进行兼容性验证，帮助企业选择和维护设备。它解决的是项目环境中的具体要求，并不意味着每一家企业都必须使用专业卡。[Professional Desktop GPUs](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/)
 
