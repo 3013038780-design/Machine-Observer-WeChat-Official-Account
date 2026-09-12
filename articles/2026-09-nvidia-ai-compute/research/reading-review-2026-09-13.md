@@ -21,3 +21,16 @@
 ## 待后续审核
 
 第二节经过多轮补充，篇幅明显重于其余章节，仍需用户整体文字审阅；本轮不删除已要求的模型、软件、硬件及服务例子。全文未重新做全部事实与价格核查，未生成 HTML。
+
+## 用户确认三步逻辑后的重写
+
+第三节正文已整体重写。逐段检查任务/产品关系、同级小标题、第二和第四节衔接；第三节仅保留三个小标题。示例主体保持服务商，单模型多副本与拆分计算分开讲。补回 HBM 不是所有 GPU 通用配置的解释。Groq 3 LPX 移到文末附录保留。
+
+本轮复核官方页面（2026-09-13）：
+- https://www.nvidia.com/en-us/data-center/gb200-nvl72/ ：计算单元、机柜互连与液冷；未抄录性能倍数。
+- https://www.nvidia.com/en-us/data-center/h200/ ：HBM3e；未引入容量与带宽数字。
+- https://docs.coreweave.com/products/inference/scaling ：副本扩容、并发与响应/处理量取舍，转述为一段，不声称复现测试。
+- https://www.nvidia.com/en-us/data-center/dgx-cloud/ ：内部云环境、跨伙伴资源、经验转化。
+- https://nvidianews.nvidia.com/news/nvidia-groq-3-lpx-now-in-full-production-with-world-class-speed-for-agentic-ai ：保留专用处理器资料至附录。
+
+其他产品沿用既有官方来源，未重查全文价格。现稿仍待用户文字审阅，不视为定稿。

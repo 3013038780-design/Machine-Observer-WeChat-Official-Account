@@ -124,53 +124,49 @@ DGX Spark 采用 CPU 与 GPU 共享的统一内存。它能容纳多大的任务
 
 至此，团队使用的产品有了明确分工：模型提供生成回答的能力，电脑中的 GPU 执行计算，开发与部署软件让模型能够被调整、运行并接入应用。客服助手进入正式使用后，如果越来越多客户同时提问，就需要更多计算资源和持续运行的保障。这些工作可以由企业自己的团队承担，也可以通过租用算力或调用模型服务交给相应服务商。接下来从这些资源的提供者出发，看看云厂商与算力运营商如何组织设备、网络和软件。
 
-## 三、云厂商与算力运营商：组织大规模计算
+## 三、云厂商与算力运营商：把计算设备变成可用的服务
 
-企业可以向腾讯云、阿里云等云厂商租用计算资源。模型实际运行在服务商提供的服务器上，这些服务器部署在数据中心等设施中。服务商负责相应设备和服务的运行，企业则按所选服务承担应用开发或模型部署工作。[腾讯云 GPU 云服务器](https://cloud.tencent.com/product/gpu) [阿里云 GPU 云服务器](https://www.alibabacloud.com/help/en/egs/quick-reference)
+前面那家企业将客服模型部署到云上以后，模型仍要在实际的服务器上运行。腾讯云、阿里云等云厂商提供这些计算资源；经营算力服务的企业也常被称为算力运营商，两者的业务可能重叠。服务器集中部署在数据中心等设施中，由相应团队管理。[腾讯云 GPU 云服务器](https://cloud.tencent.com/product/gpu) [阿里云 GPU 云服务器](https://www.alibabacloud.com/help/en/egs/quick-reference)
 
-经营计算资源、向客户提供算力服务的企业，也常被称为算力运营商，与云厂商的业务可能重叠。**算力中心则是集中部署和运行计算设备的设施**，包含服务器、网络以及供电、散热等配套。部分企业和科研机构也会自建计算集群，供内部研发使用。无论资源对外出租还是内部使用，都需要运维团队管理设备、网络和系统，让研究员与开发者能够持续运行任务。
+对服务商而言，要解决的问题是：怎样让许多客户同时使用这些设备，完成模型训练、推理或其他计算工作？这需要从一台服务器开始，再考虑多台设备协作，最后把供电、散热和运行管理配齐。
 
-### 使用者要完成任务，运营者要让资源有效协作
+### 一台服务器，怎样完成模型计算
 
-这些计算资源可能用于训练模型、提供推理服务，也可能用于科学计算或图形任务。A100、H100、H200、Blackwell 系列的 B200、B300，以及当前官方介绍的 Rubin 平台，都属于理解数据中心产品时会遇到的名称。不同产品和代际可以服务不同系统需求。[Data Center](https://www.nvidia.com/en-us/data-center/) [HGX AI Factory: Components](https://docs.nvidia.com/enterprise-reference-architectures/hgx-ai-factory/latest/components.html) [NVIDIA A100](https://www.nvidia.com/en-us/data-center/a100/)
+服务器也是计算机，只是配置与设计围绕业务运行的需要展开。以运行客服模型的 GPU 服务器为例：存储设备保存模型文件，系统内存承接程序使用的数据，CPU 运行服务程序，GPU 执行适合它的模型计算。生成回答时，GPU 需要反复读取模型参数和中间数据，因此计算速度与内存的数据传输能力都很重要。
 
-数据中心 GPU 通常需要放在相应的系统配置中理解：内存容量、带宽、设备间互连和软件配套共同影响任务表现。一些产品采用 HBM，即 High Bandwidth Memory，高带宽内存，通过堆叠等技术支持大量数据传输。HBM 描述内存技术，不是 GPU 的另一个档次。[Micron：HBM](https://www.micron.com/products/memory/hbm)
+这也是数据中心 GPU 与个人显卡的一个重要区别。个人显卡通常还要兼顾游戏、显示和创作；面向大模型的数据中心 GPU 则更强调容纳模型、传输数据，以及与其他 GPU 协作的能力。英伟达的 A100、H100、H200，以及 Blackwell 系列的 B200、B300，都是这条产品线上不同代际的代表；新一代 Rubin 平台也延续了面向大规模 AI 计算的方向。它们并非按“训练卡”和“推理卡”严格分开，选型仍要看具体任务。[数据中心产品](https://www.nvidia.com/en-us/data-center/) [A100 的训练与推理用途](https://www.nvidia.com/en-us/data-center/a100/)
 
-承接前面的客服助手，运营团队此时面对的仍然是推理，但需要服务更多同时在线的用户。训练任务也可能因模型和数据规模扩大而进入计算集群。两种任务都要考虑设备容量、计算速度与成本，具体配置则取决于各自的工作量。
+**这些 GPU 都需要内存，但采用的内存技术不同。** 例如，RTX 5090 使用 GDDR7 显存，H200 使用 HBM3e。HBM 是 High Bandwidth Memory，即高带宽内存，通过堆叠内存芯片等设计提高数据传输能力。当模型计算需要频繁读取大量数据时，更高带宽有助于减少等待。它是 GPU 内存的一种技术，不是需要额外添置的一台设备。[RTX 5090](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) [H200](https://www.nvidia.com/en-us/data-center/h200/) [HBM 技术](https://www.micron.com/products/memory/hbm)
 
-比如，一个服务希望尽快回答单个请求，另一个服务希望同时处理更多请求，二者的运行安排可能不同。CoreWeave 的部署文档就要求根据真实请求测试并发设置，权衡响应速度与整体处理量。[CoreWeave：推理扩容](https://docs.coreweave.com/products/inference/scaling)
+服务商采购的也不只有 GPU。服务器里的 CPU 可以来自不同厂商，英伟达自己的 CPU 产品包括 Grace 和 Vera；它们负责的通用处理工作，与 GPU 的模型计算相互配合。[系统组件](https://docs.nvidia.com/enterprise-reference-architectures/hgx-ai-factory/latest/components.html)
 
-针对不同服务要求，专用加速硬件也在发展。英伟达已公布 Groq 3 LPX 量产信息，其中的 LPU 是面向推理的专用处理器，LPX 是系统名称。它展示了针对特定计算需求设计硬件的方向；具体表现仍应在相应任务和部署条件下比较。[Groq 3 LPX Now in Full Production](https://nvidianews.nvidia.com/news/nvidia-groq-3-lpx-now-in-full-production-with-world-class-speed-for-agentic-ai)
+### 多台设备，怎样一起承担更多工作
 
-### 从计算部件到完整系统
+假设越来越多客户同时向模型提问，一台服务器已经忙不过来。服务商可以在更多设备上运行模型副本，把不同请求分配过去。另一种情况是模型本身很大，需要把模型或计算任务分配给多张 GPU；这时，一次任务的不同部分还需要在设备之间交换数据。
 
-服务商确定需要承担的任务后，还要把计算部件组合成能够协同工作的系统。增加 GPU 数量可以扩大部分任务的处理能力，但设备之间交换数据的速度也会影响效果。
+**增加设备只是扩容的一部分，让设备及时交换数据同样重要。** 如果 GPU 算完自己的部分，却一直等不到下一步需要的数据，再强的计算能力也会被等待拖慢。
 
-CPU 在这里继续负责通用程序、数据与执行流程。英伟达的 Grace、Vera 是 CPU 产品；BlueField 则属于 DPU，Data Processing Unit，数据处理单元，承担部分网络、存储和安全处理工作。它们与 GPU 各有分工。[Data Center](https://www.nvidia.com/en-us/data-center/) [HGX AI Factory: Components](https://docs.nvidia.com/enterprise-reference-architectures/hgx-ai-factory/latest/components.html)
+英伟达为此提供了两类连接能力。**NVLink 和 NVLink Switch**用于支持高速 GPU 互连；当系统扩展到更多服务器时，**ConnectX 网络适配器、Spectrum-X 以太网平台和 Quantum InfiniBand 网络产品**参与服务器之间的通信。BlueField 则是 DPU，即数据处理单元，可以承担部分网络、存储和安全处理工作。[GPU 互连](https://www.nvidia.com/en-us/data-center/nvlink/) [网络产品](https://www.nvidia.com/en-us/networking/products/)
 
-多张 GPU 还需要高速互连。NVLink 与 NVLink Switch 连接计算部件；ConnectX 网络适配器、Spectrum-X 以太网平台和 Quantum InfiniBand 网络产品，则参与更大范围的设备通信。[NVLink and NVLink Switch](https://www.nvidia.com/en-us/data-center/nvlink/) [Networking Products](https://www.nvidia.com/en-us/networking/products/)
+这里的“带宽”也有了不同对象：GPU 从自己的显存读取数据，看显存带宽；GPU 之间交换数据，看互连能力；跨服务器传输数据，还要看服务器网络。它们对应不同环节，不能用一个数字概括整套系统。
 
-对于运维团队，这些名字对应一个很实际的问题：GPU 算完自己的部分以后，能否及时取得其他设备的数据？等待越多，计算资源就越难被充分利用。这也使**显存带宽、GPU 互连带宽、服务器网络带宽**成为不同指标，分别描述不同位置的数据传输能力。
+这些部件可以通过不同方式组成设备。**HGX 是多 GPU 计算平台**，服务器厂商围绕它补齐 CPU、内存、存储等配置；**MGX 是模块化系统参考架构**，帮助厂商设计和组合系统；**DGX 则是英伟达的系统家族**。因此，HGX、MGX 和 DGX 不是三种显卡型号。[HGX](https://docs.nvidia.com/enterprise-reference-architectures/hgx-ai-factory/latest/components.html) [MGX](https://www.nvidia.com/en-us/data-center/products/mgx/) [DGX](https://www.nvidia.com/en-us/data-center/dgx-platform/)
 
-这些部件怎样组成整机，也有不同产品形态。**HGX 是多 GPU 计算平台**，服务器厂商围绕它配置 CPU、内存、存储等，形成完整设备；**MGX 是模块化系统参考架构**，为厂商设计和组合系统提供基础；**DGX 是英伟达的系统家族**，DGX SuperPOD 则涉及更大规模的集成方案。[HGX AI Factory: Components](https://docs.nvidia.com/enterprise-reference-architectures/hgx-ai-factory/latest/components.html) [MGX](https://www.nvidia.com/en-us/data-center/products/mgx/) [DGX Platform](https://www.nvidia.com/en-us/data-center/dgx-platform/)
+以 GB200 为例，它把 Grace CPU 与 Blackwell GPU 组合在一起；**GB200 NVL72 则进一步把计算单元和高速互连组织成液冷机柜系统**。更大规模的集群还会涉及 DGX SuperPOD 这类集成方案。随着设备规模扩大，英伟达提供的产品也从处理器延伸到了系统及其连接方式。[GB200 NVL72](https://www.nvidia.com/en-us/data-center/gb200-nvl72/) [DGX SuperPOD](https://www.nvidia.com/en-us/data-center/dgx-superpod/)
 
-再看 GB200：它将 Grace CPU 与 Blackwell GPU 组合成计算单元；GB200 NVL72 将这些计算单元与互连组织成机柜级系统。**GPU 是部件，计算单元是组合，服务器与机柜系统则包含更完整的配置。** 部件越来越多，系统对供电、散热和运行维护的要求也随之增加。[GB200 NVL72](https://www.nvidia.com/en-us/data-center/gb200-nvl72/)
+### 设备装好后，怎样持续向客户提供服务
 
-### 让设备持续提供服务
+机柜接通以后，服务商还要安排任务、监测设备、处理故障，并根据使用量调整资源。对于托管的模型服务，还需要管理模型运行与请求分配；对于出租的云服务器，客户通常自行管理其中的应用和模型。
 
-研发阶段的工具会继续进入生产环境，但运营团队还需要管理任务、监测设备、处理故障。计算能力最终通过整套硬件和软件交付给使用者，而不是把多张 GPU 放在一起就自然成为服务。
+例如，客服请求增多时，运行软件可以把请求分给更多模型副本。但同时处理的请求越多，并不代表每位客户都能更快收到回答。云服务商 CoreWeave 的文档要求用真实业务的输入长度、输出长度等条件测试，找到响应速度与总体处理量之间合适的设置。**服务商要衡量的是在可接受的等待时间内能完成多少工作，而不只是装了多少张 GPU。**[CoreWeave：推理服务扩容](https://docs.coreweave.com/products/inference/scaling)
 
-云上的产品还要看实际提供者与服务范围。截至本文核查日，DGX Cloud 官方页面将其描述为英伟达内部的 AI 开发与运行环境，并介绍与云伙伴及相关运维软件的关系。它不能仅凭“Cloud”这个名字，就与所有云厂商的对外服务直接等同。[DGX Cloud](https://www.nvidia.com/en-us/data-center/dgx-cloud/)
+英伟达自身也在运行这样的环境。其官方页面将 **DGX Cloud** 描述为内部用于开发和运行 AI 的云环境，跨云服务伙伴使用计算资源，并将实践转化为可供伙伴采用的软件与系统方案。这里的 DGX Cloud 指英伟达自身的研发与运行环境，展示的是硬件、模型软件和运营管理怎样配合。[DGX Cloud](https://www.nvidia.com/en-us/data-center/dgx-cloud/)
 
-### 一份采购报价，包含了多少交付工作
+软件之外，机房必须提供匹配的供电、冷却和网络条件。服务器、网络与这些设施共同支撑集中计算；自建计算集群的企业和科研机构，也要面对同样的运行问题。[机房部署规划](https://docs.nvidia.com/dgx-superpod/design-guides/dgx-superpod-data-center-design-h100/latest/planning.html)
 
-硬件、软件和运行条件明确后，采购范围才有依据。假设一家算力服务商准备扩充资源：如果只是给兼容的现有服务器增加 GPU，供应商可以单独报卡的价格；如果要新增计算节点，采购对象就是配有 GPU 的完整服务器，报价需要列明 GPU、CPU、系统内存、硬盘、网卡、电源等实际配置。**“最多支持几张 GPU”是扩展能力，不等于本次已经装了几张。** 系统、驱动和模型的安装是否包含在交付中，也需要单独确认。[服务器配置示例](https://www.dell.com/support/manuals/en-us/poweredge-r760xa/r760xa_ism_pub/technical-specifications?guid=guid-94e9da8c-ba80-4275-9c3b-2790a62dccfb&lang=en-us)
+这些条件也决定了一份报价包含多少工作。假设服务商要增加计算资源：给兼容的现有服务器加装 GPU，采购的是板卡；新增一台 GPU 服务器，报价就应列出实际配置的 GPU、CPU、系统内存、硬盘、网卡和电源等。若采购整套机柜系统，还要核对柜内互连、配电和冷却组件是否包含，以及机房需要做哪些配套改造。**“支持安装几张 GPU”不等于报价已经包含几张，设备交付也不自动包含模型部署与后续维护。**[服务器配置示例](https://www.dell.com/support/manuals/en-us/poweredge-r760xa/r760xa_ism_pub/technical-specifications?guid=guid-94e9da8c-ba80-4275-9c3b-2790a62dccfb&lang=en-us)
 
-如果扩容采用整套机柜系统，报价还可能包括柜内互连、配电和部分冷却组件。服务商仍需确认机房能否提供足够的电力、冷却和网络连接；柜内已有的组件，并不等于机房设施也包含在报价中。[数据中心部署规划](https://docs.nvidia.com/dgx-superpod/design-guides/dgx-superpod-data-center-design-h100/latest/planning.html)
-
-因此，这些价格对应不同的采购范围。比较方案时，需要按相同的服务需求，补齐尚未包含的设备、安装部署和软件服务，再计入场地、电费与维护成本。对于租用资源的客户，这些后台工作由服务商承担相应部分；对于服务商，它们都是把设备变成可持续交付的算力所需的投入。
-
-以上讨论的计算集中发生在机房。另一些客户则需要让计算跟随产品，进入机器人、工业设备和汽车。
+因此，服务商提供的算力，背后既有计算设备，也有网络、软件和持续运行的投入。企业租用资源，正是将其中一部分建设与维护工作交给服务商。接下来，计算还会走出机房，进入机器人和汽车等产品。
 
 ## 四、设备与汽车厂商：把计算能力装进产品
 
@@ -217,6 +213,10 @@ Omniverse 提供三维与物理仿真应用所需的库、接口和服务；Isaa
 | DPU | Data Processing Unit，数据处理单元 | 处理部分网络、存储和安全基础设施任务 |
 
 系统内存与 GPU 内存的划分依设备设计而异；采用统一内存的系统不能按独立显卡的方式简单相加。[Intel：GPU 与 CPU](https://www.intel.com/content/www/us/en/products/docs/processors/what-is-a-gpu.html) [Intel：RAM 与处理器](https://www.intel.com/content/www/us/en/learn/what-is-ram-vs-processor.html) [IBM：AI 基础设施术语](https://redbooks.ibm.com/docs/MD260021/MD260021.html) [HGX AI Factory: Components](https://docs.nvidia.com/enterprise-reference-architectures/hgx-ai-factory/latest/components.html) [NVLink and NVLink Switch](https://www.nvidia.com/en-us/data-center/nvlink/)
+
+## 附：数据中心产品的补充方向
+
+除 GPU 外，面向特定推理任务的专用处理器也在发展。英伟达已公布 Groq 3 LPX 的量产信息：LPU 是面向推理的处理器，LPX 是相应系统名称。这是专用计算的补充方向，具体表现需要按模型、任务和部署条件比较。[Groq 3 LPX 官方公告](https://nvidianews.nvidia.com/news/nvidia-groq-3-lpx-now-in-full-production-with-world-class-speed-for-agentic-ai)
 
 ## 附：两种官方价格口径样本
 
