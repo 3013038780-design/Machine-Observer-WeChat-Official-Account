@@ -1,0 +1,308 @@
+[
+  {
+    "id": "S01",
+    "title": "RTX 5090 规格",
+    "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/",
+    "accessed": "2026-09-12"
+  },
+  {
+    "id": "R20",
+    "type": "官方",
+    "title": "DGX Spark",
+    "author": "NVIDIA",
+    "published": "未标注",
+    "url": "https://www.nvidia.com/en-us/products/workstations/dgx-spark/",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "桌面 AI 系统定位；不能与 RTX Spark 混用。"
+  },
+  {
+    "id": "S03",
+    "title": "Intel：GPU 与 CPU",
+    "url": "https://www.intel.com/content/www/us/en/products/docs/processors/what-is-a-gpu.html",
+    "accessed": "2026-09-12"
+  },
+  {
+    "id": "R04",
+    "type": "官方",
+    "title": "GeForce RTX 50 Series",
+    "author": "NVIDIA",
+    "published": "未标注",
+    "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "桌面产品、用途与功能入口；笔记本需分别核对。"
+  },
+  {
+    "id": "S04",
+    "title": "Kingston：内存与存储",
+    "url": "https://www.kingston.com/en/blog/pc-performance/difference-between-memory-storage",
+    "accessed": "2026-09-12"
+  },
+  {
+    "id": "S05",
+    "title": "IBM：AI 基础设施术语",
+    "url": "https://redbooks.ibm.com/docs/MD260021/MD260021.html",
+    "accessed": "2026-09-12"
+  },
+  {
+    "id": "R05",
+    "type": "官方",
+    "title": "Professional Desktop GPUs",
+    "author": "NVIDIA",
+    "published": "未标注",
+    "url": "https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "RTX PRO、旧代专业卡及对照；不能把家族名当架构名。"
+  },
+  {
+    "id": "S02",
+    "title": "RTX PRO 6000 工作站版规格",
+    "url": "https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000/",
+    "accessed": "2026-09-12"
+  },
+  {
+    "id": "R31",
+    "type": "原始测试",
+    "title": "Topaz Video 1.6.1 Professional GPU Performance Analysis",
+    "author": "Peter Emery / Puget Systems",
+    "published": "页面发表2026-08-24，另显示更新2026-08-21",
+    "url": "https://www.pugetsystems.com/labs/articles/topaz-video-1-6-1-professional-gpu-performance-analysis/",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "阅读方法和结果；作者注明1.7已发布但未重测，日期字段不一致，保留原口径。"
+  },
+  {
+    "id": "R03",
+    "type": "官方",
+    "title": "Data Center",
+    "author": "NVIDIA",
+    "published": "未标注",
+    "url": "https://www.nvidia.com/en-us/data-center/",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "当前目录及平台入口；目录存在不等于所有地区现货。"
+  },
+  {
+    "id": "R12",
+    "type": "官方",
+    "title": "HGX AI Factory: Components",
+    "author": "NVIDIA",
+    "published": "2026-05-18 页面更新",
+    "url": "https://docs.nvidia.com/enterprise-reference-architectures/hgx-ai-factory/latest/components.html",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "HGX 底板与完整系统关系；参数表存在 CPU 行错位，不抄相关数值。"
+  },
+  {
+    "id": "S07",
+    "title": "NVIDIA A100",
+    "url": "https://www.nvidia.com/en-us/data-center/a100/",
+    "accessed": "2026-09-12"
+  },
+  {
+    "id": "S06",
+    "title": "Micron：HBM",
+    "url": "https://www.micron.com/products/memory/hbm",
+    "accessed": "2026-09-12"
+  },
+  {
+    "id": "S08",
+    "title": "NVIDIA L40S",
+    "url": "https://www.nvidia.com/en-us/data-center/l40s/",
+    "accessed": "2026-09-12"
+  },
+  {
+    "id": "R13",
+    "type": "官方",
+    "title": "NVLink and NVLink Switch",
+    "author": "NVIDIA",
+    "published": "未标注",
+    "url": "https://www.nvidia.com/en-us/data-center/nvlink/",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "GPU 互连与交换组件；规格有 preliminary 标记，不当成最终实测。"
+  },
+  {
+    "id": "R09",
+    "type": "官方",
+    "title": "Networking Products",
+    "author": "NVIDIA",
+    "published": "未标注",
+    "url": "https://www.nvidia.com/en-us/networking/products/",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "网络设备、适配器、DPU、线缆及软件；不采用其旧速率说明作为最新规格。"
+  },
+  {
+    "id": "R22",
+    "type": "官方",
+    "title": "Groq 3 LPX Now in Full Production",
+    "author": "NVIDIA",
+    "published": "2026-08-24",
+    "url": "https://nvidianews.nvidia.com/news/nvidia-groq-3-lpx-now-in-full-production-with-world-class-speed-for-agentic-ai",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "LPU 与 LPX 系统及官方量产声明；未采用厂商性能数字为独立实测。"
+  },
+  {
+    "id": "R11",
+    "type": "官方",
+    "title": "MGX",
+    "author": "NVIDIA",
+    "published": "未标注",
+    "url": "https://www.nvidia.com/en-us/data-center/products/mgx/",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "模块化参考架构介绍，OEM/ODM 与系统构建关系。"
+  },
+  {
+    "id": "R10",
+    "type": "官方",
+    "title": "DGX Platform",
+    "author": "NVIDIA",
+    "published": "未标注",
+    "url": "https://www.nvidia.com/en-us/data-center/dgx-platform/",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "平台入口及系统层级；具体配置仍需逐产品核查。"
+  },
+  {
+    "id": "R33",
+    "type": "原始测试",
+    "title": "NVIDIA DGX Spark with SGLang",
+    "author": "Jerry Zhou、Richard Chen / LMSYS",
+    "published": "2025-10-13",
+    "url": "https://www.lmsys.org/blog/2025-10-13-nvidia-dgx-spark/",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "阅读测试方法和结果；披露 NVIDIA 提前提供设备，软件版本较早；未打开原始表格或复测。"
+  },
+  {
+    "id": "R06",
+    "type": "官方",
+    "title": "Jetson Embedded Systems",
+    "author": "NVIDIA",
+    "published": "未标注",
+    "url": "https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "模块、开发套件和软件生态；未逐款核实交货。"
+  },
+  {
+    "id": "R17",
+    "type": "官方",
+    "title": "IGX",
+    "author": "NVIDIA",
+    "published": "未标注",
+    "url": "https://www.nvidia.com/en-us/edge-computing/products/igx/",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "工业级边缘 AI 平台定位；不展开安全认证细项。"
+  },
+  {
+    "id": "R07",
+    "type": "官方",
+    "title": "Autonomous Vehicles",
+    "author": "NVIDIA",
+    "published": "未标注",
+    "url": "https://www.nvidia.com/en-us/solutions/autonomous-vehicles/",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "DRIVE 硬件、软件、参考平台与模型；不是整车自动驾驶能力认证。"
+  },
+  {
+    "id": "R15",
+    "type": "官方",
+    "title": "CUDA Toolkit",
+    "author": "NVIDIA",
+    "published": "未标注",
+    "url": "https://developer.nvidia.com/cuda/toolkit",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "开发环境、库和工具；区分 CUDA 平台、工具包与 CUDA 核心。"
+  },
+  {
+    "id": "R16",
+    "type": "官方",
+    "title": "AI",
+    "author": "NVIDIA",
+    "published": "未标注",
+    "url": "https://www.nvidia.com/en-us/ai/",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "AI Enterprise、NIM、NeMo 等定位入口；不是逐软件许可证核查。"
+  },
+  {
+    "id": "R14",
+    "type": "官方",
+    "title": "DGX Cloud",
+    "author": "NVIDIA",
+    "published": "未标注",
+    "url": "https://www.nvidia.com/en-us/data-center/dgx-cloud/",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "当前页面将其定义为 NVIDIA 内部云环境；不能据此断言历史商业服务全部终止。"
+  },
+  {
+    "id": "R19",
+    "type": "官方",
+    "title": "Omniverse",
+    "author": "NVIDIA",
+    "published": "未标注",
+    "url": "https://www.nvidia.com/en-us/omniverse/",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "库、API、服务及仿真用途；不是一款 GPU。"
+  },
+  {
+    "id": "R18",
+    "type": "官方",
+    "title": "Isaac",
+    "author": "NVIDIA",
+    "published": "未标注",
+    "url": "https://developer.nvidia.com/isaac",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "ROS、Sim、Lab、GR00T 的平台关系及开发流程。"
+  },
+  {
+    "id": "R26",
+    "type": "访谈",
+    "title": "Deepu Talla About Physical AI and Robotics",
+    "author": "Austin Lyons / Deepu Talla",
+    "published": "2026-05-25",
+    "url": "https://www.chipstrat.com/p/an-interview-with-nvidias-deepu-talla",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "阅读公开正文的技术背景、数据到部署、三类计算系统章节；未声称完整收听。"
+  },
+  {
+    "id": "S09",
+    "title": "Intel：RAM 与处理器",
+    "url": "https://www.intel.com/content/www/us/en/learn/what-is-ram-vs-processor.html",
+    "accessed": "2026-09-12"
+  },
+  {
+    "id": "R35",
+    "type": "官方价格",
+    "title": "GeForce RTX 5090 marketplace",
+    "author": "NVIDIA Marketplace",
+    "published": "未标注",
+    "url": "https://marketplace.nvidia.com/en-us/consumer/graphics-cards/nvidia-geforce-rtx-5090/",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "主商品价格1999美元；页面显示缺货，未验证结账、税运费或成交。"
+  },
+  {
+    "id": "R36",
+    "type": "官方价格",
+    "title": "RTX PRO 6000 Blackwell Workstation Edition marketplace",
+    "author": "NVIDIA Marketplace",
+    "published": "未标注",
+    "url": "https://marketplace.nvidia.com/en-us/enterprise/laptops-workstations/nvidia-rtx-pro-6000-blackwell-workstation-edition/",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "主商品价格16000美元；缺货。关联推荐卡片规格有异常，不作为规格来源。"
+  },
+  {
+    "id": "S10",
+    "title": "GB200 NVL72",
+    "url": "https://www.nvidia.com/en-us/data-center/gb200-nvl72/",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "核查Grace CPU与Blackwell GPU组合、机柜集成及液冷；未引用峰值性能。"
+  },
+  {
+    "id": "S11",
+    "title": "NVIDIA Studio 创作者平台",
+    "url": "https://www.nvidia.com/en-us/studio/",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "读取创作应用、工具及Studio驱动介绍；未采用性能倍数。"
+  },
+  {
+    "id": "S12",
+    "title": "CoreWeave：推理扩容",
+    "url": "https://docs.coreweave.com/products/inference/scaling",
+    "accessed": "2026-09-12",
+    "published": "2026-08-17",
+    "read_scope_and_limit": "读取并发与延迟/吞吐权衡及真实请求测试要求；未引用计费。"
+  }
+]
