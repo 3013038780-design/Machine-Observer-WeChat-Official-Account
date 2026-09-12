@@ -1,0 +1,66 @@
+[
+  {
+    "file": "01-product-map.png",
+    "cssWidth": 366,
+    "cssHeight": 343.5,
+    "pixelWidth": 1098,
+    "pixelHeight": 1032,
+    "text": "工作环境\t产品家族\t主要任务\n个人电脑\tGeForce RTX\t游戏、视频创作、本地 AI\n专业工作站\tRTX PRO\t设计、渲染、模拟、AI 开发\n数据中心\tL 系列、RTX PRO Server；A／H／B 与 Rubin\t视频与图形服务、AI 训练和推理\n机器人与边缘设备\tJetson\t在设备附近处理传感器数据、运行 AI\n汽车\tDRIVE\t车载感知、计算与自动驾驶应用开发"
+  },
+  {
+    "file": "02-architecture.png",
+    "cssWidth": 366,
+    "cssHeight": 280.5,
+    "pixelWidth": 1098,
+    "pixelHeight": 843,
+    "text": "架构名称\t代表产品\nAmpere\tGeForce RTX 30 系列、RTX A6000、A100\nAda Lovelace\tGeForce RTX 40 系列、RTX 6000 Ada\nHopper\tH100、H200\nBlackwell／Blackwell Ultra\tRTX 50 系列、RTX PRO Blackwell；B200／B300\nRubin\tRubin GPU、Vera Rubin 系统"
+  },
+  {
+    "file": "03-components.png",
+    "cssWidth": 366,
+    "cssHeight": 547.5,
+    "pixelWidth": 1098,
+    "pixelHeight": 1644,
+    "text": "名称与英文全称\t中文含义与作用\nCPU\nCentral Processing Unit\t中央处理器。 执行通用程序、处理控制逻辑，并参与组织和调度计算任务。\nGPU\nGraphics Processing Unit\t图形处理器。 擅长并行处理大量计算，既用于生成画面，也用于 AI 等任务；通常与 CPU 配合。\nRAM\nRandom Access Memory\t随机存取存储器。 电脑配置里的“内存”通常指系统内存，用来临时存放运行中的程序与数据；常见系统内存断电后不保留内容。\nVRAM\nVideo Random Access Memory\t显存。 GPU 工作时使用的内存，保存画面数据、模型权重和计算过程中的数据；独立显卡通常自带专用显存。\nSSD\nSolid-State Drive\t固态硬盘。 长期保存系统、软件、文件和模型，断电后仍能保留数据。\nHDD\nHard Disk Drive\t机械硬盘。 同样用于长期保存数据，采用磁性盘片，与 SSD 的存储方式不同。"
+  },
+  {
+    "file": "04-geforce-prices.png",
+    "cssWidth": 366,
+    "cssHeight": 289.5,
+    "pixelWidth": 1098,
+    "pixelHeight": 870,
+    "text": "桌面型号\t标称显存\t美国发布起价\nRTX 5050\t8 GB\t$249\nRTX 5060\t8 GB\t$299\nRTX 5060 Ti\t8 GB／16 GB\t$379／$429\nRTX 5070\t12 GB\t$549\nRTX 5070 Ti\t16 GB\t$749\nRTX 5080\t16 GB\t$999\nRTX 5090\t32 GB\t$1,999"
+  },
+  {
+    "file": "05-metrics.png",
+    "cssWidth": 366,
+    "cssHeight": 433.5,
+    "pixelWidth": 1098,
+    "pixelHeight": 1302,
+    "text": "参数与英文\t它回答什么问题？\n容量\nCapacity\t能放多少数据？ 内存、显存和硬盘都可以用 GB、TB 表示容量，但它们是不同位置的空间。\n显存带宽\nMemory Bandwidth\tGPU 与显存之间，每秒能传输多少数据？ 常用 GB/s、TB/s 表示；这里的 s 是秒。\nGPU 互联带宽\nGPU Interconnect Bandwidth\t不同 GPU 之间，每秒能交换多少数据？ 影响多卡协作，和显存带宽不是同一个指标。\n算力\nCompute Performance\t处理器能完成多少计算？ 常见指标有 FLOPS（Floating-Point Operations per Second，每秒浮点运算次数）与 TOPS（Trillion Operations per Second，每秒万亿次运算）；比较时还要看精度与测试条件。"
+  },
+  {
+    "file": "06-workstations.png",
+    "cssWidth": 366,
+    "cssHeight": 253.5,
+    "pixelWidth": 1098,
+    "pixelHeight": 762,
+    "text": "RTX PRO Blackwell 型号\t标称显存\n2000\t16 GB\n4000／4000 SFF\t24 GB\n4500 工作站版\t32 GB\n5000\t48 GB／72 GB\n5500 工作站版\t84 GB\n6000 工作站版／Max-Q 版\t96 GB"
+  },
+  {
+    "file": "07-gpu-specs.png",
+    "cssWidth": 366,
+    "cssHeight": 181.5,
+    "pixelWidth": 1098,
+    "pixelHeight": 546,
+    "text": "GPU 版本\t标称显存\t显存带宽\nH100 SXM\t80 GB\t3.35 TB/s\nH200 SXM\t141 GB HBM3e\t4.8 TB/s\nB200 SXM\t180 GB HBM3e\t最高 8 TB/s\nB300 SXM\t288 GB HBM3e\t最高 8 TB/s"
+  },
+  {
+    "file": "08-market-prices.png",
+    "cssWidth": 366,
+    "cssHeight": 244.5,
+    "pixelWidth": 1098,
+    "pixelHeight": 735,
+    "text": "商品与销售方\t页面报价与状态\nRTX 5090，NVIDIA 官方商城\t$1,999；缺货\nRTX PRO 6000 Blackwell 工作站版，NVIDIA 官方商城\t$16,000；缺货\nRTX PRO 6000 Blackwell 工作站版 OEM，B&H\t$17,999.99；显示有货\nPNY H200 NVL 套件，CDW\t$33,731.99；交期需确认"
+  }
+]
