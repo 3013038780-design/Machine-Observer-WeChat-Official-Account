@@ -1,0 +1,28 @@
+{
+  "source": "https://store.steampowered.com/hwsurvey/",
+  "queried": "2026-09-13",
+  "method": "页面厂商图表 JavaScript series 最新数据点；页面标题 August 2026",
+  "scope": "Steam 自愿匿名硬件调查，不能代表全部 PC 用户",
+  "data": [
+    {
+      "vendor": "NVIDIA",
+      "period_utc": "2026-08-01T07:00:00+00:00",
+      "percent": 72.88
+    },
+    {
+      "vendor": "AMD",
+      "period_utc": "2026-08-01T07:00:00+00:00",
+      "percent": 18.68
+    },
+    {
+      "vendor": "INTEL",
+      "period_utc": "2026-08-01T07:00:00+00:00",
+      "percent": 8.03
+    },
+    {
+      "vendor": "OTHER",
+      "period_utc": "2026-08-01T07:00:00+00:00",
+      "percent": 0.41
+    }
+  ]
+}

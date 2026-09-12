@@ -6,7 +6,7 @@
 
 他们都可能使用英伟达产品，但需要解决的问题不同，买到或使用的东西也不同。
 
-有的人买的是一张卡，有的企业采购整套服务器，还有开发者通过云端使用硬件，同时借助软件工具完成工作。因此，理解英伟达的产品版图，可以先从客户的需求出发，再看这些需求怎样落到具体产品上。
+本文以这些用户的工作为线索，梳理英伟达的主要产品线：从个人显卡、专业电脑，到数据中心计算与网络，再到机器人、汽车，以及贯穿其中的软件和云平台。重点是看清它提供什么、各类产品有什么关系。实际项目可以根据需求与兼容性，组合不同厂商的硬件、软件和开源工具；文中的场景用于说明产品用途，并不意味着需要购买或使用英伟达的整套产品。
 
 ## 一、个人用户：游戏、创作与本地 AI
 
@@ -100,13 +100,13 @@ RTX PRO 的价值包括部分型号提供的大显存，以及专业软件认证
 
 #### 开发工具怎样配合模型工作
 
-为了开发这个客服助手，研发人员需要能够调整和运行所选模型的软件。若计划使用英伟达 GPU 加速计算，就会接触到 CUDA 及其相关工具。**CUDA 是英伟达的并行计算平台与编程模型；CUDA Toolkit 是相应的开发工具包**，包含编译、调试工具，以及可以直接调用的计算功能。开发者可以直接使用这些工具，也可以通过支持 CUDA 的模型开发框架间接使用 GPU。这套基础能力贯穿训练和推理，也可以用于个人电脑、企业服务器与云端。[CUDA Toolkit](https://developer.nvidia.com/cuda/toolkit)
+为了开发这个客服助手，研发人员需要能够调整和运行所选模型的软件。在英伟达 GPU 上开发和运行模型，常会通过 CUDA 及其相关工具调用计算能力。**CUDA 是英伟达的并行计算平台与编程模型；CUDA Toolkit 是相应的开发工具包**，包含编译、调试工具，以及可以直接调用的计算功能。开发者可以直接使用这些工具，也可以通过支持 CUDA 的模型开发框架间接使用 GPU。这套基础能力贯穿训练和推理，也可以用于个人电脑、企业服务器与云端。[CUDA Toolkit](https://developer.nvidia.com/cuda/toolkit)
 
 在这套基础之上，团队可以按项目需要选择更具体的工具。客服助手若需要微调，**NeMo 这套模型开发工具**可以帮助研发人员完成受支持模型的定制与评估。它与前面提到的 Nemotron 有区别：Nemotron 提供模型，NeMo 提供开发和改进模型的工具。[NeMo](https://docs.nvidia.com/nemo/)
 
 当模型已经能够生成合适的回复，下一步是让它高效运行并接入客服程序。**TensorRT 是优化模型推理的软件工具系列**，其中 TensorRT-LLM 面向大语言模型，帮助优化生成回答时的计算执行。**NIM 则提供预先打包好的模型推理服务**：把受支持模型所需的运行组件组织好，并提供程序调用接口。程序员部署相应服务后，客服程序就可以向它发送问题、接收回答。[TensorRT](https://developer.nvidia.com/tensorrt) [NIM](https://www.nvidia.com/en-us/ai-data-science/products/nim-microservices/)
 
-这些工具可以协作，但不是每个项目都必须依次使用的固定套装；部分 NIM 服务内部就会使用 TensorRT-LLM 等推理引擎。企业如果需要生产环境中的软件支持、安全更新与维护，还可以考虑 NVIDIA AI Enterprise 企业软件平台。[NIM 文档](https://docs.api.nvidia.com/nim/docs/introduction) [NVIDIA AI Enterprise](https://www.nvidia.com/en-us/data-center/products/ai-enterprise/)
+这些工具可以协作；部分 NIM 服务内部就会使用 TensorRT-LLM 等推理引擎。使用英伟达 GPU 的团队，也可以选择 vLLM 等开源工具运行模型，而不采用 NIM；vLLM 在 NVIDIA GPU 上运行时仍会使用 CUDA 等底层组件。因此，硬件、底层平台与上层工具需要分开理解。[vLLM 的 GPU 支持](https://docs.vllm.ai/en/latest/getting_started/installation/gpu/)企业如果需要生产环境中的软件支持、安全更新与维护，还可以考虑 NVIDIA AI Enterprise 企业软件平台。[NIM 文档](https://docs.api.nvidia.com/nim/docs/introduction) [NVIDIA AI Enterprise](https://www.nvidia.com/en-us/data-center/products/ai-enterprise/)
 
 #### 根据模型与软件要求配置设备
 
@@ -182,7 +182,7 @@ DGX Spark 采用 CPU 与 GPU 共享的统一内存。它能容纳多大的任务
 
 工业现场还可能要求设备长时间稳定运行，并具备相应的安全处理与维护能力。**IGX 是英伟达面向工业、医疗等场景的计算平台**，将计算硬件、功能安全相关组件和企业软件支持组合起来。以配有安全微控制器的 IGX 产品为例，主处理器之外还有专门的硬件参与安全处理。是否需要这类平台，取决于设备的运行与安全要求；不能只按 AI 算力比较。[IGX 官方介绍](https://developer.nvidia.com/igx)
 
-### 研发机器人：先在虚拟环境里训练和测试
+### 研发机器人：用虚拟环境辅助训练和测试
 
 分拣机器人投入使用前，还需要经过反复试验：包裹换一个位置、大小改变，机械臂是否仍能正确抓取？厂商可以先在电脑中建立虚拟机器人和场景，模拟运动、接触与碰撞，帮助发现问题。这就是这里所说的仿真。
 
@@ -190,7 +190,7 @@ DGX Spark 采用 CPU 与 GPU 共享的统一内存。它能容纳多大的任务
 
 在此基础上，**Isaac 是面向机器人开发的软件与工具体系**。其中，**Isaac Sim 是基于 Omniverse 软件库构建的机器人仿真工具**，可用于搭建虚拟场景、测试机器人并生成模拟训练数据。例如，团队可以改变虚拟包裹的位置和光照，检查识别程序与抓取动作在不同条件下的表现。[Isaac](https://developer.nvidia.com/isaac) [Isaac Sim](https://developer.nvidia.com/isaac/sim)
 
-这就把研发和设备连接起来了：团队在电脑或服务器上训练模型、运行仿真，再将适合的模型和程序部署到机器人里的 Jetson 等计算设备上。虚拟测试有助于扩大测试范围，但最终仍需要在真实机器人上验证。英伟达机器人业务负责人 Deepu Talla 在访谈中也强调了数据、训练、仿真和部署之间的联系。[Deepu Talla 访谈](https://www.chipstrat.com/p/an-interview-with-nvidias-deepu-talla)
+这提供了连接研发与设备的一种方式：团队可以在电脑或服务器上训练模型、运行仿真，并将适合的模型和程序部署到机器人里的 Jetson 等计算设备上。虚拟测试有助于扩大测试范围，但最终仍需要在真实机器人上验证。英伟达机器人业务负责人 Deepu Talla 在访谈中也强调了数据、训练、仿真和部署之间的联系。[Deepu Talla 访谈](https://www.chipstrat.com/p/an-interview-with-nvidias-deepu-talla)
 
 ### 汽车厂商：车载计算、运行软件与整车方案
 
