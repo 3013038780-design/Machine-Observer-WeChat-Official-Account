@@ -38,3 +38,7 @@
 - https://help.aliyun.com/zh/model-studio/what-is-model-studio/ ：现成模型服务。
 - https://help.aliyun.com/zh/model-studio/qwen-function-calling ：应用执行工具并提供结果、模型据此生成回复；正文用简化数据流，不展开工具调用协议。
 - https://help.aliyun.com/zh/ecs/user-guide/deploy-qwen3-235b-a22b-on-gpu-accelerated-instances ：云端自部署，亦提供 API；所列模型仅作部署实例，不作最新型号或配置推荐。
+
+## 云厂商与设施的区分 · 2026-09-13
+
+第三节以腾讯云、阿里云说明服务提供者，以数据中心/算力中心说明部署设施。算力运营商是业务描述，与云厂商可交叉，不作为严格官方行业分类。复核 https://cloud.tencent.com/product/gpu ，确认提供 GPU 弹性计算与训练/推理等用途；不推断具体机房归属、全部底层 GPU 品牌或型号。

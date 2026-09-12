@@ -126,13 +126,13 @@ DGX Spark 采用 CPU 与 GPU 共享的统一内存。它能容纳多大的任务
 
 ## 三、云厂商与算力运营商：组织大规模计算
 
-云厂商、算力运营商，以及自建计算集群的企业和科研机构，需要管理大量计算资源。研究员和开发者在上面提交任务，运维团队则负责设备、网络和系统的持续运行。
+企业可以向腾讯云、阿里云等云厂商租用计算资源。模型实际运行在服务商提供的服务器上，这些服务器部署在数据中心等设施中。服务商负责相应设备和服务的运行，企业则按所选服务承担应用开发或模型部署工作。[腾讯云 GPU 云服务器](https://cloud.tencent.com/product/gpu) [阿里云 GPU 云服务器](https://www.alibabacloud.com/help/en/egs/quick-reference)
 
-算力中心是这些设施集中部署和运行的地方。它与“企业”不是互斥的客户类别：一家企业可以自建算力中心，也可以租用云上的资源。
+经营计算资源、向客户提供算力服务的企业，也常被称为算力运营商，与云厂商的业务可能重叠。**算力中心则是集中部署和运行计算设备的设施**，包含服务器、网络以及供电、散热等配套。部分企业和科研机构也会自建计算集群，供内部研发使用。无论资源对外出租还是内部使用，都需要运维团队管理设备、网络和系统，让研究员与开发者能够持续运行任务。
 
 ### 使用者要完成任务，运营者要让资源有效协作
 
-这些客户可能需要训练模型、提供推理服务，也可能运行科学计算或图形任务。A100、H100、H200、Blackwell 系列的 B200、B300，以及当前官方介绍的 Rubin 平台，都属于理解数据中心产品时会遇到的名称。不同产品和代际可以服务不同系统需求。[Data Center](https://www.nvidia.com/en-us/data-center/) [HGX AI Factory: Components](https://docs.nvidia.com/enterprise-reference-architectures/hgx-ai-factory/latest/components.html) [NVIDIA A100](https://www.nvidia.com/en-us/data-center/a100/)
+这些计算资源可能用于训练模型、提供推理服务，也可能用于科学计算或图形任务。A100、H100、H200、Blackwell 系列的 B200、B300，以及当前官方介绍的 Rubin 平台，都属于理解数据中心产品时会遇到的名称。不同产品和代际可以服务不同系统需求。[Data Center](https://www.nvidia.com/en-us/data-center/) [HGX AI Factory: Components](https://docs.nvidia.com/enterprise-reference-architectures/hgx-ai-factory/latest/components.html) [NVIDIA A100](https://www.nvidia.com/en-us/data-center/a100/)
 
 数据中心 GPU 通常需要放在相应的系统配置中理解：内存容量、带宽、设备间互连和软件配套共同影响任务表现。一些产品采用 HBM，即 High Bandwidth Memory，高带宽内存，通过堆叠等技术支持大量数据传输。HBM 描述内存技术，不是 GPU 的另一个档次。[Micron：HBM](https://www.micron.com/products/memory/hbm)
 
