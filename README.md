@@ -9,6 +9,7 @@
 - [工作流与写作约定](docs/workflow.md)
 - [排版规范](docs/style-guide.md)
 - [当前排版主题](assets/theme.json)
+- [本专题准备工作记录](articles/2026-09-nvidia-ai-compute/preparation.md)
 - [英伟达与算力上下篇策划](articles/2026-09-nvidia-ai-compute/brief.md)
 - [资料记录模板](articles/2026-09-nvidia-ai-compute/research/sources.md)
 
