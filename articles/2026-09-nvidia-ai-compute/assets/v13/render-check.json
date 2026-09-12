@@ -1,0 +1,122 @@
+[
+  {
+    "file": "03-geforce.png",
+    "cssWidth": 366,
+    "cssHeight": 350.828125,
+    "pixelWidth": 1098,
+    "pixelHeight": 1052,
+    "text": "GeForce RTX 5090\n\n桌面显卡：需要装入兼容的电脑使用。\n\n原图：NVIDIA 官方产品页；图片按原比例展示，不代表产品之间的实际尺寸。\n\n旁观机器 / MACHINE OBSERVER"
+  },
+  {
+    "file": "04-online-local.png",
+    "cssWidth": 366,
+    "cssHeight": 332.125,
+    "pixelWidth": 1098,
+    "pixelHeight": 996,
+    "text": "AI 在哪里运行？\n在线 AI 服务\n\n电脑提交输入、展示结果\n模型的主要计算在服务商云端完成\n\n本地模型\n\n下载模型和运行软件\n由自己的设备完成模型计算\n\n在线服务与本地部署各有用途，不能仅凭本机显卡判断云端生成速度。\n\n旁观机器 / MACHINE OBSERVER"
+  },
+  {
+    "file": "05-local-models.png",
+    "cssWidth": 366,
+    "cssHeight": 335.59375,
+    "pixelWidth": 1098,
+    "pixelHeight": 1007,
+    "text": "可本地运行的模型例子\n模型例子\t主要用途\n通义千问 Qwen，例如 Qwen3 的较小版本\t对话、文本处理与代码辅助\nDeepSeek-R1 的蒸馏版本\t推理、数学和代码等任务\nStable Diffusion，例如 SDXL\t根据文字生成图片\n\n提供可下载权重，使用范围以具体许可证为准。\n\n旁观机器 / MACHINE OBSERVER"
+  },
+  {
+    "file": "06-rtx-pro.png",
+    "cssWidth": 366,
+    "cssHeight": 350.828125,
+    "pixelWidth": 1098,
+    "pixelHeight": 1052,
+    "text": "RTX PRO 6000 Blackwell\n\nWorkstation Edition · 专业显卡，不是一台完整电脑。\n\n原图：NVIDIA 官方产品页；图片按原比例展示，不代表产品之间的实际尺寸。\n\n旁观机器 / MACHINE OBSERVER"
+  },
+  {
+    "file": "07-enterprise-options.png",
+    "cssWidth": 366,
+    "cssHeight": 428.890625,
+    "pixelWidth": 1098,
+    "pixelHeight": 1287,
+    "text": "企业使用模型的三种方式\n调用模型 API\n\n例：接入阿里云百炼的千问服务\n服务商运行模型；企业连接业务数据与应用。\n\n租云端算力，自行部署\n\n例：租用云端 GPU 服务器运行 Qwen\n服务商提供设备资源；企业部署、维护模型。\n\n使用自己的设备部署\n\n例：在企业自有电脑或服务器运行模型\n企业配置设备，并负责模型与应用。\n\n三种方式可以组合；API 是接口形式，并非某一种部署方式的专属名称。\n\n旁观机器 / MACHINE OBSERVER"
+  },
+  {
+    "file": "08-software-layers.png",
+    "cssWidth": 366,
+    "cssHeight": 408.59375,
+    "pixelWidth": 1098,
+    "pixelHeight": 1226,
+    "text": "这些软件处在不同层级\n产品\t主要作用\nCUDA / Toolkit\t使用 GPU 的基础平台与开发工具\nNeMo\t开发、定制和评估受支持模型\nTensorRT / TensorRT-LLM\t优化模型推理执行\nNIM\t打包好的模型推理服务\nAI Enterprise\t企业软件平台及相应支持\n\n不是依次必选的套装。上层工具也可采用 vLLM 等开源方案；使用 NVIDIA GPU 不等于使用其全部软件。\n\n旁观机器 / MACHINE OBSERVER"
+  },
+  {
+    "file": "09-dgx-spark.png",
+    "cssWidth": 366,
+    "cssHeight": 372.515625,
+    "pixelWidth": 1098,
+    "pixelHeight": 1118,
+    "text": "DGX Spark\n\n图右侧的小型主机是 DGX Spark，已内置 CPU 与 GPU；左侧笔记本展示连接使用的场景。\n\n原图：NVIDIA 官方产品页；图片按原比例展示，不代表产品之间的实际尺寸。\n\n旁观机器 / MACHINE OBSERVER"
+  },
+  {
+    "file": "10-connections.png",
+    "cssWidth": 366,
+    "cssHeight": 428.890625,
+    "pixelWidth": 1098,
+    "pixelHeight": 1287,
+    "text": "三种传输，连接不同对象\n显存 ↔ GPU\n\n显存保存模型和工作数据。\n显存带宽反映这里的数据传输能力。\n\nGPU ↔ GPU\n\n多个 GPU 协作时交换数据。\n英伟达提供 NVLink 等互连能力。\n\n服务器 ↔ 服务器\n\n跨设备分配任务、传输数据。\n涉及网卡、交换机和服务器网络。\n\n不同环节的带宽不能合成一个数字。示意按功能分层，不是所有系统的固定拓扑。\n\n旁观机器 / MACHINE OBSERVER"
+  },
+  {
+    "file": "11-gb200.png",
+    "cssWidth": 366,
+    "cssHeight": 350.828125,
+    "pixelWidth": 1098,
+    "pixelHeight": 1052,
+    "text": "GB200 NVL72\n\n液冷机柜系统；与单张显卡属于不同交付层级。\n\n原图：NVIDIA 官方产品页；图片按原比例展示，不代表产品之间的实际尺寸。\n\n旁观机器 / MACHINE OBSERVER"
+  },
+  {
+    "file": "12-quote-scope.png",
+    "cssWidth": 366,
+    "cssHeight": 353.59375,
+    "pixelWidth": 1098,
+    "pixelHeight": 1061,
+    "text": "看报价，先看交付范围\n报价对象\t需要核对什么\nGPU 板卡\t具体型号、数量；现有服务器是否兼容\nGPU 服务器\t是否实际包含 GPU，以及 CPU、内存、硬盘、网卡、电源\n机柜系统\t计算设备、互连、配电、冷却组件及安装范围\n\n另行确认：机房改造、模型部署与后续维护。支持安装 GPU，不等于报价已经包含 GPU。\n\n旁观机器 / MACHINE OBSERVER"
+  },
+  {
+    "file": "14-jetson.png",
+    "cssWidth": 366,
+    "cssHeight": 350.828125,
+    "pixelWidth": 1098,
+    "pixelHeight": 1052,
+    "text": "Jetson Orin 家族\n\n包括计算模块与开发套件；具体形态按型号区分。\n\n原图：NVIDIA 官方产品页；图片按原比例展示，不代表产品之间的实际尺寸。\n\n旁观机器 / MACHINE OBSERVER"
+  },
+  {
+    "file": "15-drive.png",
+    "cssWidth": 366,
+    "cssHeight": 372.515625,
+    "pixelWidth": 1098,
+    "pixelHeight": 1118,
+    "text": "DRIVE 车载计算平台\n\n用于车载计算开发与集成；图为 NVIDIA 官方平台示意。\n\n原图：NVIDIA 官方产品页；图片按原比例展示，不代表产品之间的实际尺寸。\n\n旁观机器 / MACHINE OBSERVER"
+  },
+  {
+    "file": "16-product-map.png",
+    "cssWidth": 366,
+    "cssHeight": 526.59375,
+    "pixelWidth": 1098,
+    "pixelHeight": 1580,
+    "text": "七块产品，一张版图\n领域\t本文涉及的产品\n个人图形与创作\tGeForce RTX、Studio\n专业图形与电脑\tRTX PRO\n数据中心计算\tA / H / B、Rubin；Grace / Vera；HGX / MGX / DGX\n网络与互连\tNVLink、ConnectX、Spectrum-X、Quantum、BlueField\n边缘与机器人\tJetson、IGX、Isaac\n汽车\tDRIVE AGX、DriveOS、Hyperion\n软件、模型与云\tCUDA、NeMo、TensorRT、NIM、Nemotron、Omniverse、DGX Cloud\n\n按功能整理，部分产品跨领域使用；不同层级不代表必须配套采购。\n\n旁观机器 / MACHINE OBSERVER"
+  },
+  {
+    "file": "17-glossary.png",
+    "cssWidth": 366,
+    "cssHeight": 704.59375,
+    "pixelWidth": 1098,
+    "pixelHeight": 2114,
+    "text": "基础概念速查\n名称与英文\t作用\nCPU\nCentral Processing Unit，中央处理器\n\t运行通用程序，组织执行流程并处理数据\nGPU\nGraphics Processing Unit，图形处理器\n\t加速适合并行处理的图形、AI 等计算\n系统内存\n通常所说的 RAM：Random Access Memory，随机存取存储器\n\t程序运行时的工作空间\n显存\nVRAM：Video Random Access Memory\n\t供 GPU 使用的内存，存放图形或计算所需数据\n显存带宽\nMemory bandwidth\n\tGPU 与显存之间单位时间的数据传输能力\nGPU 互连带宽\nGPU interconnect bandwidth\n\tGPU 之间交换数据的能力\nDPU\nData Processing Unit，数据处理单元\n\t处理部分网络、存储和安全基础设施任务\n\n统一内存设备不能简单按独立显卡的方式划分。\n\n旁观机器 / MACHINE OBSERVER"
+  },
+  {
+    "file": "18-price-snapshot.png",
+    "cssWidth": 366,
+    "cssHeight": 294.59375,
+    "pixelWidth": 1098,
+    "pixelHeight": 884,
+    "text": "两种官方挂牌价样本\n具体商品\t页面挂牌价\t买到的层级\nGeForce RTX 5090\t1,999 美元\t桌面显卡\nRTX PRO 6000 Blackwell Workstation Edition\t16,000 美元\t专业工作站显卡\n\n2026年9月12日，美国 NVIDIA 商城网页快照。均显示缺货；不是出厂价，税费与运费未确认。\n\n旁观机器 / MACHINE OBSERVER"
+  }
+]

@@ -1,0 +1,146 @@
+[
+  {
+    "id": "01-header",
+    "kind": "既有品牌图",
+    "title": "旁观机器",
+    "file": "images/01-header.png",
+    "caption": "",
+    "source": "品牌已选素材"
+  },
+  {
+    "id": "02-computing-lab",
+    "kind": "AI 场景插画",
+    "title": "计算的不同工作环境",
+    "file": "images/02-computing-lab.png",
+    "caption": "个人电脑、专业创作与服务器环境｜AI 概念插画",
+    "source": "内置 image_gen，提示词见 prompts.json"
+  },
+  {
+    "id": "03-geforce",
+    "kind": "官方产品图＋说明",
+    "title": "GeForce RTX 5090",
+    "file": "images/03-geforce.png",
+    "caption": "GeForce RTX 5090",
+    "source": "rtx5090"
+  },
+  {
+    "id": "04-online-local",
+    "kind": "精确排版图表",
+    "title": "AI 在哪里运行？",
+    "file": "images/04-online-local.png",
+    "caption": "AI 在哪里运行？",
+    "source": "依据已审 v12 正文整理；引用见对应段落"
+  },
+  {
+    "id": "05-local-models",
+    "kind": "精确排版图表",
+    "title": "可本地运行的模型例子",
+    "file": "images/05-local-models.png",
+    "caption": "可本地运行的模型例子",
+    "source": "依据已审 v12 正文整理；引用见对应段落"
+  },
+  {
+    "id": "06-rtx-pro",
+    "kind": "官方产品图＋说明",
+    "title": "RTX PRO 6000 Blackwell",
+    "file": "images/06-rtx-pro.png",
+    "caption": "RTX PRO 6000 Blackwell",
+    "source": "rtxpro6000"
+  },
+  {
+    "id": "07-enterprise-options",
+    "kind": "精确排版图表",
+    "title": "企业使用模型的三种方式",
+    "file": "images/07-enterprise-options.png",
+    "caption": "企业使用模型的三种方式",
+    "source": "依据已审 v12 正文整理；引用见对应段落"
+  },
+  {
+    "id": "08-software-layers",
+    "kind": "精确排版图表",
+    "title": "这些软件处在不同层级",
+    "file": "images/08-software-layers.png",
+    "caption": "这些软件处在不同层级",
+    "source": "依据已审 v12 正文整理；引用见对应段落"
+  },
+  {
+    "id": "09-dgx-spark",
+    "kind": "官方产品图＋说明",
+    "title": "DGX Spark",
+    "file": "images/09-dgx-spark.png",
+    "caption": "DGX Spark",
+    "source": "dgxspark"
+  },
+  {
+    "id": "10-connections",
+    "kind": "精确排版图表",
+    "title": "三种传输，连接不同对象",
+    "file": "images/10-connections.png",
+    "caption": "三种传输，连接不同对象",
+    "source": "依据已审 v12 正文整理；引用见对应段落"
+  },
+  {
+    "id": "11-gb200",
+    "kind": "官方产品图＋说明",
+    "title": "GB200 NVL72",
+    "file": "images/11-gb200.png",
+    "caption": "GB200 NVL72",
+    "source": "gb200"
+  },
+  {
+    "id": "12-quote-scope",
+    "kind": "精确排版图表",
+    "title": "看报价，先看交付范围",
+    "file": "images/12-quote-scope.png",
+    "caption": "看报价，先看交付范围",
+    "source": "依据已审 v12 正文整理；引用见对应段落"
+  },
+  {
+    "id": "13-robot-lab",
+    "kind": "AI 场景插画",
+    "title": "分拣机器人的实验室",
+    "file": "images/13-robot-lab.png",
+    "caption": "视觉识别、设备计算与仿真环境｜AI 概念插画，非实物接线图",
+    "source": "内置 image_gen，提示词见 prompts.json"
+  },
+  {
+    "id": "14-jetson",
+    "kind": "官方产品图＋说明",
+    "title": "Jetson Orin 家族",
+    "file": "images/14-jetson.png",
+    "caption": "Jetson Orin 家族",
+    "source": "jetson"
+  },
+  {
+    "id": "15-drive",
+    "kind": "官方产品图＋说明",
+    "title": "DRIVE 车载计算平台",
+    "file": "images/15-drive.png",
+    "caption": "DRIVE 车载计算平台",
+    "source": "drive"
+  },
+  {
+    "id": "16-product-map",
+    "kind": "精确排版图表",
+    "title": "七块产品，一张版图",
+    "file": "images/16-product-map.png",
+    "caption": "七块产品，一张版图",
+    "source": "依据已审 v12 正文整理；引用见对应段落"
+  },
+  {
+    "id": "17-glossary",
+    "kind": "精确排版图表",
+    "title": "基础概念速查",
+    "file": "images/17-glossary.png",
+    "caption": "基础概念速查",
+    "source": "依据已审 v12 正文整理；引用见对应段落"
+  },
+  {
+    "id": "18-price-snapshot",
+    "kind": "精确排版图表",
+    "title": "两种官方挂牌价样本",
+    "file": "images/18-price-snapshot.png",
+    "caption": "两种官方挂牌价样本",
+    "source": "依据已审 v12 正文整理；引用见对应段落"
+  }
+]

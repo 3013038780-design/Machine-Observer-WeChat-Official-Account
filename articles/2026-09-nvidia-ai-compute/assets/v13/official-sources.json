@@ -1,0 +1,56 @@
+[
+  {
+    "id": "rtx5090",
+    "page": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/",
+    "image_url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/graphic-cards/50-series/rtx-5090/geforce-rtx-5090-learn-more-og-1200x630.jpg",
+    "file": "originals/rtx5090.jpg",
+    "retrieved": "2026-09-13",
+    "credit": "NVIDIA 官方产品页图片；保留原图，未用 AI 重绘",
+    "rights": "归原权利人所有；来源标注不等同于开放许可"
+  },
+  {
+    "id": "rtxpro6000",
+    "page": "https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000/",
+    "image_url": "https://www.nvidia.com/content/dam/en-zz/Solutions/data-center/rtx-pro-6000-blackwell-workstation-edition/nvidia-geforce-rtx-pro-6000-og-1200x630.jpg",
+    "file": "originals/rtxpro6000.jpg",
+    "retrieved": "2026-09-13",
+    "credit": "NVIDIA 官方产品页图片；保留原图，未用 AI 重绘",
+    "rights": "归原权利人所有；来源标注不等同于开放许可"
+  },
+  {
+    "id": "dgxspark",
+    "page": "https://www.nvidia.com/en-us/products/workstations/dgx-spark/",
+    "image_url": "https://www.nvidia.com/content/dam/en-zz/Solutions/dgx-spark/DGX-Spark-og.jpg",
+    "file": "originals/dgxspark.jpg",
+    "retrieved": "2026-09-13",
+    "credit": "NVIDIA 官方产品页图片；保留原图，未用 AI 重绘",
+    "rights": "归原权利人所有；来源标注不等同于开放许可"
+  },
+  {
+    "id": "gb200",
+    "page": "https://www.nvidia.com/en-us/data-center/gb200-nvl72/",
+    "image_url": "https://www.nvidia.com/content/dam/en-zz/Solutions/data-center/gb200-superchip/gb200-nvl72-og.jpg",
+    "file": "originals/gb200.jpg",
+    "retrieved": "2026-09-13",
+    "credit": "NVIDIA 官方产品页图片；保留原图，未用 AI 重绘",
+    "rights": "归原权利人所有；来源标注不等同于开放许可"
+  },
+  {
+    "id": "jetson",
+    "page": "https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/",
+    "image_url": "https://www.nvidia.com/content/dam/en-zz/Solutions/gtcf22/embedded-systems/jetson-orin/nvidia-jetson-orin-og.jpg",
+    "file": "originals/jetson.jpg",
+    "retrieved": "2026-09-13",
+    "credit": "NVIDIA 官方产品页图片；保留原图，未用 AI 重绘",
+    "rights": "归原权利人所有；来源标注不等同于开放许可"
+  },
+  {
+    "id": "drive",
+    "page": "https://www.nvidia.com/en-us/solutions/autonomous-vehicles/in-vehicle-computing/",
+    "image_url": "https://www.nvidia.com/content/dam/en-zz/Solutions/self-driving-cars/in-vehicle-computing/high-performance-in-vehicle-computing-for-autonomous-vehicles-og.jpg",
+    "file": "originals/drive.jpg",
+    "retrieved": "2026-09-13",
+    "credit": "NVIDIA 官方产品页图片；保留原图，未用 AI 重绘",
+    "rights": "归原权利人所有；来源标注不等同于开放许可"
+  }
+]

@@ -1,0 +1,56 @@
+{
+  "360": {
+    "scrollWidth": 360,
+    "viewport": 360,
+    "images": 18,
+    "brokenImages": 0,
+    "tables": 0,
+    "styles": 0,
+    "scripts": 0,
+    "chapterBorders": [
+      "0px",
+      "0px",
+      "0px",
+      "0px",
+      "0px",
+      "0px",
+      "0px"
+    ]
+  },
+  "390": {
+    "scrollWidth": 390,
+    "viewport": 390,
+    "images": 18,
+    "brokenImages": 0,
+    "tables": 0,
+    "styles": 0,
+    "scripts": 0,
+    "chapterBorders": [
+      "0px",
+      "0px",
+      "0px",
+      "0px",
+      "0px",
+      "0px",
+      "0px"
+    ]
+  },
+  "650": {
+    "scrollWidth": 650,
+    "viewport": 650,
+    "images": 18,
+    "brokenImages": 0,
+    "tables": 0,
+    "styles": 0,
+    "scripts": 0,
+    "chapterBorders": [
+      "0px",
+      "0px",
+      "0px",
+      "0px",
+      "0px",
+      "0px",
+      "0px"
+    ]
+  }
+}
