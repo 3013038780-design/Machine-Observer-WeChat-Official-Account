@@ -210,3 +210,9 @@
 - 37 · [T4 官方产品页](https://www.nvidia.com/en-us/data-center/tesla-t4/)。发布/更新：动态官方产品页。核查：2026-09-12。支持：Turing，16GB GDDR6，70W，推理/训练/视频/图形应用。
 - 38 · [A100 官方产品页](https://www.nvidia.com/en-us/data-center/a100/)。发布/更新：动态官方产品页。核查：2026-09-12。支持：Ampere产品归属；训练和推理均支持。本稿不引用历史宣传倍数。
 - 39 · [DRIVE AGX 开发平台](https://developer.nvidia.com/drive/agx)。发布/更新：动态官方开发文档。核查：2026-09-12。支持：Orin/Thor开发平台，Blackwell架构级GPU，车载I/O、DriveOS/DriveWorks、安全设计；不用单芯片算力证明整车自动驾驶级别。
+
+## v4 从业者视角
+
+- 40 · [Puget Systems：专业 GPU 内容创作横评](https://www.pugetsystems.com/labs/articles/2025-professional-gpu-content-creation-roundup/)，Puget Systems，2025-12-18。Evan Lagergren；After Effects平面合成/跟踪对高端GPU回报有限，三维工作差异更明显；只转述明确测试环境，不采用旧价与性能倍数。读取于2026-09-12。
+- 41 · [Dell：专业与消费 GPU 的工作负载选择](https://www.dell.com/en-us/blog/professional-vs-consumer-gpus-the-card-for-your-workflow/)，Dell，2026-03。Trey Morton；工作站性能与技术营销背景；GeForce适合部分实时工作，专业驱动和容量对应RTX PRO价值；标注整机厂商视角。读取于2026-09-12。
+- 42 · [CoreWeave：推理扩容与并发选择](https://docs.coreweave.com/products/inference/scaling)，CoreWeave，动态官方部署文档。响应延迟和吞吐的取舍；按真实输入/输出/缓存测试；超过拐点排队和延迟变差；不采用无署名会议摘录。读取于2026-09-12。

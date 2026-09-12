@@ -320,5 +320,25 @@
     "scope": "架构与产品映射；不推断各条产品线同步换代",
     "checked": "2026-09-12",
     "result": "已与所列官方正文/规格核对"
+  },
+  {
+    "id": "V4-PUGET-DATE",
+    "claim": "Evan Lagergren横评日期2025-12-18，文中写2025年12月",
+    "sources": [
+      "40"
+    ],
+    "scope": "实验环境有时点，未作为当前软件普遍排名",
+    "checked": "2026-09-12",
+    "result": "作者、日期及After Effects正文已核对"
+  },
+  {
+    "id": "V4-DELL-DATE",
+    "claim": "Trey Morton文章2026年3月，身份为Dell工作站性能/技术营销背景",
+    "sources": [
+      "41"
+    ],
+    "scope": "整机厂商观点，非无利益关系的独立共识",
+    "checked": "2026-09-12",
+    "result": "署名、作者简介与结论正文已核对"
   }
 ]

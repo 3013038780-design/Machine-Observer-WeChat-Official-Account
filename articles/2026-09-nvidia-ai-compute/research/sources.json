@@ -388,5 +388,35 @@
     "publisher": "NVIDIA",
     "supports": "Orin/Thor开发平台，Blackwell架构级GPU，车载I/O、DriveOS/DriveWorks、安全设计；不用单芯片算力证明整车自动驾驶级别",
     "reading": "已读取产品正文、规格或公告日期及供货段落"
+  },
+  {
+    "id": "40",
+    "title": "Puget Systems：专业 GPU 内容创作横评",
+    "url": "https://www.pugetsystems.com/labs/articles/2025-professional-gpu-content-creation-roundup/",
+    "published_or_updated": "2025-12-18",
+    "publisher": "Puget Systems",
+    "accessed": "2026-09-12",
+    "supports": "Evan Lagergren；After Effects平面合成/跟踪对高端GPU回报有限，三维工作差异更明显；只转述明确测试环境，不采用旧价与性能倍数",
+    "reading": "已读作者、日期及对应分析/建议正文"
+  },
+  {
+    "id": "41",
+    "title": "Dell：专业与消费 GPU 的工作负载选择",
+    "url": "https://www.dell.com/en-us/blog/professional-vs-consumer-gpus-the-card-for-your-workflow/",
+    "published_or_updated": "2026-03",
+    "publisher": "Dell",
+    "accessed": "2026-09-12",
+    "supports": "Trey Morton；工作站性能与技术营销背景；GeForce适合部分实时工作，专业驱动和容量对应RTX PRO价值；标注整机厂商视角",
+    "reading": "已读作者、日期及对应分析/建议正文"
+  },
+  {
+    "id": "42",
+    "title": "CoreWeave：推理扩容与并发选择",
+    "url": "https://docs.coreweave.com/products/inference/scaling",
+    "published_or_updated": "动态官方部署文档",
+    "publisher": "CoreWeave",
+    "accessed": "2026-09-12",
+    "supports": "响应延迟和吞吐的取舍；按真实输入/输出/缓存测试；超过拐点排队和延迟变差；不采用无署名会议摘录",
+    "reading": "已读作者、日期及对应分析/建议正文"
   }
 ]

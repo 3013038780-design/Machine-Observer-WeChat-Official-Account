@@ -5,9 +5,10 @@ import importlib.util
 import json
 import re
 import argparse
+import base64
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--version", choices=["v1", "v2", "v3"], default="v3")
+parser.add_argument("--version", choices=["v1", "v2", "v3", "v4"], default="v4")
 version = parser.parse_args().version
 
 HERE = Path(__file__).resolve().parent
@@ -15,7 +16,8 @@ ROOT = HERE.parents[2]
 spec = importlib.util.spec_from_file_location('wechat_renderer', ROOT / 'scripts/render.py')
 renderer = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(renderer)
-theme = json.loads((ROOT / 'assets/theme.json').read_text())
+theme_file = 'theme.json' if version == 'v4' else 'theme-red-v1.json'
+theme = json.loads((ROOT / 'assets' / theme_file).read_text())
 sources = json.loads((HERE.parent / 'research/sources.json').read_text())
 source_map = {s['id']: s for s in sources}
 md = (HERE / f'article-{version}.md').read_text()
@@ -75,8 +77,15 @@ header = '''<section style="margin:0 0 30px;padding:24px 0 0;border-top:4px soli
 <p style="margin:0;padding:13px 0;border-top:1px solid #EAEAEA;border-bottom:1px solid #EAEAEA;font-size:12px;line-height:1.7;letter-spacing:1px;color:#888888;">资料核查 / 2026.09.12</p>
 </section>'''
 
-if version == 'v3':
+if version in ('v3', 'v4'):
     header = header.replace('从个人显卡到机柜系统<br>不同的工作，为什么需要不同的 GPU', '从游戏、专业工作到 AI 与机器人<br>产品如何分工，价格为何不同')
+
+if version == 'v4':
+    banner = ROOT / 'assets/brand/2026-09-12-header-v2/03-retro-terminal.png'
+    banner_data = base64.b64encode(banner.read_bytes()).decode('ascii')
+    header = re.sub(r'<p style="margin:0;font-size:12px;line-height:1.6;letter-spacing:2px;color:#B91C1C;">.*?</p>',
+                    f'<img src="data:image/png;base64,{banner_data}" alt="旁观机器·复古电脑首图" style="display:block;width:100%;height:auto;margin:0;border:0;">', header, count=1)
+    header = header.replace('padding:24px 0 0;border-top:4px solid #B91C1C;', 'padding:0;')
 
 refs = '<section style="margin:36px 0 14px;padding:18px 16px;background:#FAFAFA;border-top:2px solid #B91C1C;">'
 refs += '<p style="margin:0 0 12px;font-size:14px;color:#B91C1C;font-weight:600;letter-spacing:2px;">来源与进一步阅读</p>'
@@ -91,6 +100,10 @@ footer = '<p style="margin:28px 0 12px;text-align:center;color:#B91C1C;font-size
 
 container_style = theme['container'] + 'box-sizing:border-box;max-width:640px;margin:0 auto;'
 article = f'<section style="{container_style}">\n{header}\n{body}\n{refs}\n{footer}\n</section>'
+if version == 'v4':
+    palette = {'#B91C1C':'#17633F','#C0392B':'#287A51','#E5C4C0':'#C7DDCF','#FDF6F5':'#F2F7F3','#996b65':'#527563'}
+    for original, replacement in palette.items():
+        article = article.replace(original, replacement)
 (HERE / f'article-{version}-fragment.html').write_text(article)
 document = ('<!doctype html>\n<html lang="zh-CN"><head><meta charset="utf-8">'
             '<meta name="viewport" content="width=device-width,initial-scale=1">'
