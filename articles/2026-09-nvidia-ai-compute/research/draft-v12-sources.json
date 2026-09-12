@@ -304,5 +304,19 @@
     "accessed": "2026-09-12",
     "published": "2026-08-17",
     "read_scope_and_limit": "读取并发与延迟/吞吐权衡及真实请求测试要求；未引用计费。"
+  },
+  {
+    "id": "S13",
+    "title": "GeForce RTX笔记本",
+    "url": "https://www.nvidia.com/en-us/geforce/laptops/50-series/",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "核查笔记本GPU产品形态；正文仅简短补充，无新增规格与价格。"
+  },
+  {
+    "id": "S14",
+    "title": "专业笔记本与移动工作站",
+    "url": "https://www.nvidia.com/en-us/products/workstations/professional-laptops/",
+    "accessed": "2026-09-12",
+    "read_scope_and_limit": "核查笔记本GPU产品形态；正文仅简短补充，无新增规格与价格。"
   }
 ]

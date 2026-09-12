@@ -10,11 +10,9 @@
 
 ## 一、个人用户：游戏、创作与本地 AI
 
-### 玩家和创作者，用到的是怎样一套电脑
+### [GeForce RTX 50 Series](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/) [GeForce RTX 笔记本](https://www.nvidia.com/en-us/geforce/laptops/50-series/)
 
-对玩家来说，显卡影响游戏画面的计算与呈现；对视频和三维创作者来说，它可以加速部分制作、渲染和导出工作。GeForce 是英伟达面向个人电脑的主要 GPU 产品家族，RTX 50 系列从 RTX 5050 延伸到 RTX 5090，覆盖不同定位；笔记本还有相应产品，具体规格需与桌面版分别看。[GeForce RTX 50 Series](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/)
-
-这里先分清两个容易混用的词。**GPU 是 Graphics Processing Unit，即图形处理器；显卡则是包含 GPU、显存、供电等组件的板卡。** GPU 负责计算，显卡将这些组件装在一起，供电脑使用。
+这里先分清两个容易混用的词。**GPU 是 Graphics Processing Unit，即图形处理器；显卡则是包含 GPU、显存、供电等组件的板卡。** GPU 负责计算，显卡将这些组件装在一起，供电脑使
 
 GPU 擅长把适合拆分的运算分配给许多计算单元同时处理。画面渲染有大量这类工作，AI 中的许多计算也适合这种方式，所以同一类产品能同时服务游戏、创作和 AI。[Intel：GPU 与 CPU](https://www.intel.com/content/www/us/en/products/docs/processors/what-is-a-gpu.html)
 
@@ -40,7 +38,7 @@ GPU 擅长把适合拆分的运算分配给许多计算单元同时处理。画�
 
 ### 设计师与工程师：项目变大，设备要求随之变化
 
-建筑设计、工程建模和影视制作可能涉及大型场景、复杂素材与指定的专业软件。工作站就是面向这类专业工作的计算机；RTX PRO 则是可以用于其中的专业 GPU 产品家族，并有面向其他部署形态的版本。
+建筑设计、工程建模和影视制作可能涉及大型场景、复杂素材与指定的专业软件。工作站就是面向这类专业工作的计算机；RTX PRO 则是可以用于其中的专业 GPU 产品家族，并有面向其他部署形态的版本。需要携带设备工作的团队，还可以选择搭载 RTX PRO 笔记本 GPU 的移动工作站。[专业笔记本与移动工作站](https://www.nvidia.com/en-us/products/workstations/professional-laptops/)
 
 RTX PRO 的价值包括部分型号提供的大显存，以及专业软件认证、企业驱动与支持。认证意味着针对专业应用进行兼容性验证，帮助企业选择和维护设备。它解决的是项目环境中的具体要求，并不意味着每一家企业都必须使用专业卡。[Professional Desktop GPUs](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/)
 
