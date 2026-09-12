@@ -86,7 +86,21 @@ RTX PRO 的价值包括部分型号提供的大显存，以及专业软件认证
 
 **调整模型和使用模型，是这个项目中不同的计算任务。** 如果团队用整理好的客服问答样本调整模型参数，让它更好地遵循企业的回复格式与处理要求，这属于训练；在已有模型基础上继续训练，称为微调。模型收到一个新问题并生成回答，则是在进行推理。研发人员在电脑上测试一句回复，已经发生了推理；上线后为客户生成回答，仍然是推理。团队还需要准备数据、评估效果和维护程序，训练与推理并不涵盖项目的全部工作。[NeMo 开发文档](https://docs.nvidia.com/nemo/)
 
-### 任务决定设备配置，训练与推理没有固定的显卡分界
+### 软件分别解决调用硬件、调整模型和提供服务的问题
+
+为了开发这个客服助手，研发人员需要能够调整和运行所选模型的软件。若计划使用英伟达 GPU 加速计算，就会接触到 CUDA 及其相关工具。**CUDA 是英伟达的并行计算平台与编程模型；CUDA Toolkit 是相应的开发工具包**，包含编译、调试工具，以及可以直接调用的计算功能。开发者可以直接使用这些工具，也可以通过支持 CUDA 的模型开发框架间接使用 GPU。这套基础能力贯穿训练和推理，也可以用于个人电脑、企业服务器与云端。[CUDA Toolkit](https://developer.nvidia.com/cuda/toolkit)
+
+在这套基础之上，团队可以按项目需要选择更具体的工具。客服助手若需要微调，**NeMo 这套模型开发工具**可以帮助研发人员完成受支持模型的定制与评估。它与前面提到的 Nemotron 有区别：Nemotron 提供模型，NeMo 提供开发和改进模型的工具。[NeMo](https://docs.nvidia.com/nemo/)
+
+当模型已经能够生成合适的回复，下一步是让它高效运行并接入客服程序。**TensorRT 是优化模型推理的软件工具系列**，其中 TensorRT-LLM 面向大语言模型，帮助优化生成回答时的计算执行。**NIM 则提供预先打包好的模型推理服务**：把受支持模型所需的运行组件组织好，并提供程序调用接口。程序员部署相应服务后，客服程序就可以向它发送问题、接收回答。[TensorRT](https://developer.nvidia.com/tensorrt) [NIM](https://www.nvidia.com/en-us/ai-data-science/products/nim-microservices/)
+
+这些工具可以协作，但不是每个项目都必须依次使用的固定套装；部分 NIM 服务内部就会使用 TensorRT-LLM 等推理引擎。企业如果需要生产环境中的软件支持、安全更新与维护，还可以考虑 NVIDIA AI Enterprise 企业软件平台。[NIM 文档](https://docs.api.nvidia.com/nim/docs/introduction) [NVIDIA AI Enterprise](https://www.nvidia.com/en-us/data-center/products/ai-enterprise/)
+
+### 根据模型与软件要求配置设备
+
+明确模型和软件方案后，团队需要检查现有电脑能否支持，再决定是否升级设备。软件与硬件也需要结合预算和实测结果反复调整。
+
+**能否运行、运行多快、回答质量如何，是不同的问题。** 部分模型可以通过支持 CPU 的软件运行，例如 llama.cpp；如果软件支持现有设备且内存足够，计算能力较弱可能只是让回答生成得更慢。若运行环境不兼容，或可用内存不足以完成任务，则可能无法运行。模型和计算方式相同时，设备速度慢并不意味着回答质量必然下降；为了适应设备而改用更小的模型或降低计算精度，才可能改变结果质量。[llama.cpp 支持的运行方式](https://github.com/ggml-org/llama.cpp)
 
 微调时，设备除了运行模型，还要保存调整参数所需的数据；推理时，设备需要装下模型并及时生成结果。模型大小、采用的训练方法、输入内容长度以及同时处理的请求数量，都会影响所需的内存和计算能力。因此，设备选型要先看具体工作量，不能仅凭“训练”或“推理”两个词决定买哪张卡。
 
@@ -95,16 +109,6 @@ RTX PRO 的价值包括部分型号提供的大显存，以及专业软件认证
 DGX Spark 采用 CPU 与 GPU 共享的统一内存。它能容纳多大的任务，与任务运行得多快，是不同问题。LMSYS 对早期 DGX Spark 的测试就提示，较大的内存空间不意味着所有模型都能高速运行；带宽和软件实现同样重要。[NVIDIA DGX Spark with SGLang](https://www.lmsys.org/blog/2025-10-13-nvidia-dgx-spark/)
 
 **不同 GPU 的设计各有侧重，用途也有交叉。** 例如，数据中心的 A100 同时支持训练与推理，L40S 则兼顾 AI、图形与视频任务。更大规模的模型或更多并发请求，可能需要服务器乃至多台设备协作；这些配置将在下一节展开。[A100](https://www.nvidia.com/en-us/data-center/a100/) [L40S](https://www.nvidia.com/en-us/data-center/l40s/)
-
-### 软件分别解决调用硬件、调整模型和提供服务的问题
-
-硬件承担计算，开发软件帮助程序员组织这些计算。**CUDA 是英伟达的并行计算平台与编程模型；CUDA Toolkit 是相应的开发工具包**，包含编译、调试工具，以及可以直接调用的计算功能。开发者可以直接使用这些工具，也可以通过支持 CUDA 的模型开发框架间接使用 GPU。这套基础能力贯穿训练和推理，也可以用于个人电脑、企业服务器与云端。[CUDA Toolkit](https://developer.nvidia.com/cuda/toolkit)
-
-在这套基础之上，团队可以按项目需要选择更具体的工具。客服助手若需要微调，**NeMo 这套模型开发工具**可以帮助研发人员完成受支持模型的定制与评估。它与前面提到的 Nemotron 有区别：Nemotron 提供模型，NeMo 提供开发和改进模型的工具。[NeMo](https://docs.nvidia.com/nemo/)
-
-当模型已经能够生成合适的回复，下一步是让它高效运行并接入客服程序。**TensorRT 是优化模型推理的软件工具系列**，其中 TensorRT-LLM 面向大语言模型，帮助优化生成回答时的计算执行。**NIM 则提供预先打包好的模型推理服务**：把受支持模型所需的运行组件组织好，并提供程序调用接口。程序员部署相应服务后，客服程序就可以向它发送问题、接收回答。[TensorRT](https://developer.nvidia.com/tensorrt) [NIM](https://www.nvidia.com/en-us/ai-data-science/products/nim-microservices/)
-
-这些工具可以协作，但不是每个项目都必须依次使用的固定套装；部分 NIM 服务内部就会使用 TensorRT-LLM 等推理引擎。企业如果需要生产环境中的软件支持、安全更新与维护，还可以考虑 NVIDIA AI Enterprise 企业软件平台。[NIM 文档](https://docs.api.nvidia.com/nim/docs/introduction) [NVIDIA AI Enterprise](https://www.nvidia.com/en-us/data-center/products/ai-enterprise/)
 
 至此，团队使用的产品有了明确分工：模型提供生成回答的能力，电脑中的 GPU 执行计算，开发与部署软件让模型能够被调整、运行并接入应用。客服助手进入正式使用后，如果越来越多客户同时提问，团队就需要进一步考虑服务器容量、响应速度和持续运行。这也把问题带到了下一节：如何组织更大规模的计算资源。
 
