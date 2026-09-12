@@ -84,7 +84,7 @@ RTX PRO 的价值包括部分型号提供的大显存，以及专业软件认证
 
 假设一家企业要在本地开发一套发票识别程序：员工上传发票照片后，程序自动提取日期、金额等信息，整理成报销表格。为了实现这个流程，研究员需要用发票样本反复测试和改进识别模型，程序员则要把模型接入程序，让照片输入和表格输出衔接起来。
 
-为完成这些本地实验，团队需要配置相应的计算设备。企业既可以购买已经配好 RTX PRO 显卡的电脑，也可以为兼容的台式电脑单独购买、安装显卡。DGX Spark 则是已经内置 CPU 和 GPU 的完整设备，属于另一种选择。[联想整机配置示例](https://psref.lenovo.com/Product/ThinkStation/ThinkStation_P5) [DGX Spark](https://www.nvidia.com/en-us/products/workstations/dgx-spark/)
+为完成这些本地实验，团队需要配置相应的计算设备。企业既可以购买已经配好 RTX PRO 显卡的电脑，也可以为兼容的台式电脑单独购买、安装显卡。DGX Spark 是英伟达推出的一款小型桌面 AI 电脑，已经内置 CPU 和 GPU，可用于本地模型开发、测试和运行，是团队的另一种设备选择。[联想整机配置示例](https://psref.lenovo.com/Product/ThinkStation/ThinkStation_P5) [DGX Spark](https://www.nvidia.com/en-us/products/workstations/dgx-spark/)
 
 DGX Spark 还采用 CPU 与 GPU 共享的统一内存。它能容纳多大的任务，与任务运行得多快，是不同问题。LMSYS 对早期 DGX Spark 的测试就提示，较大的内存空间不意味着所有模型都能高速运行；带宽和软件实现同样重要。[NVIDIA DGX Spark with SGLang](https://www.lmsys.org/blog/2025-10-13-nvidia-dgx-spark/)
 
