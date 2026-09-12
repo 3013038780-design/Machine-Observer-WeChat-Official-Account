@@ -34,6 +34,12 @@ body = re.sub(r'<p style="margin:0;">(<h2.*?</h2>)</p>', r'\1', body, flags=re.S
 
 def chapter(match):
     chapter.number += 1
+    if version == 'v7':
+        return (
+            '<section style="margin:44px 0 18px;padding:0;">'
+            f'<h2 style="margin:0;color:#B91C1C;font-size:18px;font-weight:700;line-height:1.55;letter-spacing:0.5px;">{match[1]}</h2>'
+            '</section>'
+        )
     chapter_label = ['产品版图', '场景与产品', '系统与价格'][chapter.number - 1] if version == 'v7' else '算力生意'
     return (
         '<section style="margin:44px 0 18px;padding:0 0 12px;border-bottom:1px solid #E5C4C0;">'
