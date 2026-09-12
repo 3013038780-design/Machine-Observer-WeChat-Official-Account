@@ -1,6 +1,6 @@
 # 算力生意（上）：英伟达的产品版图
 
-当前：v8表格图片修订稿，待审阅。用户已认可v3整体结构，未授权发表。
+当前：v8结构已被用户否定，进入重写。先审核[科普重写大纲](outline-rewrite-v9.md)，再审核纯文字稿，之后才排版。以下HTML均为历史版本。
 
 - [v8 HTML预览](article-v8.html) · [正文HTML片段](article-v8-fragment.html) · [Markdown](article-v8.md)
 - [选定首图原文件](../../../assets/brand/2026-09-12-header-v2/03-retro-terminal.png)
