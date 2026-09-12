@@ -7,7 +7,7 @@ import re
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--version", choices=["v1", "v2"], default="v2")
+parser.add_argument("--version", choices=["v1", "v2", "v3"], default="v3")
 version = parser.parse_args().version
 
 HERE = Path(__file__).resolve().parent
@@ -20,6 +20,8 @@ sources = json.loads((HERE.parent / 'research/sources.json').read_text())
 source_map = {s['id']: s for s in sources}
 md = (HERE / f'article-{version}.md').read_text()
 title = md.splitlines()[0].removeprefix('# ')
+used_ids = set(re.findall(r'〔(\d{2})〕', md))
+sources = [s for s in sources if s['id'] in used_ids]
 body = renderer.render('\n'.join(md.splitlines()[1:]), theme)
 
 # The inherited renderer wraps h2 in p. Remove that invalid wrapper here.
@@ -72,6 +74,9 @@ header = '''<section style="margin:0 0 30px;padding:24px 0 0;border-top:4px soli
 <p style="margin:0 0 26px;text-align:center;color:#888888;font-size:14px;line-height:1.75;letter-spacing:0.5px;">从个人显卡到机柜系统<br>不同的工作，为什么需要不同的 GPU</p>
 <p style="margin:0;padding:13px 0;border-top:1px solid #EAEAEA;border-bottom:1px solid #EAEAEA;font-size:12px;line-height:1.7;letter-spacing:1px;color:#888888;">资料核查 / 2026.09.12</p>
 </section>'''
+
+if version == 'v3':
+    header = header.replace('从个人显卡到机柜系统<br>不同的工作，为什么需要不同的 GPU', '从游戏、专业工作到 AI 与机器人<br>产品如何分工，价格为何不同')
 
 refs = '<section style="margin:36px 0 14px;padding:18px 16px;background:#FAFAFA;border-top:2px solid #B91C1C;">'
 refs += '<p style="margin:0 0 12px;font-size:14px;color:#B91C1C;font-weight:600;letter-spacing:2px;">来源与进一步阅读</p>'

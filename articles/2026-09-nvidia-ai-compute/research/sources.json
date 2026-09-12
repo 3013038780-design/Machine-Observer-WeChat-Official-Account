@@ -308,5 +308,85 @@
     "publisher": "Micron",
     "supports": "HBM的3D堆叠结构，容量与带宽维度",
     "reading": "已读取相关正文/规格/报价，非仅标题"
+  },
+  {
+    "id": "32",
+    "title": "Jetson Thor 平台与模块规格",
+    "url": "https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-thor/",
+    "published_or_updated": "动态官方产品页",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "T5000 128GB LPDDR5X，40–130W；Blackwell；模块与开发套件区别",
+    "reading": "已读取产品正文、规格或公告日期及供货段落"
+  },
+  {
+    "id": "33",
+    "title": "Jetson Orin 产品家族",
+    "url": "https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/",
+    "published_or_updated": "动态官方产品页",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "Orin Nano/NX/AGX产品关系，模块与开发套件；不采用页面之间不一致的性能倍数",
+    "reading": "已读取产品正文、规格或公告日期及供货段落"
+  },
+  {
+    "id": "34",
+    "title": "RTX PRO 桌面产品目录",
+    "url": "https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/",
+    "published_or_updated": "动态官方目录",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "当前Blackwell桌面2000 16GB、4000/SFF 24GB、4500 32GB、5000 48/72GB、5500 84GB、6000/Max-Q 96GB，均GDDR7 ECC；Ampere/Ada专业卡关系；ISV认证、企业驱动与支持",
+    "reading": "已读取产品正文、规格或公告日期及供货段落"
+  },
+  {
+    "id": "35",
+    "title": "Jetson T3000 与 T2000 发布",
+    "url": "https://blogs.nvidia.com/blog/jetson-thor-robotics-edge-ai-agent/",
+    "published_or_updated": "2026-07-15",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "新模块已公布，计划2027Q1供货；当前模拟开发支持不等于模块现货",
+    "reading": "已读取产品正文、规格或公告日期及供货段落"
+  },
+  {
+    "id": "36",
+    "title": "Jetson Orin Nano 2 发布",
+    "url": "https://nvidianews.nvidia.com/news/nvidia-announces-jetson-orin-nano-2-robotics-computer-to-redefine-entry-level-edge-ai",
+    "published_or_updated": "2026-08-25",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "已公布，预计2027上半年提供模块与开发套件；不复述缺少足够测试口径的性能倍数",
+    "reading": "已读取产品正文、规格或公告日期及供货段落"
+  },
+  {
+    "id": "37",
+    "title": "T4 官方产品页",
+    "url": "https://www.nvidia.com/en-us/data-center/tesla-t4/",
+    "published_or_updated": "动态官方产品页",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "Turing，16GB GDDR6，70W，推理/训练/视频/图形应用",
+    "reading": "已读取产品正文、规格或公告日期及供货段落"
+  },
+  {
+    "id": "38",
+    "title": "A100 官方产品页",
+    "url": "https://www.nvidia.com/en-us/data-center/a100/",
+    "published_or_updated": "动态官方产品页",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "Ampere产品归属；训练和推理均支持。本稿不引用历史宣传倍数",
+    "reading": "已读取产品正文、规格或公告日期及供货段落"
+  },
+  {
+    "id": "39",
+    "title": "DRIVE AGX 开发平台",
+    "url": "https://developer.nvidia.com/drive/agx",
+    "published_or_updated": "动态官方开发文档",
+    "accessed": "2026-09-12",
+    "publisher": "NVIDIA",
+    "supports": "Orin/Thor开发平台，Blackwell架构级GPU，车载I/O、DriveOS/DriveWorks、安全设计；不用单芯片算力证明整车自动驾驶级别",
+    "reading": "已读取产品正文、规格或公告日期及供货段落"
   }
 ]

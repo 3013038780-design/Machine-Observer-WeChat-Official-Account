@@ -199,3 +199,14 @@
 - GeForce发布公告保留历史日期；当前规格与页面报价另行核查，发布价不是今天市场均价。
 - 基础原理文档可能较旧；只用于稳定技术解释，最新型号、状态与价格由动态产品页和最新财务披露支持。
 - 未采用无原始证据的市场均价、出厂成本、整柜成交价或通用性能倍数。
+
+## v3 补充一手来源（2026-09-12）
+
+- 32 · [Jetson Thor 平台与模块规格](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-thor/)。发布/更新：动态官方产品页。核查：2026-09-12。支持：T5000 128GB LPDDR5X，40–130W；Blackwell；模块与开发套件区别。
+- 33 · [Jetson Orin 产品家族](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/)。发布/更新：动态官方产品页。核查：2026-09-12。支持：Orin Nano/NX/AGX产品关系，模块与开发套件；不采用页面之间不一致的性能倍数。
+- 34 · [RTX PRO 桌面产品目录](https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/)。发布/更新：动态官方目录。核查：2026-09-12。支持：当前Blackwell桌面2000 16GB、4000/SFF 24GB、4500 32GB、5000 48/72GB、5500 84GB、6000/Max-Q 96GB，均GDDR7 ECC；Ampere/Ada专业卡关系；ISV认证、企业驱动与支持。
+- 35 · [Jetson T3000 与 T2000 发布](https://blogs.nvidia.com/blog/jetson-thor-robotics-edge-ai-agent/)。发布/更新：2026-07-15。核查：2026-09-12。支持：新模块已公布，计划2027Q1供货；当前模拟开发支持不等于模块现货。
+- 36 · [Jetson Orin Nano 2 发布](https://nvidianews.nvidia.com/news/nvidia-announces-jetson-orin-nano-2-robotics-computer-to-redefine-entry-level-edge-ai)。发布/更新：2026-08-25。核查：2026-09-12。支持：已公布，预计2027上半年提供模块与开发套件；不复述缺少足够测试口径的性能倍数。
+- 37 · [T4 官方产品页](https://www.nvidia.com/en-us/data-center/tesla-t4/)。发布/更新：动态官方产品页。核查：2026-09-12。支持：Turing，16GB GDDR6，70W，推理/训练/视频/图形应用。
+- 38 · [A100 官方产品页](https://www.nvidia.com/en-us/data-center/a100/)。发布/更新：动态官方产品页。核查：2026-09-12。支持：Ampere产品归属；训练和推理均支持。本稿不引用历史宣传倍数。
+- 39 · [DRIVE AGX 开发平台](https://developer.nvidia.com/drive/agx)。发布/更新：动态官方开发文档。核查：2026-09-12。支持：Orin/Thor开发平台，Blackwell架构级GPU，车载I/O、DriveOS/DriveWorks、安全设计；不用单芯片算力证明整车自动驾驶级别。

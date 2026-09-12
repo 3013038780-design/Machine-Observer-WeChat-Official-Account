@@ -256,5 +256,69 @@
       "bytes_per_GB": 1000000000,
       "result_GB": 35
     }
+  },
+  {
+    "id": "V3-PRO",
+    "claim": "RTX PRO Blackwell桌面显存表：2000 16GB；4000/SFF 24GB；4500 32GB；5000 48/72GB；5500 84GB；6000/Max-Q 96GB，均GDDR7 ECC",
+    "sources": [
+      "34"
+    ],
+    "scope": "当前目录标称容量；不推断库存",
+    "checked": "2026-09-12",
+    "result": "已与所列官方正文/规格核对"
+  },
+  {
+    "id": "V3-T4",
+    "claim": "T4 16GB GDDR6、70W、Turing架构",
+    "sources": [
+      "37"
+    ],
+    "scope": "较早产品；不采用页面历史性能宣传",
+    "checked": "2026-09-12",
+    "result": "已与所列官方正文/规格核对"
+  },
+  {
+    "id": "V3-THOR",
+    "claim": "Jetson T5000 128GB LPDDR5X、40–130W",
+    "sources": [
+      "32"
+    ],
+    "scope": "模块平台内存与功耗范围，不作为独立GPU显存横比",
+    "checked": "2026-09-12",
+    "result": "已与所列官方正文/规格核对"
+  },
+  {
+    "id": "V3-THOR-SCHEDULE",
+    "claim": "T3000/T2000于2026年7月公布，计划2027Q1供货",
+    "sources": [
+      "35"
+    ],
+    "scope": "发布日期2026-07-15；计划状态",
+    "checked": "2026-09-12",
+    "result": "已与所列官方正文/规格核对"
+  },
+  {
+    "id": "V3-ORIN-SCHEDULE",
+    "claim": "Orin Nano 2于2026年8月公布，预计2027上半年供货",
+    "sources": [
+      "36"
+    ],
+    "scope": "发布日期2026-08-25；计划状态",
+    "checked": "2026-09-12",
+    "result": "已与所列官方正文/规格核对"
+  },
+  {
+    "id": "V3-ARCH",
+    "claim": "Ampere/RTX30/A6000/A100；Ada/RTX40/RTX6000Ada；Hopper/H100/H200；Blackwell/RTX50/RTXPRO/B200；Ultra/B300；Rubin",
+    "sources": [
+      "02",
+      "05",
+      "19",
+      "34",
+      "38"
+    ],
+    "scope": "架构与产品映射；不推断各条产品线同步换代",
+    "checked": "2026-09-12",
+    "result": "已与所列官方正文/规格核对"
   }
 ]
