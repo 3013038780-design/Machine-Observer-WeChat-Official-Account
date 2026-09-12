@@ -21,3 +21,12 @@
 ## 后续审核修订 · 2026-09-13
 
 用户确认先解释任务、模型和软件要求，再配置设备；新增兼容性、速度、结果质量的区别。查阅 https://github.com/ggml-org/llama.cpp 官方 README 的硬件后端、CPU 与 GPU 混合推理说明；不保证同一模型跨设备输出逐字相同。
+
+## 企业取得能力的路径 · 2026-09-13
+
+用户要求说明企业不一定自购设备。在案例前增加应用服务、模型 API、云端 GPU 与自购设备路径，保留本地案例并限定适用范围。
+
+- https://docs.modelstudio.console.alibabacloud.com/en/model-studio/what-is-model-studio ：现成模型 API，无需自行管理模型计算基础设施。
+- https://www.alibabacloud.com/help/en/egs/quick-reference ：租用 GPU 实例后远程管理、部署、维护等操作。
+
+未据此推断所有模型服务都使用英伟达 GPU；自管云服务器与托管服务的责任不同。
