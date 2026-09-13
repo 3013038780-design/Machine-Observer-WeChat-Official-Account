@@ -1,12 +1,17 @@
 """Landscape relationship map: branches are alternatives or complementary parts, never implicit else paths."""
 from pathlib import Path
-import html,json
+import html,json,math
 A=Path(__file__).resolve().parent
 G='#17633f'; M='#397a57'; L='#86ad95'; B='#f7faf7'; INK='#243e30'
 shapes=[];edges=[];labels=[];registry=[]
 def tx(x,y,lines,size=24,color=INK,anchor='middle',weight=400):
  return f'<text x="{x}" y="{y}" text-anchor="{anchor}" fill="{color}" font-size="{size}" font-weight="{weight}">'+''.join(f'<tspan x="{x}" dy="{0 if i==0 else size*1.45}">{html.escape(l)}</tspan>' for i,l in enumerate(lines))+'</text>'
 def box(id,x,y,w,h,title,lines=(),fill='white',size=24,titleSize=26):
+ # Enlarge actual typography within the same overall canvas, not just output pixels.
+ size=round(size*1.25,1);titleSize=round(titleSize*1.2,1)
+ extra=8 if id in ('model-work','software-work','hardware-work','replicas','model-parallel') else 44
+ x-=extra/2;w+=extra
+ h=max(h,math.ceil(82+max(0,len(lines)-1)*size*1.45))
  shapes.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="12" fill="{fill}" stroke="{L}" stroke-width="2"/>')
  color='white' if fill==G else G
  labels.append(tx(x+w/2,y+34,[title],titleSize,color,weight=600))
@@ -41,7 +46,7 @@ box('components',1950,132,520,170,'电脑中的分工',['CPU：通用程序与�
 line([(1810,201),(1950,201)],'共同工作',(1880,178))
 box('names',2590,132,590,170,'三个名称对应不同层级',['GeForce：产品家族','Blackwell：技术架构','RTX 5090：具体型号'],size=23)
 line([(2470,215),(2590,215)],'辨认产品',(2530,192),dashed=True)
-box('online',1000,348,340,110,'在线服务',['ChatGPT、Kimi、Seedance 等'],size=22)
+box('online',1000,348,340,110,'在线服务',['ChatGPT、Kimi','Seedance 等'],size=22)
 box('local',1000,534,340,110,'本地部署',['下载模型与运行软件'],size=23)
 fork(870,482,945,[1000,1000],[403,589])
 labels.append(tx(937,331,['两种方式可按需使用'],21,M))
@@ -74,7 +79,7 @@ fork(1340,1238,1400,[1450,1450,1450],[1017,1186,1355])
 labels.append(tx(1430,1101,['三种方案并列展开'],21,M))
 # A separate coordinated group for self-deployment, not a mandatory software chain.
 group(1950,1040,920,378,'自行部署时：模型、软件、设备相互配合')
-box('model-work',1970,1115,270,270,'模型与工作',['选择与评估模型','按需训练／微调','运行推理','Nemotron 等是模型资源'],size=20,titleSize=24)
+box('model-work',1970,1115,270,270,'模型与工作',['选择与评估模型','按需训练／微调','运行推理','Nemotron 等模型资源'],size=20,titleSize=24)
 box('software-work',2260,1115,285,270,'软件工具',['CUDA：计算基础','NeMo：模型定制','TensorRT：推理优化','NIM：打包推理服务','按需选择，非固定套装'],size=20,titleSize=24)
 box('hardware-work',2565,1115,285,270,'计算设备',['自有或云端资源','专业电脑、DGX Spark','或 GPU 服务器','按模型与软件要求选型'],size=20,titleSize=24)
 # Two self-hosting solutions converge into a coordinated resource group.
@@ -119,7 +124,7 @@ def svg(view=None):
  vb=view or (0,0,3300,2160);x,y,w,h=vb
  return f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="{x} {y} {w} {h}"><defs><marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="{L}"/></marker></defs><rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{B}"/><g font-family="PingFang SC,Microsoft YaHei,sans-serif">'+''.join(edges+shapes+labels)+'</g></svg>'
 (A/'full.svg').write_text(svg())
-for name,view in [('personal',(340,118,2940,580)),('enterprise',(340,743,2940,690)),('provider',(340,1425,2940,620))]:(A/(name+'.svg')).write_text(svg(view))
+for name,view in [('personal',(315,118,2965,580)),('enterprise',(315,743,2965,690)),('provider',(315,1425,2965,620))]:(A/(name+'.svg')).write_text(svg(view))
 (A/'nodes.json').write_text(json.dumps(registry,ensure_ascii=False,indent=2)+'\n')
 (A/'preview.html').write_text('''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>全文逻辑关系图</title><body style="margin:0;background:#f7faf7"><a href="full.svg"><img src="full.svg" style="display:block;width:100%;height:auto" alt="全文逻辑关系图"></a></body></html>''')
 print('Created landscape map with',len(registry),'nodes')
