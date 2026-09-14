@@ -5,7 +5,9 @@
 状态：本轮深度调研完成，大纲待审核；尚无公众号全文、HTML或发布版本。
 
 - [需求与范围](brief.md)
-- [写作逻辑与大纲 v1](outline-v1.md)
+- [当前写作逻辑与大纲 v2](outline-v2.md)
+- [中国案例补充核查](research/china-cases-v2.md)
+- [历史大纲 v1](outline-v1.md)
 - [深度调研报告 v1](research/report-v1.md)
 - [来源与阅读边界](research/sources.md)
 - [结构化来源台账](research/sources.json)
