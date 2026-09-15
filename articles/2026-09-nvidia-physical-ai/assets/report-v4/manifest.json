@@ -1,0 +1,56 @@
+[
+  {
+    "file": "atlas.jpg",
+    "url": "https://bostondynamics.com/wp-content/uploads/2025/03/atlas-news.jpg",
+    "page": "https://bostondynamics.com/news/boston-dynamics-expands-collaboration-with-nvidia/",
+    "type": "2025年官方Atlas照片",
+    "retrieved": "2026-09-15",
+    "downloaded": true,
+    "rights": "原权利人所有；仅作署名引用素材，未取得另行转载许可"
+  },
+  {
+    "file": "jetson.webp",
+    "url": "https://developer-blogs.nvidia.com/wp-content/uploads/2025/08/jetson-thor-1-1024x576-png.webp",
+    "page": "https://developer.nvidia.com/blog/introducing-nvidia-jetson-thor-the-ultimate-platform-for-physical-ai/",
+    "type": "Jetson Thor官方产品展示图",
+    "retrieved": "2026-09-15",
+    "downloaded": true,
+    "rights": "原权利人所有；仅作署名引用素材，未取得另行转载许可"
+  },
+  {
+    "file": "isaac-sim.jpg",
+    "url": "https://developer.download.nvidia.com/images/isaac/nvidia-isaac-sim-1920x1080.jpg",
+    "page": "https://developer.nvidia.com/isaac",
+    "type": "Isaac Sim官方虚拟场景图",
+    "retrieved": "2026-09-15",
+    "downloaded": true,
+    "rights": "原权利人所有；仅作署名引用素材，未取得另行转载许可"
+  },
+  {
+    "file": "motion.png",
+    "url": "https://media.githubusercontent.com/media/NVIDIA-ISAAC-ROS/.github/release-4.0/resources/isaac_ros_docs/reference_workflows/isaac_for_manipulation/manipulator_RA_rviz.png",
+    "page": "https://nvidia-isaac-ros.github.io/v/release-4.0/reference_workflows/isaac_for_manipulation/reference_architecture.html",
+    "type": "RViz运动规划界面",
+    "retrieved": "2026-09-15",
+    "downloaded": true,
+    "rights": "原权利人所有；仅作署名引用素材，未取得另行转载许可"
+  },
+  {
+    "file": "et7.png",
+    "url": "https://blogs.nvidia.com/wp-content/uploads/2022/04/ET7-1280x712.png",
+    "page": "https://blogs.nvidia.com/blog/nio-et7-drive-orin-arrives/",
+    "type": "2022年官方车型展示图，非本文实测，未确认拍摄/渲染方式",
+    "retrieved": "2026-09-15",
+    "rights": "原权利人所有；未取得另行转载许可"
+  },
+  {
+    "file": "02-car-layers.png",
+    "type": "原创概念图",
+    "source": "../guide-v1/02-car-layers.png"
+  },
+  {
+    "file": "04-robot-map.png",
+    "type": "原创概念图",
+    "source": "../guide-v1/04-robot-map.png"
+  }
+]
