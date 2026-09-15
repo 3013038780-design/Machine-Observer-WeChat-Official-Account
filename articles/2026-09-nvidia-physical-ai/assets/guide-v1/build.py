@@ -106,7 +106,7 @@ s=s.replace('## 写作提纲','## 写作提纲（归档，不进入HTML正文）
 s=s.replace('这些是功能', '这些是功能')
 anchors=[('这一过程解释了为什么', '01-braking','图1｜先看辅助减速的完整过程。'),('#### 车企选择不同的技术组合','02-car-layers','图2｜硬件、软件和车辆执行，是不同的组成部分。'),('英伟达的汽车开发产品也延伸到这一侧','03-development','图3｜开发不是一次完成，测试结果会带来下一轮修改。'),('#### 搬运与抓取，需要不同的技术配合','04-robot-map','图4｜同一形态可以进入不同场景，分类之间存在交叉。'),('这意味着，换一颗更强的芯片','05-pick-place','图5｜用一次抓取看清机械、感知与控制的配合。'),('#### 从实验动作到持续工作','06-product-roles','图6｜把产品名称放回已经认识的系统位置。')]
 for anchor,name,caption in anchors:
- s=s.replace(anchor,f'![{caption}](assets/guide-v1/{name}.png)\n\n{caption}\n\n'+anchor,1)
+ s=s.replace(anchor,f'![{caption}](assets/guide-v1/{name}.png)\n\n'+anchor,1)
 (A/'article-v3.md').write_text(s)
 # Use established Markdown inline renderer, override superseded heading decoration.
 root=A.parent.parent

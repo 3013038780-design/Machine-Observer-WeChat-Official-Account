@@ -11,10 +11,8 @@
 <p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">以跟随前车减速为例，车辆首先通过摄像头、雷达等传感器获取道路信息。传感器是测量外部环境或自身状态的设备；摄像头提供图像，雷达帮助测量距离和运动，部分车型还采用激光雷达获取空间信息。</p>
 <p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">软件随后识别前车、估计距离与速度变化，再决定需要怎样减速。识别环境称为“感知”，安排接下来的行动称为“规划”。最后，控制系统把结果转换成车辆能够执行的指令，并根据实际运动不断调整。</p>
 <img src="assets/guide-v1/01-braking.png" alt="图1｜先看辅助减速的完整过程。" style="display:block;width:100%;max-width:100%;height:auto;margin:24px auto 8px;"/><p style="margin:8px 0 26px;font-size:13px;line-height:1.65;color:#557366;text-align:left;">图1｜先看辅助减速的完整过程。</p>
-<p style="margin:8px 0 26px;font-size:13px;line-height:1.65;color:#557366;text-align:left;">图1｜先看辅助减速的完整过程。</p>
 <p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">这一过程解释了为什么“用了什么芯片”只是问题的一部分。芯片承担计算，软件处理任务，车辆的机械和电子系统完成动作，任何一环都会影响结果。</p>
 <img src="assets/guide-v1/02-car-layers.png" alt="图2｜硬件、软件和车辆执行，是不同的组成部分。" style="display:block;width:100%;max-width:100%;height:auto;margin:24px auto 8px;"/><p style="margin:8px 0 26px;font-size:13px;line-height:1.65;color:#557366;text-align:left;">图2｜硬件、软件和车辆执行，是不同的组成部分。</p>
-<p style="margin:8px 0 26px;font-size:13px;line-height:1.65;color:#557366;text-align:left;">图2｜硬件、软件和车辆执行，是不同的组成部分。</p>
 <h3 style="font-size:18px;font-weight:650;color:#17633F;margin:30px 0 14px;line-height:1.6;letter-spacing:0.5px;">车企选择不同的技术组合</h3>
 <p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">在这套分工中，车企可以自研，也可以采购或联合开发，选择并不局限于整套购买。</p>
 <p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">特斯拉官方介绍了自行设计的车载AI计算机与推理芯片。问界M8采用的华为乾崑ADS，则是驾驶辅助系统方案的名称。比亚迪在2023年发布的公告中，明确介绍了扩大英伟达DRIVE Orin的使用范围。<sup style="font-size:11px;color:#557366;">[4]</sup><sup style="font-size:11px;color:#557366;">[5]</sup><sup style="font-size:11px;color:#557366;">[6]</sup></p>
@@ -33,7 +31,6 @@
 <p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">因此，训练效率与车内响应速度不能混为一谈。模型在服务器上表现良好，还要验证移到车载硬件后，能否在需要的时间内给出结果。</p>
 <p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">仿真帮助团队重复检查这些问题。它用计算机模拟交通环境和系统反应，可以改变车辆位置、光照等条件，也可以连接真实车载计算机进行测试。之后仍需要结合封闭场地和实际道路验证；模拟环境不能覆盖全部现实情况。<sup style="font-size:11px;color:#557366;">[11]</sup></p>
 <img src="assets/guide-v1/03-development.png" alt="图3｜开发不是一次完成，测试结果会带来下一轮修改。" style="display:block;width:100%;max-width:100%;height:auto;margin:24px auto 8px;"/><p style="margin:8px 0 26px;font-size:13px;line-height:1.65;color:#557366;text-align:left;">图3｜开发不是一次完成，测试结果会带来下一轮修改。</p>
-<p style="margin:8px 0 26px;font-size:13px;line-height:1.65;color:#557366;text-align:left;">图3｜开发不是一次完成，测试结果会带来下一轮修改。</p>
 <p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">英伟达的汽车开发产品也延伸到这一侧，包括仿真和Alpamayo等模型资源。它们可以参与研发，但模型发布不等于某款车已经搭载，更不意味着下载后就获得完整驾驶系统。<sup style="font-size:11px;color:#557366;">[12]</sup></p>
 <p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">软件投入使用后，还要持续管理版本、调查异常和验证更新。OTA指通过无线网络更新软件，能够改进功能，但不能让已有硬件的能力无限增长。</p>
 <p style="margin:0;"><h2 style="font-size:20px;font-weight:700;color:#17633F;margin:38px 0 18px;line-height:1.55;letter-spacing:0.5px;">机器人：先看任务，再看形态</h2></p>
@@ -43,14 +40,12 @@
 <p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">这些分类可以交叉。人形机器人描述外形，家务机器人描述用途；一台轮式机器人可以在医院配送，也可以在工厂搬运。“通用”讨论的是能适应多大范围的任务，跑步、跳舞则展示动作能力，都不能直接代表全部工作能力。</p>
 <p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">机器人也不一定高度自主。有的执行预设程序，有的需要人远程操作，有的能在限定条件下自行完成任务。是否使用大模型，要看实际需求。</p>
 <img src="assets/guide-v1/04-robot-map.png" alt="图4｜同一形态可以进入不同场景，分类之间存在交叉。" style="display:block;width:100%;max-width:100%;height:auto;margin:24px auto 8px;"/><p style="margin:8px 0 26px;font-size:13px;line-height:1.65;color:#557366;text-align:left;">图4｜同一形态可以进入不同场景，分类之间存在交叉。</p>
-<p style="margin:8px 0 26px;font-size:13px;line-height:1.65;color:#557366;text-align:left;">图4｜同一形态可以进入不同场景，分类之间存在交叉。</p>
 <h3 style="font-size:18px;font-weight:650;color:#17633F;margin:30px 0 14px;line-height:1.6;letter-spacing:0.5px;">搬运与抓取，需要不同的技术配合</h3>
 <p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">仓库搬运是一个直观入口。机器人要知道自己在哪里、货物在哪里、路上有没有障碍，还要接收任务并到达指定位置。极智嘉的仓储方案展示了货物处理与移动机器人的实际用途；这一场景本身并不意味着采用某一家芯片或软件。<sup style="font-size:11px;color:#557366;">[14]</sup></p>
 <p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">如果任务进一步变成“把零件从料箱取出，放到工作台”，系统就要增加操作能力。</p>
 <p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">机械臂需要关节和电机，末端安装夹爪、吸盘等接触物品的工具，这些工具称为末端执行器。摄像头帮助识别零件，关节传感器反馈位置，力或触觉传感器可以帮助判断接触情况。</p>
 <p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">软件据此计算可行的动作路径，再由控制系统不断调整关节运动。前者称为运动规划，后者负责让实际动作接近期望结果。模型可以参与，但传统数学方法与控制程序同样重要。</p>
 <img src="assets/guide-v1/05-pick-place.png" alt="图5｜用一次抓取看清机械、感知与控制的配合。" style="display:block;width:100%;max-width:100%;height:auto;margin:24px auto 8px;"/><p style="margin:8px 0 26px;font-size:13px;line-height:1.65;color:#557366;text-align:left;">图5｜用一次抓取看清机械、感知与控制的配合。</p>
-<p style="margin:8px 0 26px;font-size:13px;line-height:1.65;color:#557366;text-align:left;">图5｜用一次抓取看清机械、感知与控制的配合。</p>
 <p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">这意味着，换一颗更强的芯片不一定能解决抓取问题。夹爪是否适合物体，机械是否稳定，感知和控制是否准确，都需要一起判断。</p>
 <p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">整机厂商通常要把这些能力组合成产品；供应商提供部件和软件；集成商再帮助设备接入现场。工厂和仓库由此成为机器人的使用场景，而不是与机器人并列的另一种产品。</p>
 <h3 style="font-size:18px;font-weight:650;color:#17633F;margin:30px 0 14px;line-height:1.6;letter-spacing:0.5px;">英伟达既在设备里，也在开发工具里</h3>
@@ -64,7 +59,6 @@
 <p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">比亚迪电子的合作发生在这一层。英伟达2024年公告介绍，其使用Isaac Sim和Isaac Perceptor开发自主移动机器人。Perceptor是面向移动机器人感知的参考开发流程，帮助利用摄像头信息理解周围空间。这是工具采用记录，不应被扩大为全部工厂已完成部署。<sup style="font-size:11px;color:#557366;">[2]</sup></p>
 <p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">宇树的官方Isaac Lab仿真项目也提供取放等模拟任务，支持数据收集和模型验证。它说明研发如何开展，但不能用模拟任务清单推断所有量产机器人的能力，更不能据此猜测机载芯片型号。<sup style="font-size:11px;color:#557366;">[3]</sup></p>
 <img src="assets/guide-v1/06-product-roles.png" alt="图6｜把产品名称放回已经认识的系统位置。" style="display:block;width:100%;max-width:100%;height:auto;margin:24px auto 8px;"/><p style="margin:8px 0 26px;font-size:13px;line-height:1.65;color:#557366;text-align:left;">图6｜把产品名称放回已经认识的系统位置。</p>
-<p style="margin:8px 0 26px;font-size:13px;line-height:1.65;color:#557366;text-align:left;">图6｜把产品名称放回已经认识的系统位置。</p>
 <h3 style="font-size:18px;font-weight:650;color:#17633F;margin:30px 0 14px;line-height:1.6;letter-spacing:0.5px;">从实验动作到持续工作</h3>
 <p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">开发一项取放能力，首先要确定物品材质、重量、摆放方式和操作速度。这些条件会影响机械和软件选择。</p>
 <p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">零件位置固定时，预先编程可能就能完成工作；面对杂乱物体，则可能需要更复杂的识别与规划。若采用学习方法，可以让模型从人的示范中学习，这称为模仿学习；也可以让它尝试动作、根据结果调整策略，称为强化学习。</p>
