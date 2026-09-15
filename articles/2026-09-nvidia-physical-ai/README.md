@@ -2,9 +2,14 @@
 
 候选标题：**《从汽车到机器人：英伟达的产品用在哪里？》**
 
-状态：2026-09-15已交付大纲及新闻报道式文字稿v2，待审核；尚无HTML或发布版本。
+状态：2026-09-15按用户授权交付图解HTML v3及6张图片，供综合审阅；未发表。
 
-- [当前新闻报道式文字稿v2](article-v2.md)
+- [当前图解HTML v3](article-v3.html)
+- [图解Markdown v3](article-v3.md)
+- [独立图片包](guide-v1-images.zip)
+- [完整阅读包](article-v3-package.zip)
+- [图解源文件与检查说明](assets/guide-v1/README.md)
+- [历史新闻报道式文字稿v2](article-v2.md)
 - [历史文字稿v1](article-v1.md)
 - [文字稿事实与编辑复核](research/draft-v1-checks.md)
 - [需求与范围](brief.md)

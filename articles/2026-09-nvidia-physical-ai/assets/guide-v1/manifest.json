@@ -1,0 +1,32 @@
+[
+  {
+    "file": "01-braking.png",
+    "caption": "图1｜先看辅助减速的完整过程。",
+    "source": "原创矢量科普示意，非产品实拍"
+  },
+  {
+    "file": "02-car-layers.png",
+    "caption": "图2｜硬件、软件和车辆执行，是不同的组成部分。",
+    "source": "原创矢量科普示意，非产品实拍"
+  },
+  {
+    "file": "03-development.png",
+    "caption": "图3｜开发不是一次完成，测试结果会带来下一轮修改。",
+    "source": "原创矢量科普示意，非产品实拍"
+  },
+  {
+    "file": "04-robot-map.png",
+    "caption": "图4｜同一形态可以进入不同场景，分类之间存在交叉。",
+    "source": "原创矢量科普示意，非产品实拍"
+  },
+  {
+    "file": "05-pick-place.png",
+    "caption": "图5｜用一次抓取看清机械、感知与控制的配合。",
+    "source": "原创矢量科普示意，非产品实拍"
+  },
+  {
+    "file": "06-product-roles.png",
+    "caption": "图6｜把产品名称放回已经认识的系统位置。",
+    "source": "原创矢量科普示意，非产品实拍"
+  }
+]

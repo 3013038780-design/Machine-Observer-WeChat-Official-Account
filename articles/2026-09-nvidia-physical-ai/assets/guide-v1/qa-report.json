@@ -1,0 +1,196 @@
+[
+  {
+    "file": "01-braking.svg",
+    "textBounds": "pass",
+    "pixelWidth": 1440
+  },
+  {
+    "file": "02-car-layers.svg",
+    "textBounds": "pass",
+    "pixelWidth": 1440
+  },
+  {
+    "file": "03-development.svg",
+    "textBounds": "pass",
+    "pixelWidth": 1440
+  },
+  {
+    "file": "04-robot-map.svg",
+    "textBounds": "pass",
+    "pixelWidth": 1440
+  },
+  {
+    "file": "05-pick-place.svg",
+    "textBounds": "pass",
+    "pixelWidth": 1440
+  },
+  {
+    "file": "06-product-roles.svg",
+    "textBounds": "pass",
+    "pixelWidth": 1440
+  },
+  {
+    "width": 375,
+    "scrollWidth": 375,
+    "images": [
+      {
+        "loaded": true,
+        "width": 347
+      },
+      {
+        "loaded": true,
+        "width": 347
+      },
+      {
+        "loaded": true,
+        "width": 347
+      },
+      {
+        "loaded": true,
+        "width": 347
+      },
+      {
+        "loaded": true,
+        "width": 347
+      },
+      {
+        "loaded": true,
+        "width": 347
+      }
+    ],
+    "headings": [
+      "汽车：芯片之外，还有一整套驾驶系统",
+      "车企选择不同的技术组合",
+      "车上的能力，在研发环境里反复打磨",
+      "机器人：先看任务，再看形态",
+      "搬运与抓取，需要不同的技术配合",
+      "英伟达既在设备里，也在开发工具里",
+      "从实验动作到持续工作",
+      "产品合作最终要落到具体能力",
+      "来源"
+    ]
+  },
+  {
+    "width": 390,
+    "scrollWidth": 390,
+    "images": [
+      {
+        "loaded": true,
+        "width": 362
+      },
+      {
+        "loaded": true,
+        "width": 362
+      },
+      {
+        "loaded": true,
+        "width": 362
+      },
+      {
+        "loaded": true,
+        "width": 362
+      },
+      {
+        "loaded": true,
+        "width": 362
+      },
+      {
+        "loaded": true,
+        "width": 362
+      }
+    ],
+    "headings": [
+      "汽车：芯片之外，还有一整套驾驶系统",
+      "车企选择不同的技术组合",
+      "车上的能力，在研发环境里反复打磨",
+      "机器人：先看任务，再看形态",
+      "搬运与抓取，需要不同的技术配合",
+      "英伟达既在设备里，也在开发工具里",
+      "从实验动作到持续工作",
+      "产品合作最终要落到具体能力",
+      "来源"
+    ]
+  },
+  {
+    "width": 430,
+    "scrollWidth": 430,
+    "images": [
+      {
+        "loaded": true,
+        "width": 402
+      },
+      {
+        "loaded": true,
+        "width": 402
+      },
+      {
+        "loaded": true,
+        "width": 402
+      },
+      {
+        "loaded": true,
+        "width": 402
+      },
+      {
+        "loaded": true,
+        "width": 402
+      },
+      {
+        "loaded": true,
+        "width": 402
+      }
+    ],
+    "headings": [
+      "汽车：芯片之外，还有一整套驾驶系统",
+      "车企选择不同的技术组合",
+      "车上的能力，在研发环境里反复打磨",
+      "机器人：先看任务，再看形态",
+      "搬运与抓取，需要不同的技术配合",
+      "英伟达既在设备里，也在开发工具里",
+      "从实验动作到持续工作",
+      "产品合作最终要落到具体能力",
+      "来源"
+    ]
+  },
+  {
+    "width": 1000,
+    "scrollWidth": 1000,
+    "images": [
+      {
+        "loaded": true,
+        "width": 412
+      },
+      {
+        "loaded": true,
+        "width": 412
+      },
+      {
+        "loaded": true,
+        "width": 412
+      },
+      {
+        "loaded": true,
+        "width": 412
+      },
+      {
+        "loaded": true,
+        "width": 412
+      },
+      {
+        "loaded": true,
+        "width": 412
+      }
+    ],
+    "headings": [
+      "汽车：芯片之外，还有一整套驾驶系统",
+      "车企选择不同的技术组合",
+      "车上的能力，在研发环境里反复打磨",
+      "机器人：先看任务，再看形态",
+      "搬运与抓取，需要不同的技术配合",
+      "英伟达既在设备里，也在开发工具里",
+      "从实验动作到持续工作",
+      "产品合作最终要落到具体能力",
+      "来源"
+    ]
+  }
+]
