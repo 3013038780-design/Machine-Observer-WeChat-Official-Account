@@ -22,7 +22,24 @@ while i<len(lines):
         out.append('<p style="text-align:center;color:#7A9A8A;font-size:13px;letter-spacing:2px;margin:0 0 30px;">和 Codex 一起工作 · 第一篇</p>')
         i+=1; continue
     if line.startswith('## '):
-        out.append('<h2 style="font-size:18px;font-weight:bold;color:#17633F;margin:44px 0 18px;display:block;line-height:1.55;border-bottom:1px solid #C7DDCF;padding-bottom:10px;letter-spacing:0.5px;">'+inline(line[3:])+'</h2>')
+        title=line[3:]
+        if title == '资料说明':
+            out.append('<section style="margin:38px 0 18px;padding:18px 16px;background:#FAFAFA;border-top:2px solid #17633F;"><h2 style="font-size:17px;font-weight:bold;color:#17633F;margin:0 0 14px;line-height:1.5;letter-spacing:0.5px;">'+inline(title)+'</h2>')
+        else:
+            m=re.match(r'^([一二三四五六七八九十]+)、(.*)$', title)
+            if m:
+                nums={'一':'01','二':'02','三':'03','四':'04','五':'05','六':'06','七':'07','八':'08','九':'09','十':'10'}
+                label=nums.get(m.group(1),m.group(1))
+                clean=m.group(2)
+            else:
+                label=''; clean=title
+            out.append('<section style="margin:42px 0 20px;padding:12px 14px;background:#F2F7F3;border:1px solid #C7DDCF;border-left:4px solid #17633F;border-radius:4px;box-shadow:0 3px 10px rgba(23,99,63,0.06);"><p style="margin:0;line-height:1.45;letter-spacing:0.5px;"><span style="display:inline-block;min-width:34px;margin-right:10px;padding:4px 6px;background:#17633F;color:#ffffff;font-size:13px;font-weight:bold;text-align:center;border-radius:3px;letter-spacing:1px;">'+label+'</span><span style="font-size:18px;font-weight:bold;color:#17633F;">'+inline(clean)+'</span></p></section>')
+            if clean.startswith('先分清：'):
+                out.append('<section style="margin:18px 0 26px;padding:14px 10px;background:#FAFAFA;border:1px solid #E4ECE7;border-radius:4px;text-align:center;"><p style="margin:6px 0;font-size:14px;color:#17633F;font-weight:bold;">通用工作入口</p><p style="margin:10px 0;color:#777;font-size:18px;">ChatGPT　→　Work　→　Codex　→　API / Platform</p><p style="margin:8px 0 4px;font-size:13px;color:#789082;">从对话与组织，到代码执行，再到接入自己的产品</p></section>')
+            if clean.startswith('工作空间和 worktree'):
+                out.append('<section style="margin:18px 0 26px;padding:14px 10px;background:#FAFAFA;border:1px solid #E4ECE7;border-radius:4px;text-align:center;"><p style="margin:6px 0;font-size:14px;color:#17633F;font-weight:bold;">项目工作的层级</p><p style="margin:10px 0;color:#333;font-size:15px;line-height:2;">工作空间<br><span style="color:#9CB9A8;">↓</span><br>仓库 / 文件夹　　任务 / Thread<br><span style="color:#9CB9A8;">↓　　　　　　　　　↓</span><br>worktree　　　　Artifact</p><p style="margin:8px 0 4px;font-size:13px;color:#789082;">工作空间定边界，仓库存材料，worktree隔离修改</p></section>')
+            if clean.startswith('Codex 有哪些入口'):
+                out.append('<section style="margin:18px 0 26px;padding:14px 10px;background:#FAFAFA;border:1px solid #E4ECE7;border-radius:4px;text-align:center;"><p style="margin:6px 0;font-size:14px;color:#17633F;font-weight:bold;">控制入口 ≠ 执行机器</p><p style="margin:10px 0;color:#333;font-size:15px;line-height:1.9;">桌面 / CLI / IDE / 手机 Remote<br><span style="color:#9CB9A8;">↓ 控制</span><br>本地电脑 / 开发机 / Codex Cloud<br><span style="color:#9CB9A8;">↓ 执行</span><br>文件、命令、测试与结果</p></section>')
         i+=1; continue
     if line.startswith('### '):
         out.append('<h3 style="font-size:17px;font-weight:bold;color:#287A51;margin:28px 0 14px;line-height:1.5;letter-spacing:0.5px;">'+inline(line[4:])+'</h3>')
@@ -51,8 +68,11 @@ while i<len(lines):
         while i<len(lines) and '|' in lines[i] and lines[i].strip():
             rows.append([x.strip() for x in lines[i].strip().strip('|').split('|')]); i+=1
         cards=[]
+        phases={1:'想清楚',4:'做出来',7:'交付出去'}
         for n,row in enumerate(rows,1):
-            cards.append('<section style="margin:14px 0;padding:16px;background:#F2F7F3;border:1px solid #D8E5DD;border-radius:3px;"><p style="margin:0 0 10px;font-size:16px;color:#17633F;font-weight:bold;">'+str(n).zfill(2)+' · '+inline(row[0])+'</p><p style="margin:6px 0;line-height:1.75;font-size:15px;color:#333333;">'+inline(row[1])+'</p><p style="margin:8px 0 0;line-height:1.75;font-size:14px;color:#60746A;">留下的结果：'+inline(row[2])+'</p></section>')
+            if n in phases:
+                cards.append('<p style="margin:26px 0 10px;padding:7px 10px;border-left:3px solid #287A51;color:#287A51;font-size:14px;font-weight:bold;letter-spacing:1px;">'+phases[n]+'</p>')
+            cards.append('<section style="margin:12px 0;padding:15px 16px;background:#F2F7F3;border:1px solid #D8E5DD;border-radius:4px;"><p style="margin:0 0 8px;font-size:16px;color:#17633F;font-weight:bold;"><span style="display:inline-block;margin-right:8px;color:#7A9A8A;font-size:12px;letter-spacing:1px;">'+str(n).zfill(2)+'</span>'+inline(row[0])+'</p><p style="margin:6px 0;line-height:1.75;font-size:15px;color:#333333;">'+inline(row[1])+'</p><p style="margin:8px 0 0;line-height:1.75;font-size:14px;color:#60746A;">留下的结果：'+inline(row[2])+'</p></section>')
         out.append(''.join(cards)); continue
     if line=='---':
         out.append('<hr style="border:none;border-top:1px solid #C7DDCF;margin:36px 0;">'); i+=1; continue
