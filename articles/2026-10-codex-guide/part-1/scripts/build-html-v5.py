@@ -9,7 +9,8 @@ def inline(s):
     s=html.escape(s, quote=False)
     # links after escape
     s=re.sub(r'\[([^\]]+)\]\((https?://[^)]+)\)', r'<a href="\2" style="color:#17633F;text-decoration:none;border-bottom:1px solid #C7DDCF;">\1</a>', s)
-    s=re.sub(r'\*\*([^*]+)\*\*', r'<strong style="font-weight:bold;color:#17633F;">\1</strong>', s)
+    s=re.sub(r'\*\*([^*]+)\*\*', r'<strong style="font-weight:700;color:#222222;">\1</strong>', s)
+    s=re.sub(r'__([^_]+)__', r'<strong style="font-weight:700;color:#17633F;">\1</strong>', s)
     s=re.sub(r'`([^`]+)`', r'<code style="background:#f6f6f6;color:#17633F;padding:2px 5px;border-radius:3px;font-size:14px;font-family:SFMono-Regular,Consolas,monospace;">\1</code>', s)
     return s
 
