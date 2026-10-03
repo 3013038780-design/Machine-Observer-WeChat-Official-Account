@@ -70,11 +70,16 @@ while i<len(lines):
         while i<len(lines) and '|' in lines[i] and lines[i].strip():
             rows.append([x.strip() for x in lines[i].strip().strip('|').split('|')]); i+=1
         cards=[]
-        phases={1:'想清楚',4:'做出来',7:'交付出去'}
-        for n,row in enumerate(rows,1):
-            if n in phases:
-                cards.append('<p style="margin:26px 0 10px;padding:7px 10px;border-left:3px solid #287A51;color:#287A51;font-size:14px;font-weight:bold;letter-spacing:1px;">'+phases[n]+'</p>')
-            cards.append('<section style="margin:12px 0;padding:15px 16px;background:#F2F7F3;border:1px solid #D8E5DD;border-radius:4px;"><p style="margin:0 0 8px;font-size:16px;color:#17633F;font-weight:bold;"><span style="display:inline-block;margin-right:8px;color:#7A9A8A;font-size:12px;letter-spacing:1px;">'+str(n).zfill(2)+'</span>'+inline(row[0])+'</p><p style="margin:6px 0;line-height:1.75;font-size:15px;color:#333333;">'+inline(row[1])+'</p><p style="margin:8px 0 0;line-height:1.75;font-size:14px;color:#60746A;">留下的结果：'+inline(row[2])+'</p></section>')
+        if len(headers)==3 and all(len(row)>=3 for row in rows):
+            phases={1:'想清楚',4:'做出来',7:'交付出去'}
+            for n,row in enumerate(rows,1):
+                if n in phases:
+                    cards.append('<p style="margin:26px 0 10px;padding:7px 10px;border-left:3px solid #287A51;color:#287A51;font-size:14px;font-weight:bold;letter-spacing:1px;">'+phases[n]+'</p>')
+                cards.append('<section style="margin:12px 0;padding:15px 16px;background:#F2F7F3;border:1px solid #D8E5DD;border-radius:4px;"><p style="margin:0 0 8px;font-size:16px;color:#17633F;font-weight:bold;"><span style="display:inline-block;margin-right:8px;color:#7A9A8A;font-size:12px;letter-spacing:1px;">'+str(n).zfill(2)+'</span>'+inline(row[0])+'</p><p style="margin:6px 0;line-height:1.75;font-size:15px;color:#333333;">'+inline(row[1])+'</p><p style="margin:8px 0 0;line-height:1.75;font-size:14px;color:#60746A;">留下的结果：'+inline(row[2])+'</p></section>')
+        else:
+            for row in rows:
+                if len(row)>=2:
+                    cards.append('<section style="margin:12px 0;padding:13px 15px;background:#FAFAFA;border:1px solid #D8E5DD;border-left:3px solid #9FC5B0;border-radius:3px;"><p style="margin:0 0 5px;font-size:15px;color:#17633F;font-weight:bold;">'+inline(row[0])+'</p><p style="margin:0;line-height:1.7;font-size:14px;color:#526B5D;">'+inline(row[1])+'</p></section>')
         out.append(''.join(cards)); continue
     if line=='---':
         out.append('<hr style="border:none;border-top:1px solid #C7DDCF;margin:36px 0;">'); i+=1; continue

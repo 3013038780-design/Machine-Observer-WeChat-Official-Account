@@ -46,12 +46,12 @@ OpenAI 当前把 ChatGPT Work 定义为面向较长、多步骤工作的 agent�
 ### Codex：进入软件真正发生的地方
 当事情进入代码、仓库、命令、依赖、测试、Git 和运行环境时，Codex 的角色开始变得明确。
 OpenAI 当前将 Codex 定义为面向软件开发工作的 coding agent；它可以出现在桌面 App、CLI、IDE、Web 和 Cloud 等不同入口中。
-比如你现在已经有一个游戏项目：
-my-game/
-├── src/
-├── assets/
-├── package.json
-└── README.md
+比如你现在已经有一个游戏项目，目录里至少有：
+
+- `src/`：程序代码；
+- `assets/`：图片、音效等素材；
+- `package.json`：依赖和运行脚本；
+- `README.md`：项目说明。
 你希望 AI：
 - 阅读现有代码；
 - 修改 src/game.ts；
@@ -67,22 +67,14 @@ my-game/
 如果你不是想“让 ChatGPT 帮我工作”，而是希望你做出来的游戏、网站或服务本身调用模型，就进入了 API 层。
 例如，你以后希望小游戏里的 NPC 能调用模型生成对话，那么你需要考虑 API、模型调用、鉴权、成本、服务器逻辑和用户数据，而不是简单打开 Codex。
 API 的 agent 体系甚至可以直接使用 OpenAI 管理的 Codex harness：由 OpenAI 管理 session、工具循环、上下文压缩和恢复，再连接你选择的执行环境。
-因此第一张地图可以先画成：
-想问题、研究、讨论
-        ↓
-     ChatGPT
+因此第一张地图可以先这样看：
 
-较长、多步骤的知识工作
-        ↓
-  ChatGPT Work
-
-进入代码、命令、测试和工程环境
-        ↓
-      Codex
-
-把模型和 agent 能力接进自己的产品
-        ↓
- OpenAI API / Platform
+| 你现在要解决的问题 | 更接近的入口 |
+| --- | --- |
+| 想问题、研究、讨论 | ChatGPT |
+| 推进较长、多步骤的知识工作 | ChatGPT Work |
+| 进入代码、命令、测试和工程环境 | Codex |
+| 把模型和 agent 能力接进自己的产品 | OpenAI API / Platform |
 它们之间会重叠，但重叠不代表它们是同一个层级。
 而图片、语音、浏览器操作、Computer Use，以及通过插件连接的外部系统，又是叠加在这些入口上的不同能力。
 所以以后遇到一个功能，先别问：
@@ -165,25 +157,19 @@ Remote 恰好相反。
 - 查看 diff 和测试结果。
 但真正工作的仍然是与你连接的电脑。
 官方目前的描述非常直接：手机负责 start、guide 和 review，任务运行在 connected computer 上；如果走的是这种 Remote 本地执行路径，电脑需要保持在线和唤醒。
-所以：
-Remote
-手机 ───────► 你的电脑执行
+所以，Remote 和 Cloud 可以这样区分：
 
-Cloud
-手机/网页 ──► 云环境执行
-这是两件完全不同的事。
-于是你可以得到第二张地图：
-          你从哪里控制？
- Desktop / CLI / IDE / Web / Mobile
-                 │
-                 ▼
-          工作在哪里执行？
-       ┌─────────┴─────────┐
-       │                   │
- This computer           Cloud
-       │
- ┌─────┴─────┐
- Local     Worktree
+| 控制入口 | 执行地点 | 典型情况 |
+| --- | --- | --- |
+| 手机 / Web / Desktop / CLI / IDE | 你的电脑或开发机 | Remote 控制本地任务；电脑需要在线并保持可用 |
+| 手机 / Web / Desktop | OpenAI 管理的 Cloud 环境 | Cloud 任务在远程环境继续运行，本地电脑可以休眠 |
+
+在执行地点内部，还要继续区分：
+
+- **Local**：直接使用当前项目目录；
+- **Worktree**：在 Git 隔离副本中修改；
+- **Cloud task workspace**：在云端任务自己的工作副本中修改。
+
 只要把入口和执行环境分开，大量产品名立刻就不混乱了。
 
 ---
@@ -262,19 +248,15 @@ Codex 修改代码，本质上最终还是修改这些文件。
 如果两边直接改同一批文件，就容易互相覆盖。
 这就是 Git worktree 有用的地方。
 Codex 可以为一个聊天创建独立 worktree。官方当前实现会从所选择分支的 HEAD 开始建立工作副本；如果你明确选择带本地修改的分支，也可以把这些未提交修改应用到新 worktree。多个 worktree 因此可以围绕同一 repository 同时开展不同工作。
-于是：
-Repository
-│
-├── Local checkout
-│      └── 你正在修改主菜单
-│
-├── Worktree A
-│      └── Codex 实验新关卡
-│
-└── Worktree B
-       └── Codex 修复音频 Bug
-代码来源相同。
-工作副本不同。
+于是，同一个 Repository 可以对应多份工作副本：
+
+| 工作副本 | 正在做什么 |
+| --- | --- |
+| Local checkout | 修改主菜单 |
+| Worktree A | 实验新关卡 |
+| Worktree B | 修复音频 Bug |
+
+代码来源可以相同，工作副本彼此隔离。
 
 ---
 ### Chat、Task 和 Thread 也不是一个东西
@@ -300,32 +282,15 @@ Worktree：隔离的 Git 工作副本
 都可以成为需要验收的 artifact。
 
 ---
-### 于是完整关系终于出现了
-ChatGPT Workspace
-│
-│  决定账号、成员、政策和能力边界
-│
-└── Project
-    │
-    │  组织长期工作的聊天、文件、说明和来源
-    │
-    ├── Chat A：需求
-    ├── Chat B：开发
-    └── Chat C：测试
-             │
-             ▼
-      Repository / Folder
-             │
-       ┌─────┴─────┐
-       │           │
-     Local      Worktree
-       │           │
-       └─────┬─────┘
-             ▼
-      修改、测试、构建
-             │
-             ▼
-          Artifact
+### 于是完整关系可以压缩成五层：
+
+| 层级 | 它负责什么 |
+| --- | --- |
+| ChatGPT Workspace | 账号、成员、政策和能力边界 |
+| Project | 长期工作的聊天、文件、说明和来源 |
+| Chat / Task | 一次相对独立的协作和要完成的结果 |
+| Repository / Folder / Worktree | 实际文件与隔离的 Git 工作副本 |
+| 修改、测试、构建 → Artifact | 可以检查、预览或交付的结果 |
 这里有两个特别常见的错误。
 第一个：
 “我已经把项目放进 Project 了，所以所有聊天应该都自动看到我电脑上的最新代码。”
@@ -632,12 +597,14 @@ Plugin 再向上一层。
 - MCP server；
 - 外部应用连接；
 - 以及部分可选扩展资源。
-官方甚至直接把它画成：
-Plugin
-├── Skills
-└── MCP server
-    ├── Tools
-    └── optional UI
+可以把 Plugin 理解成一个能力包：
+
+| Plugin 里面可以有什么 | 作用 |
+| --- | --- |
+| Skills | 可复用的工作流程 |
+| MCP server | 外部系统和工具的连接 |
+| Tools | 具体可调用的动作 |
+| Optional UI | 给人使用的界面组件 |
 因此：
 MCP 和 Plugin 不是竞争关系。
 MCP 负责把外部能力接进来。
@@ -651,18 +618,17 @@ Plugin 可以把这些东西包装成一个可安装、可分发的能力单位�
 Harness 不是一个模型。
 它是围绕模型构建的执行框架。
 在当前 OpenAI Agents API 的定义中，Codex harness 会管理模型与工具之间的循环，以及 agent session；环境则负责真正执行代码和处理文件。
-可以把它粗略想成：
-               ┌──────── Model
-               │
-               ├──────── Context
-               │
-User Goal → Harness ──── Tools
-               │
-               ├──────── Skills
-               │
-               ├──────── MCP / Plugins
-               │
-               └──────── Execution Environment
+可以把它理解成一条执行链：
+
+| 组成部分 | 在链条中的职责 |
+| --- | --- |
+| User Goal | 说明要达到的结果 |
+| Harness | 组织上下文、工具调用、循环和停止条件 |
+| Model | 理解、推理并决定下一步 |
+| Tools | 读取文件、运行命令、浏览或操作界面 |
+| Skills | 提供可复用的流程知识 |
+| MCP / Plugins | 连接和包装外部能力 |
+| Execution Environment | 真正提供文件、程序和计算机 |
 模型负责思考。
 工具负责动作。
 Skill 负责流程知识。

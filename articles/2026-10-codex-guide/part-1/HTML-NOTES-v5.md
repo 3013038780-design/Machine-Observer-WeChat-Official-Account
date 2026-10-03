@@ -9,3 +9,7 @@
 - 两处交付关系表转为手机卡片，分成“想清楚—做出来—交付出去”。
 - 标签闭合结构检查通过；生成 `article-v5.html` 和 `article-v5-body.html`。
 - 浏览器视觉实测仍受本地 `file://` 页面限制；未绕过限制，尚未完成 135 实际粘贴核验。
+
+## 2026-10-04 关系图修订
+
+用户反馈截图显示 ASCII 图在普通中文字体下错位。已将 Remote/Cloud、Repository/Worktree、Workspace/Project、Plugin 和 Harness 等字符图全部改为 HTML 卡片或表格，避免依赖等宽字符和固定换行。结构检查通过，HTML 中不再包含 box-drawing 字符。
