@@ -44,12 +44,22 @@ while i<len(lines):
     if line.startswith('### '):
         out.append('<h3 style="font-size:17px;font-weight:bold;color:#287A51;margin:28px 0 14px;line-height:1.42;letter-spacing:0.5px;">'+inline(line[4:])+'</h3>')
         i+=1; continue
-    if line.startswith('> '):
+    if re.match(r'^>($|\s)',line):
         qs=[]
-        while i<len(lines) and (lines[i].startswith('> ') or not lines[i].strip()):
-            if lines[i].startswith('> '): qs.append('<p style="margin:6px 0;line-height:1.6;color:#5D7569;letter-spacing:0.5px;">'+inline(lines[i][2:])+'</p>')
-            i+=1
-        out.append('<blockquote style="margin:24px 0;padding:14px 18px;background:#F2F7F3;border-left:3px solid #17633F;color:#5D7569;font-size:15px;border-radius:2px;">'+''.join(qs)+'</blockquote>')
+        while i<len(lines):
+            current=lines[i]
+            if re.match(r'^>($|\s)',current):
+                content=re.sub(r'^> ?','',current)
+                if content.strip():
+                    qs.append('<p style="margin:8px 0;line-height:1.6;color:#5D7569;letter-spacing:0.5px;">'+inline(content)+'</p>')
+                i+=1
+            elif not current.strip():
+                j=i+1
+                while j<len(lines) and not lines[j].strip():j+=1
+                if j<len(lines) and re.match(r'^>($|\s)',lines[j]):i=j
+                else:break
+            else:break
+        out.append('<blockquote style="margin:20px 0;padding:12px 16px;background:#F2F7F3;border-left:3px solid #17633F;color:#5D7569;font-size:15px;border-radius:2px;">'+''.join(qs)+'</blockquote>')
         continue
     if re.match(r'^[-*] ',line):
         items=[]
