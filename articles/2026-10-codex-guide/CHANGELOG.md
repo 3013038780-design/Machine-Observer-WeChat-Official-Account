@@ -147,3 +147,7 @@
 ## 2026-10-07 · 第二篇大纲 v10：合并 Anthropic 与 Claude Code
 
 按用户明确要求，第一部分固定为双钻、Anthropic/Claude Code、OpenAI、Superpowers、人机协同研究五项。Claude Code 实际协作过程与 Anthropic 工程解释合并，研究放第五项承接提问协作；重写 brief 以清除与最新要求冲突的历史描述，归档 review-v9。总三部分保留，旧稿未获认可，未制作 HTML 或发表。
+
+## 2026-10-07 · 第二篇正文 v7 与 HTML
+
+用户要求直接完成中文和 HTML 并自行修改。按 v10 大纲写完整新稿，撤掉七项清单，展开官方实际工作安排与自身流程的形成和接续。交付 article-v7.md、article-v7.html、upper/article-v7-body.html、复现脚本及 review-v10，更新 brief。绿色主题、紧凑行距、编号框、内嵌品牌首图和已有流程图；协作模式表改纵向排布。完整性、内联样式、链接和图片结构检查通过。浏览器策略拒绝 file 协议，未绕过，视觉及135粘贴未实测。标题仍候选，未发表。
