@@ -1,0 +1,11 @@
+{
+  "source": "article-v12.md",
+  "source_selection": "user-retained-v2.md",
+  "chapters": 5,
+  "embedded_images": 3,
+  "prompt_blocks": 5,
+  "source_text_preserved": true,
+  "inline_styles": true,
+  "visual_preview": "not tested; prior file protocol blocked",
+  "135_paste": "not tested"
+}
