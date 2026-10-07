@@ -1,0 +1,12 @@
+{
+  "source": "article-v10.md",
+  "html": "article-v10.html",
+  "chapters": 5,
+  "prompt_blocks": 8,
+  "embedded_images": 1,
+  "source_text_preserved": true,
+  "inline_styles": true,
+  "body_line_height": 1.6,
+  "visual_preview": "not performed: browser file protocol blocked",
+  "135_paste": "not tested"
+}
