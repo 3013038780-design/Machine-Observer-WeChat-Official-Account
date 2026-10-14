@@ -33,3 +33,10 @@
 - https://learn.chatgpt.com/docs/build-skills ：读取目录结构与调用机制；SKILL.md 需要名称与描述，其余目录可选。
 - https://developers.openai.com/api/docs/guides/agents-api/architecture ：架构参考，不将 API 与 Codex 桌面环境等同。Harness 目录和循环为编辑示意，不是官方文件规范。
 - 用户级 MCP 配置仅作脱敏状态检查；本会话 Node REPL 完成无副作用工具调用。详情见 review-v2.md；没有归档用户配置和认证信息。
+
+## v4 补充来源（2026-10-14）
+
+- https://git-scm.com/docs/git-worktree ：成功读取DESCRIPTION，复核一个仓库支持多个工作目录及不同分支同时检出；修正前轮缺失连字符的不可访问地址。
+- https://docs.npmjs.com/cli/v11/commands/npm-ci/ ：读取Description，核对锁文件要求和清洁安装语义。正文命令仅作具有对应脚本的Node.js项目示例。
+- https://docs.typesafe.ai/confidence ：复核概率与置信度语义、阈值按项目数据验证；分类不证明因果，行动授权须独立。
+- MCP与AGENTS.md说明沿用前轮已读取官方资料，本文不增加新的配置接口。

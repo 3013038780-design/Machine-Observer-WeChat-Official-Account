@@ -12,19 +12,23 @@
 
 ## 交付
 
-- article-v3.md：纯文字正文
-- article-v3.html：带品牌首图的内联样式 HTML
-- upper/article-v3-body.html：可复制正文片段
-- render_article_v3.py：HTML 复现脚本
+- article-v4.md：纯文字正文
+- article-v4.html：带品牌首图的内联样式 HTML
+- upper/article-v4-body.html：可复制正文片段
+- render_article_v4.py：HTML 复现脚本
 - research/sources-v1.md：来源和边界记录
 
 正文和 HTML 均待用户审核；未制作独立配图，未实测 135 粘贴，未发表。
 
 
-## v2 当前有效版本
+## v2 历史版本
 
 增加 Skills、MCP 与 Harness 实际形态、Codex 调用流程、自建条件与失败验证。v1 保留为历史稿。本轮仍未实测135粘贴，未发表。
 
-## v3 当前有效版本
+## v3 历史版本
 
 原第五节按理解执行框架、自建条件、局部判断拆为05、06、07节。原结尾改为08节，删去与对照表重复的逐项回顾。保留v2历史稿；本轮未新增事实或配置断言。
+
+## v4 当前有效版本
+
+按全文审读修正分支隔离、Skill采用条件、规则与权限、Jev分类及置信度、Harness恢复机制；补运行环境、一轮协作和代表性任务检查。保留八节结构，删重复回顾。正文与HTML仍待审核，未发表，135未实测。
