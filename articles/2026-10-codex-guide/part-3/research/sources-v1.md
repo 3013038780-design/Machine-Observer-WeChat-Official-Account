@@ -40,3 +40,9 @@
 - https://docs.npmjs.com/cli/v11/commands/npm-ci/ ：读取Description，核对锁文件要求和清洁安装语义。正文命令仅作具有对应脚本的Node.js项目示例。
 - https://docs.typesafe.ai/confidence ：复核概率与置信度语义、阈值按项目数据验证；分类不证明因果，行动授权须独立。
 - MCP与AGENTS.md说明沿用前轮已读取官方资料，本文不增加新的配置接口。
+
+## v5 补充核查（2026-10-15）
+
+- https://docs.github.com/en/pull-requests/reference/pull-requests ：读取Working with pull requests，核对合并提议、讨论、diff、checks与merge状态。
+- https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes ：读取README用途和内容建议，详细文档可链接。
+- https://learn.chatgpt.com/docs/agent-configuration/agents-md ：复核指导文件用途；样例中的状态文件名与读写安排为项目自定约定。
