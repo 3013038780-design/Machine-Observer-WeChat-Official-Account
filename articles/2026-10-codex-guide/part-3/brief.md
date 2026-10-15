@@ -12,10 +12,10 @@
 
 ## 交付
 
-- article-v5.md：纯文字正文
-- article-v5.html：带品牌首图的内联样式 HTML
-- upper/article-v5-body.html：可复制正文片段
-- render_article_v5.py：HTML 复现脚本
+- article-v6.md：纯文字正文
+- article-v6.html：带品牌首图的内联样式 HTML
+- upper/article-v6-body.html：可复制正文片段
+- render_article_v6.py：HTML 复现脚本
 - research/sources-v1.md：来源和边界记录
 
 正文和 HTML 均待用户审核；未制作独立配图，未实测 135 粘贴，未发表。
@@ -33,6 +33,10 @@
 
 按全文审读修正分支隔离、Skill采用条件、规则与权限、Jev分类及置信度、Harness恢复机制；补运行环境、一轮协作和代表性任务检查。保留八节结构，删重复回顾。正文与HTML仍待审核，未发表，135未实测。
 
-## v5 当前有效版本（2026-10-15）
+## v5 历史版本（2026-10-15）
 
 第一节解释PR发起者、维护者、差异审阅、批准与合并的区别。第二节重写为README、AGENTS.md、状态记录三项实际用途，保留运行环境说明并融入README样例。八节结构不变，内容待审阅；HTML程序检查通过，视觉与135粘贴未实测。
+
+## v6 当前有效版本（2026-10-15）
+
+第一节按是什么、为何需要、同一按钮修复例子展开Issue、分支、PR和Review；明确pull命令与PR不同、审阅与合并不同。其余章节沿用v5。正文与HTML待审阅，未发表。

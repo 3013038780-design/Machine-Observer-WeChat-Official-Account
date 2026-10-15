@@ -46,3 +46,7 @@
 - https://docs.github.com/en/pull-requests/reference/pull-requests ：读取Working with pull requests，核对合并提议、讨论、diff、checks与merge状态。
 - https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes ：读取README用途和内容建议，详细文档可链接。
 - https://learn.chatgpt.com/docs/agent-configuration/agents-md ：复核指导文件用途；样例中的状态文件名与读写安排为项目自定约定。
+
+## v6 补充来源（2026-10-15）
+
+https://git-scm.com/docs/git-pull ：读取Description，核对fetch与整合当前分支，区别于GitHub PR合并提议。其余来源沿用v5。
