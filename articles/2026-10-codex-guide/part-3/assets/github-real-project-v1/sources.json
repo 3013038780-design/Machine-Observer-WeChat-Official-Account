@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-16",
+  "type": "真实GitHub页面截图，未使用AI重绘",
+  "status": "配图候选，未嵌入文章，未发表",
+  "images": [
+    {
+      "file": "01-repository.jpg",
+      "concept": "仓库：项目文件集中存放",
+      "source": "https://github.com/3013038780-design/Machine-Observer-WeChat-Official-Account"
+    },
+    {
+      "file": "02-commit-history.jpg",
+      "concept": "Commit：每次修改留下版本记录",
+      "source": "https://github.com/3013038780-design/Machine-Observer-WeChat-Official-Account/commits/main/"
+    },
+    {
+      "file": "03-file-diff.jpg",
+      "concept": "Diff：红色表示删除，绿色表示新增",
+      "source": "https://github.com/3013038780-design/Machine-Observer-WeChat-Official-Account/commit/13b0315c781b2d706358a23cc95321d20b0b2562"
+    },
+    {
+      "file": "04-readme.jpg",
+      "concept": "README：项目说明文件",
+      "source": "https://github.com/3013038780-design/Machine-Observer-WeChat-Official-Account/blob/main/README.md"
+    }
+  ]
+}
