@@ -1,0 +1,383 @@
+# 用 AI 卷考公
+
+考公人还在囤课，已经有人给 AI 发讲义了。
+
+发的还是花生十三。
+
+GitHub 上，一个叫 huasheng13-skill 的项目，把速算、言语、判断等方法分门别类收了进去。你发一道题，AI就去查对应的方法，照着讲。课不光人要看，AI也领了一份。
+
+再往下翻，申论也热闹起来：白鹭、小马哥、袁东，都有人整理。还有专门做复盘的 Skill，负责讲题、追问、记错因、安排复习。
+
+考公人的学习搭子，配置越来越齐。
+
+## 先看看，考公人的 AI 搭子已经凑了多少
+
+这轮找到的公开入口，先摆一桌。下面列出 **13个外部仓库**，再加上自己的方法库和学习网站；同一项目可能兼做几件事。红领巾分模块版与复盘版有沿革关联，仓库数不等于独立方法体系数。
+
+| 项目，点名字直达 | 主要干什么 |
+| --- | --- |
+| [花生十三方法整理](https://github.com/WangJunqing-coder/huasheng13-skill) | 资料速算、言语、判断等行测方法 |
+| [考公AI导师](https://github.com/KeWang0622/kaogong-skill) | 行测、申论、面试、时政等综合辅导 |
+| [gongkao-practice](https://github.com/Why-com-ui/gongkao-practice.skill) | 生成练习、仿题、导入题库，含时政 |
+| [公务员考试备考指南](https://github.com/NanjingHJLP/hjlp-skills) | 综合备考与专项训练指导 |
+| [行测复盘一体版](https://github.com/liuyuexi1987/xingce-review-pro) | 先追问选择依据，再讲题、留复盘记录 |
+| [申论复盘一体版](https://github.com/liuyuexi1987/shenlun-review-pro) | 材料解析、作答对照与修改 |
+| [申论训练营](https://github.com/HuaXiLF/shenlun-trainer) | 小题提炼、失分分析、训练记录 |
+| [Hermes教育技能包](https://github.com/hezkvectory/hermes-edu-skills) | 行测与申论诊断、限时练习、复测 |
+| [红领巾分模块版](https://github.com/MUMU0208/redscarf-gongkao-skills) | 言语、填空、资料、判断、数量、错因 |
+| [七位申论名师方法整理](https://github.com/WangJunqing-coder/shenlun-skill) | 审题、材料阅读、申论题型方法 |
+| [白鹭、小马哥、袁东方法整理](https://github.com/coffe-d/Shenlun.skill) | 申论小题与作文分流 |
+| [青岸冲刺教练](https://github.com/XiaoSiKe/qingan-initiative-civil-service-examination-sprint-coach) | 冲刺安排、政治常识记忆与复测 |
+| [gongkao-distill](https://github.com/hilltahuang/gongkao-distill) | 按科目、教师整理的方法稿 |
+| [自己的 Skills 与方法库](https://github.com/3013038780-design/civilserviceexam) | 把解题动作整理成能模仿、能检验的方法 |
+| [公考研习室](https://gongkao-study-studio.easy-tern-3117.chatgpt.site/) | 原题、方法、跨年示范和试用，当前私人访问 |
+
+按用途细分的文件链接留在文末，想先看哪一科，可以直接翻过去。
+
+人齐了。光看介绍还不过瘾，直接拿题试。
+
+## 一道资料题，除法还没开始就结束了
+
+**2026年国考副省级行测，第131题。**
+
+解题所需材料节选：
+
+> 2024年，我国对联合国定义的45个最不发达国家（以下简称最不发达国家）进出口14230.2亿元人民币，占同期我国外贸进出口总值的3.2%。
+
+题目原文：
+
+> 2024年，我国外贸进出口总值在以下哪个范围内？
+>
+> A. 不到44万亿元
+>
+> B. 44万亿元～45万亿元之间
+>
+> C. 45万亿元～46万亿元之间
+>
+> D. 超过46万亿元
+
+资料分析熟人局：给部分、给比重，求整体。
+
+**这道题怎么测的？**把原题交给已读取方法文件的助手，按红领巾资料分支的顺序走：识别题型，定位时间、主体、单位，列关系，再选计算方式。同时参考花生速算文件的范围排除思路。
+
+题目里的“2024年”不能换，“对最不发达国家”是部分，“全国外贸”是整体。先把14230.2亿元换成1.42302万亿元，列式就是1.42302÷3.2%。
+
+再看选项，出题人只想知道它落在哪个区间。那就从选项往回乘：
+
+**44×3.2%＝1.408。**
+
+**45×3.2%＝1.44。**
+
+1.42302夹在中间，总量就在44到45万亿元之间，输出 B。独立计算复核得到44.469375万亿元，也落在 B。
+
+原本准备埋头算小数，结果乘两下就做完了。
+
+**有用的地方，是把“该算多准”提前想清楚。**红领巾的方法文件提供定位、列式、估算与比较这套顺序；本题的两次反乘，是沿着这个顺序作出的具体推导。读者能抄走的动作是：问范围，先试边界；能分出选项，就停。
+
+边界也顺手测一下。下面两道是本轮改编题，金额都设为**恰占总量3.2%**，不是另一年的真题。
+
+**改编题一：**某项金额为14399亿元，恰占总量的3.2%。总量在以下哪个范围内？
+
+> A. 不到44万亿元
+>
+> B. 44万亿元～45万亿元之间
+>
+> C. 45万亿元～46万亿元之间
+>
+> D. 超过46万亿元
+
+**改编题二：**某项金额为14401亿元，恰占总量的3.2%。总量在以下哪个范围内？
+
+> A. 不到44万亿元
+>
+> B. 44万亿元～45万亿元之间
+>
+> C. 45万亿元～46万亿元之间
+>
+> D. 超过46万亿元
+
+输出分别是 B、C。复算总量分别为44.996875万亿元和45.003125万亿元。
+
+只差2亿元，答案跨了一档。
+
+如果一上来都凑成“1.44万亿元左右”，两题就分不出来了。45万亿元对应的部分恰好是1.44万亿元；1.4399在下侧，1.4401在上侧。保留到能看清这点差别，才能停。
+
+**这就是这招的使用边界：选项分得开，可以省计算；已经贴着分界，就要补精度。**“速算”两个字里，算还是得算对。
+
+花生 Skill 里还整理了截位直除、份数法、假设分配等方法。找中间值、换算特殊分数、比较大小，都是考公人熟悉的招。把条件、动作和停止点一起整理出来，下一次换数字，方法还能接着用。
+
+## 花生十三的方法，具体怎么做成 Skill？
+
+翻开这个项目，先看到 `SKILL.md`，往下还有一组按模块分好的方法文件。
+
+其中，`ziliao-fenxi.md` 放资料分析方法，`ziliao-susuan.md` 展开速算，`yanyu-lianjie.md` 讲言语关系。入口写着：用户发来单题，先识别题型，再去读对应文件，按方法作答并解释易错点。
+
+相当于给 AI 配了一个导学老师：资料题往这边走，言语题去隔壁，别把整本讲义从头背一遍。
+
+具体到方法，也得有可以执行的内容。
+
+拿文件中的增长量示例来说：现期是12000，同比增长25%，问增长量。25%是四分之一，去年占4份，今年占5份，增加1份，所以12000÷5＝2400。
+
+这一小段里，题型、已知量、关系和计算都齐了。AI读到的，就不只是一句“增长量用份数法”。它知道这题为什么分5份，每份又代表什么。
+
+换成自己整理，关键也在这里。听课时记下“看到增长率想到分数”，还只是一个提醒；继续写出什么情况下能用、怎么转换、怎样得到答案，才成了一份能照着操作的方法。
+
+申论 Skill 的整理方式也很直观。有的项目把归纳概括、综合分析、公文、大作文分别存放；coffe-d 的项目则先用一个入口区分小题和作文，再调用相应方法。行测复盘项目还往里面加了题型协议、方法卡和记录脚本。
+
+老师讲过的方法，就这样被拆成一份份可查、可调用的文件。这里介绍的教师方法项目均为社区整理，作者和具体文件链接放在文末。
+
+## 还真有“只管这一科”的 Skill
+
+继续逛 GitHub，会发现有人已经把科目拆开了。MUMU0208保留的红领巾分模块仓库里，言语、选词、资料、判断、数量各有一份Skill，错因诊断还有单独入口。只想练词语搭配，就去找 `redscarf-cloze`；想看一段话的主旨、排序和衔接，则看 `redscarf-verbal`。
+
+另一种逛法是按老师和科目找。`gongkao-distill` 的方法稿里，能看到[郭熙的言语整理](https://github.com/hilltahuang/gongkao-distill/blob/36d2d10d2ac3299974e762914db7875484605ed2/source/公务员/行测/言语理解/郭熙/SKILL.md)、[蔡金龙的判断整理](https://github.com/hilltahuang/gongkao-distill/blob/36d2d10d2ac3299974e762914db7875484605ed2/source/公务员/行测/判断推理/蔡金龙/SKILL.md)、[唐宋的资料整理](https://github.com/hilltahuang/gongkao-distill/blob/36d2d10d2ac3299974e762914db7875484605ed2/source/公务员/行测/资料分析/唐宋/SKILL.md)。里面分别列出识别题型的入口和对应检查步骤。
+
+收藏夹开始有了教研室的气氛。
+
+还有人负责出题。[gongkao-practice](https://github.com/Why-com-ui/gongkao-practice.skill)可以按模块、题量和难度组织练习，也提供参考题导入与仿题入口。比如学完一种解法，再按相同结构找练习，就有了接下去折腾的地方。
+
+## 红领巾这套，是怎么从讲题里抠出方法的？
+
+红领巾的方法库有一条很具体的来路：视频讲解转录。
+
+项目的[方法库入口](https://github.com/MUMU0208/redscarf-gongkao-skills/blob/main/skills/redscarf-method-router/references/红领巾方法库入口.md)说明，规则来自 UP 主“网友红领巾”的视频讲解转录。再看[数据字典](https://github.com/MUMU0208/redscarf-gongkao-skills/blob/main/skills/redscarf-method-router/references/产物数据字典.md)，整个加工过程就能看出层次：先登记源文件，再把内容切成讲解单元，接着从单元里提取方法候选和错因候选，最后按科目、题型建立索引。
+
+按这份字典的记录，源文件索引有326条、单元索引有7839条、方法候选有4706条。
+
+一条方法候选里有这些字段：什么情况下触发，规则是什么，可能在哪里失效，出自哪份文件、哪个单元，以及对应的讲解片段。AI需要做题时，就顺着题型去找这些内容。
+
+**原来视频里稍纵即逝的一句复盘，开始有了地址。**
+
+比如在[言语方法文件](https://github.com/MUMU0208/redscarf-gongkao-skills/blob/main/skills/redscarf-verbal/references/言语理解.md)里，“过度推理”已经被整理成三层：表现是脱离文段补脑内逻辑，原因是把可以直接对应的题想复杂了，修正动作是回到原文与选项核对。旁边保留了原讲解片段和单元编号，其中一条能看到“选最直接的延续”这几个字。
+
+到这里，做错题之后能留下的东西就变了。一次“这题我想多了”，被拆成了：在哪种题里想多，具体多想了什么，下次先检查哪一步。
+
+整个包又把工作分开：`redscarf`负责接住请求，言语、选词、资料、判断各有分支；`redscarf-error-diagnosis`专门整理表现、原因和修正策略。用户问一道题，先分科，再找方法；用户问为什么老犯同一种错，就去查错因。
+
+这类Skill的制作，主要是在加工知识和编排动作。资料被拆细，方法有入口，出处能回看；日后发现哪条规则不好用，还能找到位置继续改。看完这套结构，自己的错题笔记也很适合照着整理：题目可以换，动作留下来。
+
+## 言语也能这样拆？把题摆上来
+
+资料分析有公式，比较容易想象。言语呢？总不能给 AI 装一个“语感插件”吧。
+
+看**2015年国考副省级行测第44题**：
+
+> 在美国的电影院线，无论是重磅大片，还是低成本制作，票价都是相同的。这看上去并不符合“需求大小决定价格高低”的经济学理论。有研究人员指出，任何一家影院同期上映的所有电影票价均相同，这一现象形成于上世纪70年代。不仅电影业如此，体育赛事和演出也都遵循这一规律。虽然在某些时候和某些地区，机动定价能够使电影公司和影院获得更高的收益，但对于影院来说，保持不同电影的票价相同仍然利大于弊。
+>
+> 这段文字接下来最有可能讲述的是：
+>
+> A. 不同电影票价相同对影院更有利的原因
+>
+> B. 美国电影行业确定票价的主要参考因素
+>
+> C. 电影制作成本和观众需求与影片定价的关系
+>
+> D. 体育赛事和演出等其他行业票价的形成规律
+
+**这道题怎么测的？**读取红领巾言语分支及方法正文，按全文、转折、主题与选项关系做检查，再完成本题的接续判断。
+
+开头提出一个有点反直觉的现象：大片、小片，一个价。中间补了背景，结尾又说：有时候机动定价能多赚钱，可对影院来说，同价总体还是更划算。
+
+理由呢？还没讲。
+
+在这里接一句“这是因为……”，A就很顺。
+
+B要泛讲定价因素，C回到成本、需求与价格的关系，D去聊体育比赛和演出。它们都和电影票价沾边，但 A 直接接住了最后那个尚未解释的判断。
+
+本次输出 A，与这道题已有的配套参考一致。
+
+**有用的地方，是让“看着都相关”继续往下走一步。**A、B、C都有电影和价格，光找主题词，剩下三个熟人谁也不好赶。继续比较它们各自准备讲什么，才能看到一个接原因，一个铺定价因素，一个回头谈成本需求。
+
+红领巾文件在这里提供主题、关系与过度推理的检查；“末尾判断还没解释原因”，是当前题文里的具体推导。这条接续比较，也被补进了自己的下文预测方法库。
+
+**这道题的边界：能选出最自然的接续，不等于推导出所有文章的下一段。**如果结尾刚介绍一种新仪器，后文可能接工作原理；如果刚提出新理论，也可能继续解释理论。要留下的是“找当前尚未展开的内容”，而不是把“下文一律选原因”背回去。
+
+同样叫下文预测，文章留下的事不一样。例题多看几道，这个差别才会慢慢变得好认。
+
+## 复盘 Skill：答案对完，还能接着问
+
+做题时觉得自己有理，对答案以后只剩一个红叉，这种事太常见了。
+
+“行测复盘一体版”把讲题和复盘分开。按它的复盘流程，用户给了选项，AI先问：你为什么这样选，又是怎么排除其他项的？等用户回应，再进入讲解。
+
+这就给复盘多留了一样东西：选择当时的依据。
+
+接着拿**2015年国考副省级行测第44题**，演练了一次两轮复盘，完整原题与选项就在上面。
+
+模拟考生先说：“我选 B。”
+
+按已读行测复盘一体版的规则，首轮先记录选项，问为什么选、怎样排除其他项，暂不公布答案。第二轮模拟考生补充：“因为整段一直在讨论定价，所以我选主要参考因素。”
+
+这时讲解才能落到具体位置：定价这个主题抓对了，但任务问的是下一段接什么。末尾的“同票价对影院更有利”尚未释因，A接得更近；B会重新铺开定价因素。
+
+**这里有用的是把“错在哪一步”问出来。**如果另一个人选C，是因为只盯住开头的成本和需求，接下来要提醒他的就该是文章已经推进到哪里。
+
+还试了一个缺题面的情境：只发“这道言语题我选B”，没有原文和四项。按文件执行的结果是先要题面和选择依据。没有材料时，这个流程只能收集信息，不能给一个字母安排一整套错因。
+
+以上对话是本轮模拟情境，不是真实考生作答；没有写进个人错题档案。
+
+这类项目还把错因、练习和复习记录接起来。方法卡放方法，个人档案放学习记录，脚本按规定保存。以后换题，还能查到此前留了什么。
+
+于是，错题本里可以少一句“审题不仔细”，多一条动作：“下文题先说清文章讲到哪了，再看选项接下来准备讲什么。”
+
+如果自己要整理 Skill，也可以从一类题起步：拿几道做过的题，归出共同动作，再用下一道题检验。资料越积越多时，就有必要像这些项目一样，给方法编目录，把复盘记录另外存好。
+
+## 申论名师也凑齐了，能干什么？
+
+申论这边，GitHub 上已经有多种整理：WangJunqing-coder 的项目汇集多位教师方法；coffe-d 的项目侧重白鹭、小马哥、袁东；另有专门做材料解析和作答复盘的 shenlun-review-pro。
+
+[申论训练营](https://github.com/HuaXiLF/shenlun-trainer)走的是另一条整理路线：它的语料说明列了历年国考题目、多来源参考答案和高频考点分析，再用失分类型与评分标尺组织训练。工具文件里还有字数统计、来源标签处理和文本一致性检查。读材料、提炼结构、形成练法，作者已经把一部分加工过程留在仓库里。
+
+真拿来用，找点和加工这两步很值得展开看。
+
+**2026年国考副省级申论第一题，题干原文：**
+
+> 请根据“给定资料1”，谈一谈H市是如何管理“城市用光”的。（10分）
+>
+> 要求：全面准确，有条理，不超过250字。
+
+250字，材料里却塞了规划、路灯、夜景、智慧系统、便民设施和长效管理。考场上写着写着，字数比思路先用完了。
+
+这次使用时，先参考白鹭社区审题整理，抓住“如何管理”这个任务，再借申论概括协议里的同功能归并思路，处理材料。
+
+拿智慧照明这一段看。**以下为给定资料1节选，中间省略部分句子：**
+
+> 走进H市市容景观发展中心，智慧照明系统实时监测大屏幕映入眼帘，全市所有路灯设施的情况，如配电箱状态、亮灯时间、能耗等一目了然……
+>
+> “目前，H市全城区道路，主副城区接壤道路以及市内重要景观的照明设施已基本实现统一控制。”……“可通过智慧照明系统精准定位路灯故障点，及时调派工作人员到一线进行维修。”
+
+这里能摘出三件事：实时监测、统一控制、定位故障并维修。
+
+它们都在说同一套系统怎样管理照明设施，可以合成一组。在本次作答整理中，这组写成：
+
+**智慧管护。统一控制、实时监测设施与能耗，定位故障、及时维修。**
+
+二十多个字，把具体管理动作留下了。原文里的场景介绍、人物说话和重复说明，就可以不跟着进答案。
+
+**这处测试的结果，是保住了监测、控制和维修三个具体动作，并合成一个管护功能组。**用处在于读者能看见从哪几句材料压成了哪一句答案。材料中的场景、采访话语删掉，作答所需的行动还在。
+
+**边界在材料和任务里。**这一段只支持这组智慧管护措施，不能据此算整道10分题拿多少分，也不能因为归了一组，就把规划、节能、夜景等其他材料漏掉。完整答案还要逐段检漏。
+
+同样的办法再处理其他段落：太阳能、LED等归到绿色节能；结合山水人文做差异化夜景，归到特色设计；规划和亮灯模式，则检查能否围绕分区分时调控组织。
+
+这样看 AI 的答案，就有了可以追问的位置：“你把哪几句话合并了？”“这个概括后面，对应什么具体动作？”一问下去，材料怎样加工成答案就能展开。
+
+作文也可以沿着这个方向用。把题干里的几个概念拿出来，要求AI回材料找它们的关系，再讨论分论点怎么排。白鹭、小马哥、袁东的方法各有整理入口，需要哪一部分就查哪一部分，像翻不同老师的讲义。
+
+## 时政也有人接活了
+
+做题、复盘、申论之外，时政也有入口，而且玩法不一样。
+
+[考公AI导师的时政模块](https://github.com/KeWang0622/kaogong-skill/blob/main/skills/kaogong/references/shizheng.md)提供政治、经济、社会、文化、生态几个分析维度。拿到一篇政策或新闻，可以沿着这些方向梳理它和申论、面试的关系，提炼表述和案例。
+
+[青岸的政治常识协议](https://github.com/XiaoSiKe/qingan-initiative-civil-service-examination-sprint-coach/blob/main/plugins/qingan/skills/qingan-initiative-civil-service-examination-sprint-coach/references/politics-protocol.md)则把重点放在记忆和辨析：一条时政记发布主体、日期、核心表述，再做挖空回忆，混入旧卡复测。稳定理论和当年新闻分开整理，复习时就能少翻几页流水账。
+
+[gongkao-practice](https://github.com/Why-com-ui/gongkao-practice.skill/blob/main/SKILL.md)还设了时政专题：按说明把参考资料放入对应目录，再据此生成练习。这样，时政可以从一摞收藏的文章，变成能拿来问自己的题。
+
+选哪一种，看当下要干什么：分析热点、记住表述，还是出几道题练手。文末详细索引把这几条入口分开列，省得又收藏一遍后找不到。
+
+## 再往前折腾一步：自己的方法，自己的网站
+
+外部 Skill 提供了一批现成参考。真正开始做题，又会长出自己的记录：这道题在哪个词上分流，那条方法在哪一步用上，两道看着相似的题，为什么最后走了不同路径。
+
+这些东西散在聊天里，过几天再找，就得重新打捞。
+
+这次实验还整理了两份自己的Skill。[xingce-strategy](https://github.com/3013038780-design/civilserviceexam/blob/main/.agents/skills/xingce-strategy/SKILL.md)管行测的读题信号、选法和停止点；[shenlun-strategy](https://github.com/3013038780-design/civilserviceexam/blob/main/.agents/skills/shenlun-strategy/SKILL.md)管申论的任务识别、材料提炼与论证。做过的真题继续检验这些动作，整理出的新规则再补回自己的方法库。
+
+接着做了一个[私人学习网站](https://gongkao-study-studio.easy-tern-3117.chatgpt.site/)，把题目、方法和练习接到一起。最近已核验的线上版本有2026副省级行测完整135题入口、35张方法卡，26个分支带流程与示范，另有78道答案分离的试用题。跨年例题也能从分类方法里进入。
+
+比如，学完电影票价这题，可以回到“下文预测”，看其他年份的题是怎么接续的；学资料分析，则沿着基期、增量、比重等操作找例子。年份负责定位，方法负责把题连起来。
+
+读题、看示范、换题试一下，就能在同一个地方完成。
+
+网站还在调整教学顺序。最近最直接的反馈是：流程有了，读起来还是费劲。于是改成先摆真题，跟着走一遍，再总结方法。刚才的两道行测题，就采用这种讲法。
+
+对考公人来说，最后能留下来的，可能就这么几招：问范围先看边界，预测下文先找还没展开的事，申论概括把同功能动作合到一起。
+
+几招放进自己的 Skill，再拿新题练，慢慢就有了自己的方法库。
+
+名师资料，AI也能翻；题目解析，AI也能写。现在更值得折腾的是：让它陪你把一招练到，换道题还能拿出来。
+
+---
+
+### 按用途找项目
+
+项目有交叉，这里按使用场景分组；点链接可直达项目或具体方法。
+
+## 1. 做题、讲题、出题
+
+| 项目 | 可以拿来做什么 | 入口 |
+| --- | --- | --- |
+| 花生十三方法整理 | 资料速算及行测各模块讲解 | [项目](https://github.com/WangJunqing-coder/huasheng13-skill) |
+| 考公AI导师 | 行测训练，兼申论、面试、时政、选岗 | [项目](https://github.com/KeWang0622/kaogong-skill) |
+| gongkao-practice | 按模块生成练习、参考题仿题、题库导入；含时政资料出题入口 | [项目](https://github.com/Why-com-ui/gongkao-practice.skill)、[技能说明](https://github.com/Why-com-ui/gongkao-practice.skill/blob/main/SKILL.md) |
+| 公务员考试备考指南 | 综合备考和专项训练指导，作为备用总入口 | [具体Skill](https://github.com/NanjingHJLP/hjlp-skills/blob/main/skills/civil-service-exam/SKILL.md) |
+
+## 2. 复盘、诊断、复测
+
+| 项目 | 可以拿来做什么 | 入口 |
+| --- | --- | --- |
+| 行测复盘一体版 | 讲题、追问依据、错因与复习记录 | [项目](https://github.com/liuyuexi1987/xingce-review-pro) |
+| 申论复盘一体版 | 材料解析、作答对照与修改 | [项目](https://github.com/liuyuexi1987/shenlun-review-pro) |
+| 申论训练营 | 小题提炼、失分类型与训练记录 | [项目](https://github.com/HuaXiLF/shenlun-trainer) |
+| Hermes教育技能包 | 行测/申论各有诊断、限时训练、复盘及复测入口 | [行测](https://github.com/hezkvectory/hermes-edu-skills/blob/main/skills/exam-prep/civil-service-aptitude/SKILL.md)、[申论](https://github.com/hezkvectory/hermes-edu-skills/blob/main/skills/exam-prep/civil-service-essay/SKILL.md) |
+| 红领巾错因诊断 | 按定位、关系、词义、计算和策略分析错题 | [错因Skill](https://github.com/MUMU0208/redscarf-gongkao-skills/blob/main/skills/redscarf-error-diagnosis/SKILL.md) |
+
+## 3. 申论方法与训练
+
+| 项目 | 侧重 | 入口 |
+| --- | --- | --- |
+| 七位申论名师方法整理 | 审题、材料阅读及五大题型 | [项目](https://github.com/WangJunqing-coder/shenlun-skill) |
+| 白鹭、小马哥、袁东方法整理 | 小题、作文分流与方法参考 | [项目](https://github.com/coffe-d/Shenlun.skill) |
+| 申论训练营 | 归纳概括等小题专项；作文入口在所读说明中为预留 | [项目](https://github.com/HuaXiLF/shenlun-trainer) |
+| 申论复盘一体版 | 解析、批改及参考答案比较 | [项目](https://github.com/liuyuexi1987/shenlun-review-pro) |
+
+## 4. 政治、时政与知识整理
+
+| 路径 | 工作方式 | 入口 |
+| --- | --- | --- |
+| kaogong时政模块 | 从政治、经济、社会、文化、生态维度分析热点，关联申论/面试 | [时政方法文件](https://github.com/KeWang0622/kaogong-skill/blob/main/skills/kaogong/references/shizheng.md) |
+| 青岸政治常识协议 | 概念辨析、时政来源/日期核对、挖空回忆与旧卡回测 | [协议](https://github.com/XiaoSiKe/qingan-initiative-civil-service-examination-sprint-coach/blob/main/plugins/qingan/skills/qingan-initiative-civil-service-examination-sprint-coach/references/politics-protocol.md)、[项目](https://github.com/XiaoSiKe/qingan-initiative-civil-service-examination-sprint-coach) |
+| gongkao-practice时政出题 | 按说明读取current-events参考资料生成练习 | [技能说明](https://github.com/Why-com-ui/gongkao-practice.skill/blob/main/SKILL.md) |
+| 花生时政知识文件 | 时政与常识积累的参考模块 | [文件](https://github.com/WangJunqing-coder/huasheng13-skill/blob/6a43d776741f69a231eb2d75f9d5d59efe870659/references/shizheng-redian.md) |
+
+以上分别是分析框架、训练协议、资料驱动出题和知识文件；不表示都有自动抓取当日新闻的运行服务。
+
+## 5. 有没有按题型单独拆开的Skills？有
+
+### 红领巾分模块版本
+
+MUMU0208保留的分模块仓库中，每份有自己的SKILL.md和references。原作者旧仓库名已跳转到xingce-review-pro，下面作为相关分模块版本列出，不重复当成另一独立方法体系。
+
+| 专项 | 可直接阅读的文件 |
+| --- | --- |
+| 言语阅读、主旨、标题、排序、填句 | [redscarf-verbal](https://github.com/MUMU0208/redscarf-gongkao-skills/blob/main/skills/redscarf-verbal/SKILL.md) |
+| 逻辑填空、成语、词语搭配 | [redscarf-cloze](https://github.com/MUMU0208/redscarf-gongkao-skills/blob/main/skills/redscarf-cloze/SKILL.md) |
+| 资料分析 | [redscarf-data](https://github.com/MUMU0208/redscarf-gongkao-skills/blob/main/skills/redscarf-data/SKILL.md) |
+| 判断推理 | [redscarf-judgement](https://github.com/MUMU0208/redscarf-gongkao-skills/blob/main/skills/redscarf-judgement/SKILL.md) |
+| 数量关系 | [redscarf-quant](https://github.com/MUMU0208/redscarf-gongkao-skills/blob/main/skills/redscarf-quant/SKILL.md) |
+
+### 按科目与教师方法整理的版本
+
+[gongkao-distill](https://github.com/hilltahuang/gongkao-distill)有科目/教师索引。本轮已打开下列实际方法稿，链接固定到核对的提交。它们在source目录，作为具体方法稿阅读；不将旧索引中不存在的publish路径称为已可安装文件。
+
+| 科目 | 本轮打开的方法稿 |
+| --- | --- |
+| 言语理解 | [郭熙整理](https://github.com/hilltahuang/gongkao-distill/blob/36d2d10d2ac3299974e762914db7875484605ed2/source/公务员/行测/言语理解/郭熙/SKILL.md) |
+| 判断推理 | [蔡金龙整理](https://github.com/hilltahuang/gongkao-distill/blob/36d2d10d2ac3299974e762914db7875484605ed2/source/公务员/行测/判断推理/蔡金龙/SKILL.md) |
+| 资料分析 | [唐宋整理](https://github.com/hilltahuang/gongkao-distill/blob/36d2d10d2ac3299974e762914db7875484605ed2/source/公务员/行测/资料分析/唐宋/SKILL.md) |
+
+名师名称表示社区资料整理方向，具体方法含行业共通做法，不作为教师官方出品或授权声明。
+
+## 6. 我们自己的Skills和网站
+
+| 产物 | 负责什么 | 链接 |
+| --- | --- | --- |
+| xingce-strategy | 识别信号、最简解法、停止条件、外部方法引用、跨题检验 | [行测Skill](https://github.com/3013038780-design/civilserviceexam/blob/main/.agents/skills/xingce-strategy/SKILL.md) |
+| shenlun-strategy | 任务识别、材料提炼、要点组织、概念关系与论证 | [申论Skill](https://github.com/3013038780-design/civilserviceexam/blob/main/.agents/skills/shenlun-strategy/SKILL.md) |
+| 分类方法 | 十一类入口、实际分支与方法说明 | [分类方法](https://github.com/3013038780-design/civilserviceexam/blob/main/行测分类通用方法.md) |
+| 公考研习室 | 题目、分类方法、跨年例题和答案分离试用 | [网站，私人访问](https://gongkao-study-studio.easy-tern-3117.chatgpt.site/) |
+| 公开项目 | 代码、原创方法与索引 | [civilserviceexam](https://github.com/3013038780-design/civilserviceexam) |
+
+
+资料说明：题号与文字按本次采用的真题主版本，材料节选已标明。本轮完成指定文件阅读后的方法执行测试：2道既有行测真题回放、2道改编精度题、2种模拟流程场景和1处申论材料回放；可见输出与独立算式复核已保存，未作全包安装或独立客户端测试，不合并报告正确率。红领巾的数据规模按其公开字典记录，未重跑原视频抽取。时政部分是方法、资料与训练入口，不把它们称作已运行的自动新闻服务。网站仍为私人访问。
