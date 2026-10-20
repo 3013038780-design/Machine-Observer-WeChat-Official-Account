@@ -124,5 +124,17 @@
   "sha256": "4e1c10b3f4d3b8d37525055e80a8e4e7d7894420c068f8971648f440681377bb",
   "bytes": 45705,
   "files": 20,
-  "site_change": "none; current private site access and paused research preserved"
+  "site_change": "none; current private site access and paused research preserved",
+  "delivery": {
+    "public_zip_download": "fetched with curl; SHA256 equals verified local ZIP",
+    "article_repo_commit": "08559b4",
+    "civilserviceexam_main": "51ce0b06ba1482ad25cd94f58848a2b822e67cff",
+    "civilserviceexam_research_branch": "9a4a71d164459f41cf13f601314bb1f1c684b147",
+    "main_change_scope": [
+      "README.md",
+      "公开上手与项目完善说明.md"
+    ],
+    "baidu_upload": "由用户执行，未代上传",
+    "goal_audit": "six agreed contents present and verified; project-readiness assessment delivered; personal transfer and full project completion remain explicitly unproven"
+  }
 }
