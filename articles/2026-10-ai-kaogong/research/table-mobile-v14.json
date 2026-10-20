@@ -1,0 +1,116 @@
+{
+  "viewports": [
+    {
+      "width": 375,
+      "scrollWidth": 375,
+      "headers": [
+        "项目",
+        "能做什么",
+        "值得借用的做法"
+      ],
+      "headerY": [
+        66.5,
+        66.5,
+        66.5
+      ],
+      "columns": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "projects": 14,
+      "links": 14,
+      "emptyRows": 0
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "headers": [
+        "项目",
+        "能做什么",
+        "值得借用的做法"
+      ],
+      "headerY": [
+        66.5,
+        66.5,
+        66.5
+      ],
+      "columns": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "projects": 14,
+      "links": 14,
+      "emptyRows": 0
+    },
+    {
+      "width": 430,
+      "scrollWidth": 430,
+      "headers": [
+        "项目",
+        "能做什么",
+        "值得借用的做法"
+      ],
+      "headerY": [
+        66.5,
+        66.5,
+        66.5
+      ],
+      "columns": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "projects": 14,
+      "links": 14,
+      "emptyRows": 0
+    }
+  ],
+  "image": {
+    "path": "assets/项目总览-手机三列表.png",
+    "width": 750,
+    "height": 3086,
+    "projects": 14,
+    "columns": 3,
+    "source_width": 375,
+    "scale": 2
+  },
+  "copy_to_135": "PNG可直接上传，链接仍在正文；未实测135粘贴"
+}
