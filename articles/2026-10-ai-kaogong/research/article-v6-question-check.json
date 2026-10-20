@@ -1,0 +1,20 @@
+{
+  "normalization": "仅为核对去排版空白与标点，保留全部汉字、字母和数字；原稿保留标点",
+  "checks": [
+    {
+      "source": "2026-副省级-主卷",
+      "question": 131,
+      "pdf_page": 25,
+      "complete_stem_and_four_choices_match": true
+    },
+    {
+      "source": "2015-副省级-主卷",
+      "question": 44,
+      "pdf_page": 4,
+      "complete_stem_and_four_choices_match": true
+    }
+  ],
+  "authored_cases_labeled": true,
+  "question_blocks": 4,
+  "shenlun_task_and_excerpt_retained": true
+}
