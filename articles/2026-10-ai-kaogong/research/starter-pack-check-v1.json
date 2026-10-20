@@ -1,0 +1,59 @@
+{
+  "files": 14,
+  "zip_integrity": "CRC and 13 content SHA256 passed",
+  "local_links": "all seven preset files exist after extraction",
+  "browser": [
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "presetBlocks": 7,
+      "presetLinks": 7,
+      "offlineRoute": true,
+      "beginnerRoute": true,
+      "troubleshooting": true,
+      "scripts": 0
+    },
+    {
+      "width": 1000,
+      "scrollWidth": 1000,
+      "presetBlocks": 7,
+      "presetLinks": 7,
+      "offlineRoute": true,
+      "beginnerRoute": true,
+      "troubleshooting": true,
+      "scripts": 0
+    }
+  ],
+  "article": [
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "tables": 8,
+      "overviewRows": 15,
+      "links": 50,
+      "question131": true,
+      "question44": true,
+      "choiceD": 3,
+      "overviewBeforeFirstQuestion": true,
+      "brokenImages": 0,
+      "scriptCount": 0
+    },
+    {
+      "width": 1000,
+      "scrollWidth": 1000,
+      "tables": 8,
+      "overviewRows": 15,
+      "links": 50,
+      "question131": true,
+      "question44": true,
+      "choiceD": 3,
+      "overviewBeforeFirstQuestion": true,
+      "brokenImages": 0,
+      "scriptCount": 0
+    }
+  ],
+  "preserved": "all article tables and original quoted questions/choices unchanged",
+  "skill_installation": "none; original copy-paste presets only",
+  "wechat_keyword_reply": "copy and setup instructions ready; not configured or tested",
+  "publication": "not published"
+}
