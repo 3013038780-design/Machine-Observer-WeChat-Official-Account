@@ -1,0 +1,38 @@
+{
+  "base": "用户本轮提供的完整文章，采用其标题、章节递进和多数叙述段落",
+  "preserved_tables": "与v9逐行一致，8张",
+  "preserved_source_quotes_and_options": "与v9逐行一致",
+  "preserved_tests": "2既有行测题回放、2改编精度题、2模拟复盘情境、1申论材料回放；无新增测试",
+  "changes": "嵌入完整原题、方法来源与测试性质，保留自建项目与六类策略表；原结尾内补AI对讲题/复盘环节的影响，不新增行业章节",
+  "factual_edits": "去掉无法确认的实物复古电脑场景；不采用未核实的2020上岸与大神排名；申论答案字数改为一句话",
+  "viewports": [
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "tables": 8,
+      "overviewRows": 15,
+      "links": 50,
+      "question131": true,
+      "question44": true,
+      "choiceD": 3,
+      "overviewBeforeFirstQuestion": true,
+      "brokenImages": 0,
+      "scriptCount": 0
+    },
+    {
+      "width": 1000,
+      "scrollWidth": 1000,
+      "tables": 8,
+      "overviewRows": 15,
+      "links": 50,
+      "question131": true,
+      "question44": true,
+      "choiceD": 3,
+      "overviewBeforeFirstQuestion": true,
+      "brokenImages": 0,
+      "scriptCount": 0
+    }
+  ],
+  "paste_to_135": "未实测",
+  "publication": "未发表"
+}
