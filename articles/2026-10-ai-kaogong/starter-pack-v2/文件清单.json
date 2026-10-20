@@ -1,0 +1,101 @@
+{
+  "version": "v2",
+  "date": "2026-10-20",
+  "files": [
+    {
+      "path": "00-从这里开始.html",
+      "bytes": 36967,
+      "sha256": "6392bb95418ca7be021eed4d9cd9c7c17926e833e2445621f1a8eafb75c8d0b2"
+    },
+    {
+      "path": "Civil-Service-Exam项目介绍.html",
+      "bytes": 6043,
+      "sha256": "6d1ca0872ad239fff958f6b0375f3163966d9cd0318e825a3b218b8e8b86668e"
+    },
+    {
+      "path": "Civil-Service-Exam项目介绍与完善顺序.md",
+      "bytes": 3691,
+      "sha256": "4d116e5822b9565229213dfdedd9bdc3c3ab770866327c56aa22c87d04759fd6"
+    },
+    {
+      "path": "README.txt",
+      "bytes": 790,
+      "sha256": "48b972c17b50ba7a3e952544c27e6a79121a26f37b2aa178fe2ccd69c788935a"
+    },
+    {
+      "path": "三组真题示范与测试.html",
+      "bytes": 11422,
+      "sha256": "476d5fecd0da49aed6dabeef47923afcfe406adca6f26f888fb1ec949acf132e"
+    },
+    {
+      "path": "三组真题示范与测试.md",
+      "bytes": 9188,
+      "sha256": "52b0d0f6b6aefa23341280488f9aa0ecbde75608dc1048c0fef2eea505ab498f"
+    },
+    {
+      "path": "先试一道自拟题.txt",
+      "bytes": 957,
+      "sha256": "23f4a397dbfa89117c407556e20f3ae33e50e3606d2362e3232478481f83bd43"
+    },
+    {
+      "path": "公开项目导航.md",
+      "bytes": 2125,
+      "sha256": "ff111ac0d49cf59d35058d3844bc775da0ba66f19acade7c145d36c816cc265d"
+    },
+    {
+      "path": "六张方法卡.md",
+      "bytes": 2338,
+      "sha256": "97a79f1b77f2c79472e05fc5ea0bfd3ebd40678cd17a7ceb7b7bfcd886aad63c"
+    },
+    {
+      "path": "按场景选择工具.md",
+      "bytes": 730,
+      "sha256": "431a6e862a6392219de1dc1cd73569e3d7fca25b9e2d0394b606f19af82a164b"
+    },
+    {
+      "path": "独立练习记录.csv",
+      "bytes": 303,
+      "sha256": "1f7b90e45290fce21611442d7463b2b299a4b7a2a21f0433943449e8a697cc9d"
+    },
+    {
+      "path": "资料来源与使用范围.md",
+      "bytes": 1619,
+      "sha256": "336f78c279f0989d3b9ece0c9cf2bdb60c4262be2b45bfd03e4aaf0867894a8b"
+    },
+    {
+      "path": "预设/01-先告诉AI怎么陪我学.txt",
+      "bytes": 1130,
+      "sha256": "fa68514f27ab917d42a7866f84c6dff068ce021cffe4c0864e92dd3a7597caa6"
+    },
+    {
+      "path": "预设/02-一道行测题怎么讲.txt",
+      "bytes": 951,
+      "sha256": "4c2613164c1b4897428dcd20d1ec32ddaeda1fc8c9ec27e3a3593216d8f91be0"
+    },
+    {
+      "path": "预设/03-我卡住了先别给答案.txt",
+      "bytes": 539,
+      "sha256": "1f876470f5b86821c79f9ecf629695aaafeab47b6c1012120a2fee25bcc84f27"
+    },
+    {
+      "path": "预设/04-做完怎么复盘.txt",
+      "bytes": 737,
+      "sha256": "85e2fb14be264a4577e266616487f131586352720e4cb03f5a916a75d14189bb"
+    },
+    {
+      "path": "预设/05-申论材料怎么变答案.txt",
+      "bytes": 912,
+      "sha256": "a44ef69da41305a8a2cdf663fb0c4b039bdbd7ff6b64e7753b08f6d0b9d68124"
+    },
+    {
+      "path": "预设/06-换一道题检验我会没会.txt",
+      "bytes": 662,
+      "sha256": "0f3042b7ec8e17e56e564d7785230a5e6bd1cbaaada5bc5bd37b440ac76b7bc7"
+    },
+    {
+      "path": "预设/07-把解析压成可执行方法卡.txt",
+      "bytes": 533,
+      "sha256": "51d710750fde68dc88942714728224095e9f6e98a535ba4feacb85cdb056b9fd"
+    }
+  ]
+}

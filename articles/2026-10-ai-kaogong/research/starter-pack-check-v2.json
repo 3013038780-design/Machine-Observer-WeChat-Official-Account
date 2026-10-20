@@ -1,0 +1,128 @@
+{
+  "requirements": {
+    "six_modules_in_single_reader": "verified",
+    "seven_presets": "verified",
+    "six_method_cards": "verified",
+    "thirteen_external_repos_and_one_own_project": "verified",
+    "three_full_question_cases_and_required_options": "verbatim quoted lines match article-v13",
+    "tests": "reuses existing R1/R2/B1/B2/P1/P2/S1; no new model eval claimed",
+    "project_maturity_and_improvement": "read current branch/checkpoint/OpenSpec; partial scope and user transfer pending explicit",
+    "zip": "all 20 files byte-identical with 19 content hashes",
+    "readable_offline": "browser opens extracted single file with six live section anchors",
+    "wechat": "no upload/configuration/publication performed"
+  },
+  "browser": [
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "sections": [
+        {
+          "id": "guide",
+          "exists": true
+        },
+        {
+          "id": "catalog",
+          "exists": true
+        },
+        {
+          "id": "preset",
+          "exists": true
+        },
+        {
+          "id": "methods",
+          "exists": true
+        },
+        {
+          "id": "cases",
+          "exists": true
+        },
+        {
+          "id": "project",
+          "exists": true
+        }
+      ],
+      "presets": 7,
+      "cases": 3,
+      "initiallyOpen": 0,
+      "presetLinks": 7,
+      "projectIntro": true,
+      "sourceIds": [
+        true,
+        true,
+        true
+      ],
+      "localHrefs": [
+        "预设/01-先告诉AI怎么陪我学.txt",
+        "预设/02-一道行测题怎么讲.txt",
+        "预设/03-我卡住了先别给答案.txt",
+        "预设/04-做完怎么复盘.txt",
+        "预设/05-申论材料怎么变答案.txt",
+        "预设/06-换一道题检验我会没会.txt",
+        "预设/07-把解析压成可执行方法卡.txt",
+        "独立练习记录.csv",
+        "先试一道自拟题.txt"
+      ],
+      "invalidAnchors": [],
+      "dataExplanationOpens": true,
+      "dataAnswerPresent": true
+    },
+    {
+      "width": 1000,
+      "scrollWidth": 1000,
+      "sections": [
+        {
+          "id": "guide",
+          "exists": true
+        },
+        {
+          "id": "catalog",
+          "exists": true
+        },
+        {
+          "id": "preset",
+          "exists": true
+        },
+        {
+          "id": "methods",
+          "exists": true
+        },
+        {
+          "id": "cases",
+          "exists": true
+        },
+        {
+          "id": "project",
+          "exists": true
+        }
+      ],
+      "presets": 7,
+      "cases": 3,
+      "initiallyOpen": 0,
+      "presetLinks": 7,
+      "projectIntro": true,
+      "sourceIds": [
+        true,
+        true,
+        true
+      ],
+      "localHrefs": [
+        "预设/01-先告诉AI怎么陪我学.txt",
+        "预设/02-一道行测题怎么讲.txt",
+        "预设/03-我卡住了先别给答案.txt",
+        "预设/04-做完怎么复盘.txt",
+        "预设/05-申论材料怎么变答案.txt",
+        "预设/06-换一道题检验我会没会.txt",
+        "预设/07-把解析压成可执行方法卡.txt",
+        "独立练习记录.csv",
+        "先试一道自拟题.txt"
+      ],
+      "invalidAnchors": [],
+      "dataExplanationOpens": true,
+      "dataAnswerPresent": true
+    }
+  ],
+  "sha256": "4e1c10b3f4d3b8d37525055e80a8e4e7d7894420c068f8971648f440681377bb",
+  "bytes": 45705,
+  "files": 20,
+  "site_change": "none; current private site access and paused research preserved"
+}
