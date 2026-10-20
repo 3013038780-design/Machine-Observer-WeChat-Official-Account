@@ -1,0 +1,166 @@
+{
+  "date": "2026-10-20",
+  "mode": "当前会话读取指定源文件后逐项按协议执行；可见输出由助手撰写，语义由人工检查；脚本仅保存并校验数字/字段，不冒充独立模型调用或端到端安装测试",
+  "input_sha256": "52d0dc6f2cc400482b200e48bfeaf0087b94c90e9c9b73d592460c26efdd1076",
+  "source_files": [
+    {
+      "path": "README.md",
+      "sha256": "de8881c79743f54ba0eeb1368969987e85cf541a3d55ee86c73a24542cbdcea0",
+      "url": "https://github.com/MUMU0208/redscarf-gongkao-skills/blob/main/README.md"
+    },
+    {
+      "path": "skills/redscarf/SKILL.md",
+      "sha256": "4d854d5a700c371fc9cfbb4b05b3a9c10f9082549c1a8fca860058e937403b06",
+      "url": "https://github.com/MUMU0208/redscarf-gongkao-skills/blob/main/skills/redscarf/SKILL.md"
+    },
+    {
+      "path": "skills/redscarf-data/SKILL.md",
+      "sha256": "464a7af4954833545e00a55f05b446d9802511461f25bfa46f76135841a93345",
+      "url": "https://github.com/MUMU0208/redscarf-gongkao-skills/blob/main/skills/redscarf-data/SKILL.md"
+    },
+    {
+      "path": "skills/redscarf-data/references/资料分析.md",
+      "sha256": "4541de8a1dc2d1af49dbcfd7ea2ea4b9b65f173e5b96bc9b8bad444d239a5142",
+      "url": "https://github.com/MUMU0208/redscarf-gongkao-skills/blob/main/skills/redscarf-data/references/资料分析.md"
+    },
+    {
+      "path": "skills/redscarf-data/references/资料分析技巧索引.md",
+      "sha256": "e349c1a5d5fe56cd678c7b7fd1599f4706622e51f4ab3c5bc86e078ffc472bb7",
+      "url": "https://github.com/MUMU0208/redscarf-gongkao-skills/blob/main/skills/redscarf-data/references/资料分析技巧索引.md"
+    },
+    {
+      "path": "skills/redscarf-error-diagnosis/SKILL.md",
+      "sha256": "d41a68febf0e7cfc7d9b95fa9376c74eb4ec8c6fe320f09b5a2af48c4a4523ff",
+      "url": "https://github.com/MUMU0208/redscarf-gongkao-skills/blob/main/skills/redscarf-error-diagnosis/SKILL.md"
+    },
+    {
+      "path": "skills/redscarf-method-router/SKILL.md",
+      "sha256": "ad8f54db9347caf819e2fce5a9883472c1affa81f624d69e06e3ebdb461e738b",
+      "url": "https://github.com/MUMU0208/redscarf-gongkao-skills/blob/main/skills/redscarf-method-router/SKILL.md"
+    },
+    {
+      "path": "skills/redscarf-method-router/references/产物数据字典.md",
+      "sha256": "5a176da59383e3c437eb46694f5c78c04156fb7e4d5cb25c045c7e8c14787d10",
+      "url": "https://github.com/MUMU0208/redscarf-gongkao-skills/blob/main/skills/redscarf-method-router/references/产物数据字典.md"
+    },
+    {
+      "path": "skills/redscarf-method-router/references/红领巾方法库入口.md",
+      "sha256": "a297b3ee7952e2f7c1735c7a34d85f78806b9da8640a5526fa151ad7ef277b6f",
+      "url": "https://github.com/MUMU0208/redscarf-gongkao-skills/blob/main/skills/redscarf-method-router/references/红领巾方法库入口.md"
+    },
+    {
+      "path": "skills/redscarf-verbal/SKILL.md",
+      "sha256": "45483babb53bcb4c21fbc6ad8d50eb101e5d49c34c32a9ec40e6c981aee6d5cd",
+      "url": "https://github.com/MUMU0208/redscarf-gongkao-skills/blob/main/skills/redscarf-verbal/SKILL.md"
+    },
+    {
+      "path": "skills/redscarf-verbal/references/言语理解.md",
+      "sha256": "b2f2182a5a80a8682ebfca48f5aa70192a826798f46020ad908a2c7a027f6524",
+      "url": "https://github.com/MUMU0208/redscarf-gongkao-skills/blob/main/skills/redscarf-verbal/references/言语理解.md"
+    },
+    {
+      "path": "skills/redscarf-verbal/references/言语理解题型索引.md",
+      "sha256": "ebdbda764516d308e26249cb08c4bfbddfaf3626fd9f59a694ce9b77f59f3512",
+      "url": "https://github.com/MUMU0208/redscarf-gongkao-skills/blob/main/skills/redscarf-verbal/references/言语理解题型索引.md"
+    }
+  ],
+  "cases": [
+    {
+      "id": "R1",
+      "observed_route": "redscarf-data",
+      "visible_output": "题型是由部分和比重求整体。2024年、亿元与万亿元先统一：14230.2亿元=1.42302万亿元。44×3.2%=1.408，45×3.2%=1.44，材料值在中间，故总量44—45万亿元，选B。若直接求值为44.469375万亿元。下次先核口径，再按选项所需精度选择计算。",
+      "answer": "B",
+      "assessment": "按所读方法流程可执行；公式/阈值反乘由当前助手推导，不称源库包含此题或此完整算法",
+      "source_action": "定位时间/单位/主体→公式→估算比较→核选项",
+      "source_evidence": "redscarf-data/SKILL.md输出模板及references/资料分析.md判断流程",
+      "origin_quote_used": false,
+      "reference_status": "旧答案B已知；本次数字另用Decimal复核",
+      "arithmetic_check": {
+        "id": "R1",
+        "part_trillion": "1.42302",
+        "total_trillion": "44.469375",
+        "at_44": "1.408",
+        "at_45": "1.440",
+        "at_46": "1.472",
+        "answer": "B"
+      }
+    },
+    {
+      "id": "R2",
+      "observed_route": "redscarf-verbal",
+      "visible_output": "这是下文接语题。前面提出同价现象并补行业背景，最后虽然局部机动价格能多收益，但影院同价总体利大于弊，判断未解释原因。A接原因更近；B泛定价因素、C回成本需求设疑、D转其他行业。相对选A。只找电影/票价主题词还不能排B和C，还要比较每项承担的篇章作用。",
+      "answer": "A",
+      "assessment": "可作通用检查支架，补充相邻下文展开判断后可完成；不能把完整接语算法冒充原文已有",
+      "source_action": "保全文/末尾转折、主题与关系核对、当前题选项比较",
+      "source_evidence": "references/言语理解.md判断流程及过度推理/偷换概念项，结语索引三条片段",
+      "reference_status": "旧A及参考A已知，非新题正确率",
+      "attribution": "库内有通用规则，本轮已读文件未见本题直接讲解；全文推导属当前题应用"
+    },
+    {
+      "id": "B1",
+      "observed_route": "redscarf-data",
+      "visible_output": "自拟题，不是真题。金额1.4401万亿元，恰占总量3.2%。45万亿元对应1.44万亿元，46对应1.472。1.4401在其间，总量45—46，选C。不能把1.4401先凑为1.44后划到前一档。",
+      "answer": "C",
+      "assessment": "精度边界例执行正确；独立复算45.003125万亿元",
+      "source_action": "误差边界核对与范围比较",
+      "source_evidence": "references/资料分析.md估算技巧/误差控制，特定数值是本次自拟",
+      "arithmetic_check": {
+        "id": "B1",
+        "part_trillion": "1.4401",
+        "total_trillion": "45.003125",
+        "at_44": "1.408",
+        "at_45": "1.440",
+        "at_46": "1.472",
+        "answer": "C"
+      }
+    },
+    {
+      "id": "B2",
+      "observed_route": "redscarf-data",
+      "visible_output": "自拟题，不是真题。1.4399万亿元小于45万亿元对应的1.44，大于44万亿元对应的1.408，总量44—45，选B。与B1只差2亿元，答案已经跨了分界，应保留到能判上下侧的精度。",
+      "answer": "B",
+      "assessment": "精度边界例执行正确；独立复算44.996875万亿元",
+      "source_action": "同一阈值两侧核对",
+      "source_evidence": "同B1，当前数值推导不归为源作者原例",
+      "arithmetic_check": {
+        "id": "B2",
+        "part_trillion": "1.4399",
+        "total_trillion": "44.996875",
+        "at_44": "1.408",
+        "at_45": "1.440",
+        "at_46": "1.472",
+        "answer": "B"
+      }
+    },
+    {
+      "id": "P1",
+      "observed_route": "redscarf-verbal",
+      "visible_output": "请补充完整文段和四个选项，再说一句你为什么选B。现在没有题面，无法核对选项，也不能判断具体错在哪一步。",
+      "answer": null,
+      "assessment": "信息缺失流程检查符合：未猜答案、未把B记成错题",
+      "source_action": "题面缺失时不补造",
+      "source_evidence": "redscarf-verbal/SKILL.md第4流程及当前题推理边界"
+    },
+    {
+      "id": "P2",
+      "observed_route": "xingce-review-pro/复盘",
+      "visible_output_first": "【模式】复盘\n【题型】言语理解·接语选择\n你的答案 B：已记录，不判对错\n你为什么这么选这个答案，又是怎么排除其他选项的？\n你也可以不答，直接说“讲吧”，我就开始讲解",
+      "simulated_user_second": "因为整段一直在讨论定价，所以我选主要参考因素。",
+      "visible_output_second": "你抓住了定价这个主题，B也确实和主题有关。但题目问下一段接什么，末尾刚判断影院同票价更有利，还没解释理由，A接原因最直接。B会转成定价因素总论。下次先写出结尾完成了什么、还缺什么，再比较同主题选项。此处是模拟复盘，未写入真实用户错因或学习档案。",
+      "answer": "A",
+      "assessment": "两轮协议演练符合；首轮未透露答案，第二轮再对依据；不称实际用户答错",
+      "source_evidence": "xingce-review-pro/SKILL.md复盘首轮门禁与核验规则；未执行上游writeback.py",
+      "source_action": "先记录与追问，再给当前题解释"
+    },
+    {
+      "id": "S1",
+      "observed_route": "白鹭任务识别+归纳概括协议",
+      "visible_output": "任务为概括H市已有城市用光管理做法。智慧系统中的实时监测、统一控制、故障定位和维修属于同组管护功能，可整理为：智慧管护。统一控制、实时监测设施与能耗，定位故障、及时维修。此为材料片段的一个答案组，不当完整250字答案或评分结果。",
+      "answer": null,
+      "assessment": "现有材料回放：同功能合并有具体动作依据；不称新运行shenlun-trainer或官方得分",
+      "source_evidence": "既有申论材料映射第1题；白鹭审题及申论review概括协议",
+      "source_action": "审题→抽动作→按功能合并→保实质信息"
+    }
+  ],
+  "limitations": "2真题旧答回放、2自拟精度例、2模拟行为场景、1申论片段回放；无随机样本、无安装前后对照、无用户计时或提分数据；不合并报正确率。"
+}
