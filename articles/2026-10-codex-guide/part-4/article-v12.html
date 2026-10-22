@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>你发出一句话后，Codex 背后发生了什么？</title></head><body style="margin:0;padding:0 0 36px;background:#ffffff;">
+<section style="font-size:16px;color:#333333;line-height:1.75;letter-spacing:0.5px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;word-break:break-word;background:#ffffff;padding:0 12px;max-width:640px;margin:0 auto;box-sizing:border-box;">
+<h1 style="font-size:22px;font-weight:bold;color:#17633F;text-align:center;margin:36px 0 30px;line-height:1.5;letter-spacing:0.5px;">你发出一句话后，Codex 背后发生了什么？</h1>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">你让 Codex 做一份竞品调研。它读资料、查网页、整理数据，最后交回报告。屏幕上看起来，是一个助手接过任务，一直工作到完成。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">但这段连续表现的背后，可能已经发生了许多次模型调用。每一次，模型根据手头的信息选择下一步：有时生成文字，有时发出操作请求，软件把请求交给工具执行，再把结果带回来，供模型继续判断。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;"><strong style="font-weight:bold;color:#17633F;">一句请求，是这一连串判断和行动的起点。</strong></p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">这能解释许多使用中的困惑：为什么同一句话换个背景，结果就不同；为什么明明有工具，它却没有用；为什么它能自己修正问题，又可能给出一段合理却未必可信的解释。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">理解这些差别，才能知道哪些事情需要交代，哪些工作可以让它承担，以及我们究竟能了解这个&quot;黑箱&quot;到什么程度。</p>
+<h2 style="font-size:18px;font-weight:bold;color:#17633F;margin:44px 0 18px;display:block;line-height:1.55;border-bottom:1px solid #C7DDCF;padding-bottom:10px;letter-spacing:0.5px;">一、把上下文交代完整，它才知道你真正要解决什么</h2>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">假设一家公司准备做一款面向新手的家用咖啡机，让 Codex 调研竞品。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">负责人其实已经知道不少事情：目标顾客想在家喝咖啡，却不愿花时间研究操作；已有反馈集中在清洁麻烦、使用步骤多；公司这次需要决定优先改善什么，而不是要一篇行业介绍。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">如果只交代&quot;做咖啡机竞品调研&quot;，Codex 可以按常见报告的写法介绍品牌、价格和市场趋势。它可能认真完成了自己理解出来的任务，却没有回答负责人真正关心的问题。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">这不是多加一句&quot;深入一点&quot;就能解决的。缺少的是会改变调查方向的事实：给谁做、要作什么决定、已经发现了什么、有哪些限制。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">上下文，就是这些来龙去脉。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">它们进入系统以后，会与当前要求、相关对话、适用规则、工具说明及读到的材料一起，成为模型处理这项工作的输入。<strong style="font-weight:bold;color:#17633F;">你发出的那句话，只是模型工作材料的一部分。</strong><a href="https://openai.com/index/unrolling-the-codex-agent-loop/" style="color:#17633F;text-decoration:none;border-bottom:1px solid #C7DDCF;">Codex 的输入与执行机制</a></p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">因此，资料的组织也会影响结果。公司有一份客户访谈，不等于模型已经知道访谈内容；文件能够访问，也还需要实际读取；它从训练中学过的行业知识，更不能代替这家公司尚未告诉它的事实。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">&quot;完整&quot;也不要求你一次贴进所有文件。把关键目的说清楚，指出访谈、旧报告和产品约束在哪里，让 Codex 主动查看、补齐缺口就行。资料很多时，选出与任务有关的部分，比全部塞进去更有用。<a href="https://www.anthropic.com/research/effective-context-engineering-for-ai-agents" style="color:#17633F;text-decoration:none;border-bottom:1px solid #C7DDCF;">Anthropic 对上下文组织的说明</a></p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">人不必先把整套专业流程学一遍，但要交接自己独有的信息。AI 这边，则应该把已有资料找出来、读进去，而不是把每一次遗漏都算作&quot;用户没有提醒&quot;。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">背景清楚了，它接到的工作才从&quot;介绍一些咖啡机&quot;，变成&quot;调查现有产品怎样解决新手的使用与清洁困难，为产品取舍提供依据&quot;。</p>
+<h2 style="font-size:18px;font-weight:bold;color:#17633F;margin:44px 0 18px;display:block;line-height:1.55;border-bottom:1px solid #C7DDCF;padding-bottom:10px;letter-spacing:0.5px;">二、它把下一步动作生成出来，再让程序执行</h2>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">Codex 收到任务后，接下来的输出未必是一段回答，也可能是一项操作请求。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">这个区别，是它能够真正做事的关键。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">在我们的例子里，模型已经知道：调研要帮助公司判断怎样降低新手的操作与清洁负担。系统还会提供当前可调用工具的说明，包括工具能做什么、需要哪些输入。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">模型利用这些材料生成下一步的输出。如果选择搜索，它就需要生成工具调用，而不只是写一句&quot;应该搜索&quot;。把这样的请求翻成日常语言，大致是：</p>
+<blockquote style="margin:24px 0;padding:14px 18px;background:#F2F7F3;border-left:3px solid #17633F;color:#6b6b6b;font-size:15px;border-radius:2px;"><p style="margin:6px 0;line-height:1.75;color:#6b6b6b;letter-spacing:0.5px;">使用网页搜索工具，查找这几款产品的清洁说明。</p></blockquote>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">实际调用会明确工具名称与搜索内容等输入。<strong style="font-weight:bold;color:#17633F;">&quot;调用哪个工具、交给它什么&quot;，也是模型生成的结果。</strong>软件接到这项请求，才能调用对应工具执行。<a href="https://developers.openai.com/api/docs/guides/function-calling" style="color:#17633F;text-decoration:none;border-bottom:1px solid #C7DDCF;">工具调用怎样产生和执行</a></p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">也就是说，不需要先有一段给人看的完整计划，再由另一个程序读懂计划、替它决定怎么做。模型可以直接生成下一项可执行的请求，运行系统负责按允许的范围安排执行。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">这些选择依赖训练形成的能力，并结合本次输入作出。2026 年 OpenAI 与 Ironclad 的研究，就展示了把业务要求、软件操作和结果反馈结合起来训练模型的方法。模型从中改善的是处理任务的本领，而不是拿到一份覆盖所有未来请求的固定操作表。<a href="https://openai.com/index/advancing-computer-use-with-ironclad/" style="color:#17633F;text-decoration:none;border-bottom:1px solid #C7DDCF;">OpenAI 与 Ironclad 的研究</a></p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">这里仍要分清：我们能说明操作请求的形式和执行流程，并不代表已经完整解释了神经网络为什么恰好生成这一个请求。这个边界，后面还会谈到。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">现在，搜索工具开始工作，把找到的页面、摘要或其他结果交回系统。这时，工作并不是模型凭空&quot;想到了更多东西&quot;，而是它取得了前一轮尚未拥有的外部信息。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;"><strong style="font-weight:bold;color:#17633F;">系统把这些结果加入后续输入，再调用模型。</strong>下一次模型处理的材料里，便多了刚才的操作与返回结果。你只发过一句话，背后已经进入下一轮判断。<a href="https://openai.com/index/unlocking-the-codex-harness/" style="color:#17633F;text-decoration:none;border-bottom:1px solid #C7DDCF;">Codex 如何连接模型调用与工具结果</a></p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">假设搜索结果里有个产品写着&quot;一键清洁&quot;。搜索摘要不足以判断实际负担，于是下一次输出可以是读取该产品说明页的请求。页面内容返回后，模型发现日常使用还需要拆洗部件，接下来又可能请求查找用户对此的反馈。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">这一串来回中，每次调用的输入都在变化。新的内容可能支持原来的做法，也可能暴露缺口，让下一项操作改变。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;"><strong style="font-weight:bold;color:#17633F;">它能够自己推进，是因为这套循环不需要用户在每一步之间重新发消息。</strong>从外面看，像一个助手在持续工作；从运行过程看，是模型的多次判断与工具的多次执行被连接了起来。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">出错以后能够继续，也来自这套机制。如果读取页面返回的是登录提示，下一轮模型接到的就是这份返回。它需要识别&quot;这次没有取得评价&quot;，再决定换来源、使用已有材料，或说明阻碍。工具失败同样提供了新的判断依据，重新判断之后，动作才可能改变——机械地重复同一条命令，或把话写得更长，都不会让尚未取得的评价自动出现。</p>
+<h3 style="font-size:17px;font-weight:bold;color:#287A51;margin:28px 0 14px;line-height:1.5;letter-spacing:0.5px;">结果又怎样变成文件</h3>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">调查进行到一定程度，模型还可以生成处理资料的代码，再请求运行。程序按照代码整理记录、计算或生成表格，把输出文件的位置、处理结果或错误带回来。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">代码在这里有两种身份：可以是最终要交付的软件，也可以只是完成这次调研的临时工具。让程序整理几百条记录，不要求用户自己成为程序员。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">终端经常出现在这个环节，因为它能启动程序，并返回输出和错误；需要观察图片或页面效果时，则用相应的查看工具。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">模型还可以通过文件工具，把生成的报告正文写入指定位置。若写入或处理失败，错误继续进入后续判断；需要核对时，再请求打开文件、读取数据或查看效果。文件是在这些真实操作中产生的，不会因为最后一句话写了&quot;已完成&quot;就自然存在。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">完成这一串工作后，模型再生成交给人的答复，说明成果在哪里、得到了什么结论、还有哪些缺口。这时，你在聊天里看到的一段文字，已经对应着外部实际发生的许多动作。</p>
+<h3 style="font-size:17px;font-weight:bold;color:#287A51;margin:28px 0 14px;line-height:1.5;letter-spacing:0.5px;">为什么有时还是需要反复提醒</h3>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">提供了工具，只是让某些操作成为可能，并不能保证模型在需要时一定选中它们。它可能直接回答，也可能没有发现该补查什么，或者把中间结果误当成已经足够。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">所以，&quot;知道有这个工具&quot;和&quot;这次发出了正确调用&quot;，要分开检查。让它继续写一段分析，未必补得上缺失的调查；需要补的是具体动作，以及动作应当带回的依据。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">当前指令也会影响下一次输出。OpenAI 在 2026 年的 Astra 开发建议中指出，过细的旧步骤、含糊的工具适用说明，以及过宽的停止要求，都可能影响新模型的工作方式。<a href="https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra" style="color:#17633F;text-decoration:none;border-bottom:1px solid #C7DDCF;">GPT-6 Astra 的开发经验</a></p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">这为排查提供了一个具体方向：停在了哪一轮？当时已有什么信息、缺什么信息、实际发出了什么请求？该继续查资料，还是确实需要人作决定？AI 应先把能核查的部分查清，而不是用一句&quot;需要你进一步指示&quot;交回整项工作。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">人交接目的、特殊事实和关键取舍；常规的行动选择、执行与异常调查交给 AI。这种分工成立的前提，是它可以在一次请求里完成许多轮工作，不用每一步都等人重新启动。</p>
+<h2 style="font-size:18px;font-weight:bold;color:#17633F;margin:44px 0 18px;display:block;line-height:1.55;border-bottom:1px solid #C7DDCF;padding-bottom:10px;letter-spacing:0.5px;">三、我们能检查它做了什么，还不能完全知道它为什么这样想</h2>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">说到这里，必须给&quot;打开黑箱&quot;划出一条边界。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">Codex 的工具调用、读取结果、文件修改，都可以留下可检查的记录。但模型内部怎样形成某一次判断，并没有同样完整、直观的说明。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">它当然运行在程序里，我们也能写程序规定调用顺序、限制操作范围。难点在于：模型训练中形成的解题策略，不是一张开发者能逐条列出、人类可读的规则表。<strong style="font-weight:bold;color:#17633F;">能够用程序调用它，与能够用一套明确规则解释它的所有判断，是两回事。</strong></p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">科学家正在研究这些内部机制，而且已经看见了一部分。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">2026 年 7 月，Anthropic 的研究人员通过读取和干预内部活动，研究模型尚未写出来的信息。一个实验中，研究者把模型内部与&quot;足球&quot;对应的表示换成&quot;橄榄球&quot;，模型随后报告的项目也随之改变。这为&quot;特定内部活动怎样影响输出&quot;提供了证据。<a href="https://www.anthropic.com/research/global-workspace" style="color:#17633F;text-decoration:none;border-bottom:1px solid #C7DDCF;">Anthropic 的内部机制研究</a></p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">但这不等于已经完整读懂模型，也不能把针对 Claude 的发现直接当作 Codex 的内部结构。研究得到的是局部认识，仍有覆盖范围和方法上的限制。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">同样，模型写出的思考文字也不是内部计算的完整转写。Astra 的最新系统卡就报告，在部分监测评测中，通过文字推理识别其某些行为变得更困难。模型更强，与判断原因更容易被看清，并不保证同步。<a href="https://deploymentsafety.openai.com/gpt-6-astra" style="color:#17633F;text-decoration:none;border-bottom:1px solid #C7DDCF;">GPT-6 Astra 系统卡</a></p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">这次文章协作就暴露过这样的缺口：AI 把局部意见扩大成全文改写，随后解释自己&quot;过度跟随了最新一句话&quot;。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">改了哪些内容、改变发生在什么意见之后，可以从记录中核查；&quot;过度跟随&quot;也能概括这个行为。但这段解释不等于它检查了自己的内部计算，更不能据此断言已经找到了全部原因。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">因此，可以请 AI 解释，但有用的解释应当尽量连接证据：依据了什么材料，采用了哪条要求，在哪一步作了假设，实际做了什么。它对内部原因的推测，需要与这些可核查的事实分开。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">回到竞品调研，值得追问的是：为什么把清洁负担列为重要差异，依据来自哪份说明、哪些反馈；资料不足的地方，是否被当成了确定结论。这些问题能帮助修正成果，而不需要先读懂每一次神经网络计算。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">完整的上下文，让它更接近你真正要解决的问题；实际行动和返回结果，让工作一步步变得具体、准确；清楚的依据，则让人能在内部仍有未知的情况下判断成果。</p>
+<p style="margin:18px 0;line-height:1.75;color:#333333;letter-spacing:0.5px;text-align:justify;">理解 Codex，不是为了替它安排更多步骤，而是为了交接好它无法自行知道的事情，让它承担调查与执行，同时分清哪些结果可以核查、哪些解释还不能当作定论。</p>
+</section>
+</body></html>

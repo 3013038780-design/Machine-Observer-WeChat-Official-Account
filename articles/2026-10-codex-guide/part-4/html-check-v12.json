@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-22",
+  "checks": [
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "h2": 3,
+      "h3": 2,
+      "links": 8,
+      "unstyled": 0,
+      "bodyFont": "16px",
+      "lineHeight": "28px",
+      "rawMarkers": false,
+      "height": 7062
+    },
+    {
+      "width": 1280,
+      "scrollWidth": 1280,
+      "h2": 3,
+      "h3": 2,
+      "links": 8,
+      "unstyled": 0,
+      "bodyFont": "16px",
+      "lineHeight": "28px",
+      "rawMarkers": false,
+      "height": 5015
+    }
+  ],
+  "checks135": "未在135编辑器实际粘贴"
+}
