@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-22",
+  "reference": "part-3/article-v9.html",
+  "checks": [
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "chapters": 3,
+      "links": 8,
+      "images": [
+        {
+          "alt": "旁观机器：复古电脑公众号首图",
+          "loaded": true
+        }
+      ],
+      "card": "margin:34px 0 17px;padding:12px 14px;background:#F2F7F3;border:1px solid #C7DDCF;border-radius:4px;",
+      "h2": "margin:0;color:#17633F;font-size:18px;font-weight:700;line-height:1.5;letter-spacing:0.5px;",
+      "footer": "<p style=\"margin:28px 0 10px;text-align:center;color:#17633F;font-size:12px;letter-spacing:2px;\">旁观机器 · MACHINE OBSERVER</p>",
+      "bodyLineHeight": "28px",
+      "matchesPreviousCard": true,
+      "matchesPreviousFooter": true
+    },
+    {
+      "width": 1280,
+      "scrollWidth": 1280,
+      "chapters": 3,
+      "links": 8,
+      "images": [
+        {
+          "alt": "旁观机器：复古电脑公众号首图",
+          "loaded": true
+        }
+      ],
+      "card": "margin:34px 0 17px;padding:12px 14px;background:#F2F7F3;border:1px solid #C7DDCF;border-radius:4px;",
+      "h2": "margin:0;color:#17633F;font-size:18px;font-weight:700;line-height:1.5;letter-spacing:0.5px;",
+      "footer": "<p style=\"margin:28px 0 10px;text-align:center;color:#17633F;font-size:12px;letter-spacing:2px;\">旁观机器 · MACHINE OBSERVER</p>",
+      "bodyLineHeight": "28px",
+      "matchesPreviousCard": true,
+      "matchesPreviousFooter": true
+    }
+  ],
+  "checks135": "未实际粘贴"
+}
