@@ -1,0 +1,30 @@
+[
+  {
+    "viewport": 375,
+    "imageWidth": 351,
+    "tableFont": 15.6,
+    "bodyFont": 16,
+    "horizontalOverflow": false
+  },
+  {
+    "viewport": 390,
+    "imageWidth": 360,
+    "tableFont": 16,
+    "bodyFont": 16,
+    "horizontalOverflow": false
+  },
+  {
+    "viewport": 760,
+    "imageWidth": 360,
+    "tableFont": 16,
+    "bodyFont": 16,
+    "horizontalOverflow": false
+  },
+  {
+    "viewport": 1440,
+    "imageWidth": 360,
+    "tableFont": 16,
+    "bodyFont": 16,
+    "horizontalOverflow": false
+  }
+]
