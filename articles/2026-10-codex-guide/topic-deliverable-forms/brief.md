@@ -80,3 +80,7 @@
 ## 表格设计样张
 
 用户反馈表格偏丑，同意先做同一组内容的对比样张。当前 table-style-comparison-v1.html 展示新轻量三列表与排版 v2 原图；仅改前三项的视觉设计，不替换全文。样张可编辑源与核查见 assets/table-style-sample-v1/，待用户审阅。
+
+## 完整双版本测试交付
+
+用户要求同时提供原生表格与表格图片两个版本，自行测试效果。本轮将轻量样张风格应用全篇：article-v3-layout-v3-tables.html 为原生内联表格，article-v3-layout-v3-images.html 为高清表格图片，内容与分段一致；提供135测试包-v3.zip。详细说明HTML-NOTES-v3.md。两个版本均待用户实际135测试与选择，未发表。

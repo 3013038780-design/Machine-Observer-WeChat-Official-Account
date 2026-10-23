@@ -1,0 +1,26 @@
+[
+  {
+    "width": 375,
+    "scrollWidth": 375,
+    "tableCount": 32,
+    "cellOverflow": [],
+    "font": "16px",
+    "external": false
+  },
+  {
+    "width": 390,
+    "scrollWidth": 390,
+    "tableCount": 32,
+    "cellOverflow": [],
+    "font": "16px",
+    "external": false
+  },
+  {
+    "width": 760,
+    "scrollWidth": 760,
+    "tableCount": 32,
+    "cellOverflow": [],
+    "font": "16px",
+    "external": false
+  }
+]
