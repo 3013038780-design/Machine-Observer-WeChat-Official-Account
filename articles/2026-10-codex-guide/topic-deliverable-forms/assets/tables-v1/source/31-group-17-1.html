@@ -1,0 +1,10 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>17 · 设备、传感器与实体机器人模块</title><style>
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:white;width:360px}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.sheet{width:360px;background:white;padding:0}
+.label{margin:0;padding:8px 7px 7px;color:#17633F;background:#F2F7F3;border:1px solid #C7DDCF;border-bottom:0;font-size:16px;font-weight:600;line-height:1.4;letter-spacing:0}
+table{border-collapse:collapse;table-layout:fixed;width:100%;margin:0}
+th,td{border:1px solid #C7DDCF;padding:8px 6px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;line-break:strict;font-size:17.5px;line-height:1.4;letter-spacing:0}
+th{background:#17633F;color:white;font-weight:600;font-size:16px;padding-top:8px;padding-bottom:8px;vertical-align:middle}
+td{color:#333}td.name{color:#17633F;font-weight:600}td.request{color:#244C36}tbody tr:nth-child(even){background:#F8FBF9}
+</style></head><body><section class="sheet"><p class="label">17 · 设备、传感器与实体机器人模块</p><table><colgroup><col style="width:25%"><col style="width:28%"><col style="width:47%"></colgroup><thead><tr><th>交付物</th><th>用途 / 入口</th><th>这样跟 AI 说</th></tr></thead><tbody><tr><td class="name">单片机固件</td><td>烧录到指定板卡，读取输入并控制输出</td><td class="request">为这块板卡做一个读取传感器并显示状态的固件，附接线、烧录和验证说明。</td></tr><tr><td class="name">设备驱动/通信程序</td><td>连接设备，读写串口、USB 或网络数据</td><td class="request">为指定设备做一个通信程序，按协议读数据并保存，先确认接口与驱动。</td></tr><tr><td class="name">机器人传感器节点</td><td>在机器人环境中采集并传递数据</td><td class="request">做一个传感器消息节点，读取指定数据并发布，附消息和启动配置。</td></tr><tr><td class="name">运动规划/控制模块</td><td>在仿真或指定机器人上运行控制逻辑</td><td class="request">为指定机器人做一个运动模块，先验证仿真，明确实机还需检查的条件。</td></tr><tr><td class="name">机器人仿真工程</td><td>启动场景、改条件并记录测试结果</td><td class="request">搭一个机器人仿真场景，能修改障碍布局并重跑测试，交模型和启动配置。</td></tr></tbody></table></section></body></html>

@@ -1,0 +1,10 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>07 · 接口服务与软件复用</title><style>
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:white;width:360px}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.sheet{width:360px;background:white;padding:0}
+.label{margin:0;padding:8px 7px 7px;color:#17633F;background:#F2F7F3;border:1px solid #C7DDCF;border-bottom:0;font-size:16px;font-weight:600;line-height:1.4;letter-spacing:0}
+table{border-collapse:collapse;table-layout:fixed;width:100%;margin:0}
+th,td{border:1px solid #C7DDCF;padding:8px 6px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal;line-break:strict;font-size:17.5px;line-height:1.4;letter-spacing:0}
+th{background:#17633F;color:white;font-weight:600;font-size:16px;padding-top:8px;padding-bottom:8px;vertical-align:middle}
+td{color:#333}td.name{color:#17633F;font-weight:600}td.request{color:#244C36}tbody tr:nth-child(even){background:#F8FBF9}
+</style></head><body><section class="sheet"><p class="label">07 · 接口服务与软件复用（1/2）</p><table><colgroup><col style="width:25%"><col style="width:28%"><col style="width:47%"></colgroup><thead><tr><th>交付物</th><th>用途 / 入口</th><th>这样跟 AI 说</th></tr></thead><tbody><tr><td class="name">查询服务</td><td>网页、App 等传编号，取得数据</td><td class="request">做一个库存查询 API，输入商品号返回数量和更新时间，附调用示例。</td></tr><tr><td class="name">规则计算服务</td><td>其他程序传参数，取得计算明细</td><td class="request">做一个运费计算 API，输入重量和目的地返回明细，附规则和启动方法。</td></tr><tr><td class="name">文件处理服务</td><td>上传文件，直接或按任务编号取结果</td><td class="request">做一个表格转换服务，上传文件后返回约定格式，说明失败时怎样反馈。</td></tr><tr><td class="name">业务操作服务</td><td>应用提交业务请求，收到处理结果</td><td class="request">做一个预约登记 API，提交时段后保存记录，已满时返回明确原因。</td></tr></tbody></table></section></body></html>
