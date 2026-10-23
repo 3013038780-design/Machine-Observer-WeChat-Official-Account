@@ -71,12 +71,12 @@ const blocks = parse(source);
 const tables = blocks.filter(b => b.type === 'table');
 if (tables.length !== 18 || tables.reduce((n, t) => n + t.rows.length, 0) !== 119) throw new Error('Unexpected source coverage');
 
-function tableHTML(table, rows, part, total) {
+function tableHTML(table, rows, part, total, inlineOnly = false) {
  const cells=rows.map(row=>'<tr>'+row.map((v,i)=>`<td style="font-size:16px;line-height:1.45;letter-spacing:0;text-align:left;vertical-align:top;padding:9px 6px;border:0;border-bottom:1px solid #DCE8E0;word-break:normal;overflow-wrap:anywhere;line-break:strict;color:${i===0?'#17633F':i===2?'#244C36':'#333'};background:${i===2?'#F2F7F3':'#FFFFFF'};font-weight:${i===0?'600':'400'};">${esc(plain(v))}</td>`).join('')+'</tr>').join('');
  const head=['交付物','用途 / 入口','这样跟 AI 说'].map(h=>`<th style="font-size:14px;font-weight:500;line-height:1.45;letter-spacing:0;color:#61746A;text-align:left;vertical-align:middle;padding:9px 6px;border:0;border-bottom:2px solid #287A51;background:#FFFFFF;">${esc(h)}</th>`).join('');
  const cols=settings.columns.map(n=>`<col style="width:${n}%">`).join('');
- const fragment=`<table style="border-collapse:collapse;table-layout:fixed;width:100%;margin:0;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;"><colgroup>${cols}</colgroup><thead><tr>${head}</tr></thead><tbody>${cells}</tbody></table>`;
- if(part==='inline')return fragment;
+ const fragment=`<table style="border-collapse:collapse;table-layout:fixed;width:100%;margin:0;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;"><colgroup>${cols}</colgroup>${part === 1 ? '<thead><tr>'+head+'</tr></thead>' : ''}<tbody>${cells}</tbody></table>`;
+ if(inlineOnly)return fragment;
  return `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><style>*{box-sizing:border-box}html,body{margin:0;padding:0;background:white;width:360px}body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}.sheet{width:360px}</style></head><body><section class="sheet">${fragment}</section></body></html>`;
 }
 function balanced(rows, maxRows) {
@@ -171,10 +171,10 @@ async function main() {
         if (block.type === 'table') {
           const group = manifest.tables.find(t => t.group === block.group);
           parts.push('<section style="margin:12px 0 16px;">');
+          if(native){parts.push(tableHTML(block,block.rows,1,1,true));parts.push('</section>');continue;}
           for (const img of group.images) {
-            if(native){parts.push('<section style="margin:0 0 6px;">'+tableHTML(block,img.rows,'inline',img.parts)+'</section>');continue;}
             const alt = `${block.heading} ${img.part}/${img.parts}：` + img.rows.map(r => r[0]).join('、');
-            parts.push(`<img src="${imageSource(img.filename, embedded)}" alt="${esc(alt)}" width="${img.width}" height="${img.height}" style="display:block;width:100%;max-width:100%;height:auto;margin:0 0 6px;border:0;">`);
+            parts.push(`<img src="${imageSource(img.filename, embedded)}" alt="${esc(alt)}" width="${img.width}" height="${img.height}" style="display:block;width:100%;max-width:100%;height:auto;margin:0;border:0;">`);
           }
           parts.push('</section>');
         }

@@ -58,8 +58,8 @@
           "part": 2,
           "parts": 2,
           "width": 1080,
-          "height": 1128,
-          "logicalHeight": 375.546875,
+          "height": 1008,
+          "logicalHeight": 335.25,
           "rows": [
             [
               "有数据记录的业务应用",
@@ -130,8 +130,8 @@
           "part": 2,
           "parts": 2,
           "width": 1080,
-          "height": 1464,
-          "logicalHeight": 487.296875,
+          "height": 1341,
+          "logicalHeight": 447,
           "rows": [
             [
               "桌面窗口应用",
@@ -202,8 +202,8 @@
           "part": 2,
           "parts": 2,
           "width": 1080,
-          "height": 1128,
-          "logicalHeight": 375.546875,
+          "height": 1008,
+          "logicalHeight": 335.25,
           "rows": [
             [
               "设计/三维软件插件",
@@ -279,8 +279,8 @@
           "part": 2,
           "parts": 2,
           "width": 1080,
-          "height": 1800,
-          "logicalHeight": 599.046875,
+          "height": 1677,
+          "logicalHeight": 558.75,
           "rows": [
             [
               "工单处理 Agent",
@@ -356,8 +356,8 @@
           "part": 2,
           "parts": 2,
           "width": 1080,
-          "height": 1128,
-          "logicalHeight": 375.546875,
+          "height": 1008,
+          "logicalHeight": 335.25,
           "rows": [
             [
               "知识问答机器人",
@@ -433,8 +433,8 @@
           "part": 2,
           "parts": 2,
           "width": 1080,
-          "height": 1464,
-          "logicalHeight": 487.296875,
+          "height": 1341,
+          "logicalHeight": 447,
           "rows": [
             [
               "可视化工作流工程",
@@ -510,8 +510,8 @@
           "part": 2,
           "parts": 2,
           "width": 1080,
-          "height": 1464,
-          "logicalHeight": 487.296875,
+          "height": 1341,
+          "logicalHeight": 447,
           "rows": [
             [
               "AI 处理服务",
@@ -587,8 +587,8 @@
           "part": 2,
           "parts": 2,
           "width": 1080,
-          "height": 1128,
-          "logicalHeight": 375.546875,
+          "height": 1008,
+          "logicalHeight": 335.25,
           "rows": [
             [
               "Agent Skill 能力包",
@@ -659,8 +659,8 @@
           "part": 2,
           "parts": 2,
           "width": 1080,
-          "height": 1128,
-          "logicalHeight": 375.546875,
+          "height": 1008,
+          "logicalHeight": 335.25,
           "rows": [
             [
               "标注与评估数据",
@@ -731,8 +731,8 @@
           "part": 2,
           "parts": 2,
           "width": 1080,
-          "height": 1128,
-          "logicalHeight": 375.546875,
+          "height": 1008,
+          "logicalHeight": 335.25,
           "rows": [
             [
               "可填写表单/问卷",
@@ -798,8 +798,8 @@
           "part": 2,
           "parts": 2,
           "width": 1080,
-          "height": 1128,
-          "logicalHeight": 375.546875,
+          "height": 1008,
+          "logicalHeight": 335.25,
           "rows": [
             [
               "可编辑设计稿",
@@ -870,8 +870,8 @@
           "part": 2,
           "parts": 2,
           "width": 1080,
-          "height": 1464,
-          "logicalHeight": 487.296875,
+          "height": 1341,
+          "logicalHeight": 447,
           "rows": [
             [
               "程序化动画/动态图解",
@@ -942,8 +942,8 @@
           "part": 2,
           "parts": 2,
           "width": 1080,
-          "height": 1128,
-          "logicalHeight": 375.546875,
+          "height": 1008,
+          "logicalHeight": 335.25,
           "rows": [
             [
               "程序化/参数化场景模型",
@@ -1009,8 +1009,8 @@
           "part": 2,
           "parts": 2,
           "width": 1080,
-          "height": 1197,
-          "logicalHeight": 398.734375,
+          "height": 1077,
+          "logicalHeight": 358.4375,
           "rows": [
             [
               "三维打印文件",
