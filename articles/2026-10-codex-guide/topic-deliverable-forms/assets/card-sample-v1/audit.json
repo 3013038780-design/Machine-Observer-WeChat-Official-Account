@@ -1,0 +1,37 @@
+{
+  "checks": [
+    {
+      "width": 375,
+      "scrollWidth": 375,
+      "cardCount": 3,
+      "tableCount": 0,
+      "bodyFont": "16px",
+      "external": false,
+      "overflow": []
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "cardCount": 3,
+      "tableCount": 0,
+      "bodyFont": "16px",
+      "external": false,
+      "overflow": []
+    },
+    {
+      "width": 760,
+      "scrollWidth": 760,
+      "cardCount": 3,
+      "tableCount": 0,
+      "bodyFont": "16px",
+      "external": false,
+      "overflow": []
+    }
+  ],
+  "allSourceTextRetained": true,
+  "paragraphOrder": "usage grouped before delivery; wording unchanged",
+  "nativeFont": "16px",
+  "imageLogicalWidth": 360,
+  "pngWidth": 1080,
+  "actual135PasteTested": false
+}
