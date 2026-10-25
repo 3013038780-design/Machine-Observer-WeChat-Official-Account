@@ -1,0 +1,536 @@
+{
+  "date": "2026-10-25",
+  "source": "article-v6.md",
+  "sourceSha256": "a12e59b0914d00c9cfa1293a6327f31b7d70a707ad1a7c5e8a84360be568d991",
+  "cards": 58,
+  "groups": 10,
+  "font": 16,
+  "lineHeight": 1.65,
+  "logicalWidth": 360,
+  "scale": 3,
+  "noPreviewImages": true,
+  "images": [
+    {
+      "number": 1,
+      "group": 1,
+      "name": "网站与网页应用",
+      "file": "01-card.png",
+      "width": 1080,
+      "height": 1260,
+      "logicalHeight": 419.515625
+    },
+    {
+      "number": 2,
+      "group": 1,
+      "name": "手机和平板 App",
+      "file": "02-card.png",
+      "width": 1080,
+      "height": 1182,
+      "logicalHeight": 393.125
+    },
+    {
+      "number": 3,
+      "group": 1,
+      "name": "电脑应用",
+      "file": "03-card.png",
+      "width": 1080,
+      "height": 1182,
+      "logicalHeight": 393.125
+    },
+    {
+      "number": 4,
+      "group": 1,
+      "name": "平台小程序",
+      "file": "04-card.png",
+      "width": 1080,
+      "height": 1182,
+      "logicalHeight": 393.125
+    },
+    {
+      "number": 5,
+      "group": 1,
+      "name": "游戏与互动故事",
+      "file": "05-card.png",
+      "width": 1080,
+      "height": 1260,
+      "logicalHeight": 419.515625
+    },
+    {
+      "number": 6,
+      "group": 1,
+      "name": "虚拟空间体验",
+      "file": "06-card.png",
+      "width": 1080,
+      "height": 1101,
+      "logicalHeight": 366.734375
+    },
+    {
+      "number": 7,
+      "group": 2,
+      "name": "浏览器插件",
+      "file": "07-card.png",
+      "width": 1080,
+      "height": 1101,
+      "logicalHeight": 366.734375
+    },
+    {
+      "number": 8,
+      "group": 2,
+      "name": "办公软件插件",
+      "file": "08-card.png",
+      "width": 1080,
+      "height": 1101,
+      "logicalHeight": 366.734375
+    },
+    {
+      "number": 9,
+      "group": 2,
+      "name": "代码编辑器插件",
+      "file": "09-card.png",
+      "width": 1080,
+      "height": 1101,
+      "logicalHeight": 366.734375
+    },
+    {
+      "number": 10,
+      "group": 2,
+      "name": "设计软件插件",
+      "file": "10-card.png",
+      "width": 1080,
+      "height": 1182,
+      "logicalHeight": 393.125
+    },
+    {
+      "number": 11,
+      "group": 2,
+      "name": "网站系统插件",
+      "file": "11-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 12,
+      "group": 2,
+      "name": "桌面小组件与系统扩展",
+      "file": "12-card.png",
+      "width": 1080,
+      "height": 1182,
+      "logicalHeight": 393.125
+    },
+    {
+      "number": 13,
+      "group": 2,
+      "name": "游戏扩展包",
+      "file": "13-card.png",
+      "width": 1080,
+      "height": 1101,
+      "logicalHeight": 366.734375
+    },
+    {
+      "number": 14,
+      "group": 3,
+      "name": "批处理程序",
+      "file": "14-card.png",
+      "width": 1080,
+      "height": 1182,
+      "logicalHeight": 393.125
+    },
+    {
+      "number": 15,
+      "group": 3,
+      "name": "自动化工作流与快捷指令",
+      "file": "15-card.png",
+      "width": 1080,
+      "height": 1182,
+      "logicalHeight": 393.125
+    },
+    {
+      "number": 16,
+      "group": 3,
+      "name": "接口服务（API）",
+      "file": "16-card.png",
+      "width": 1080,
+      "height": 1182,
+      "logicalHeight": 393.125
+    },
+    {
+      "number": 17,
+      "group": 3,
+      "name": "可复用代码包",
+      "file": "17-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 18,
+      "group": 3,
+      "name": "可嵌入的界面组件",
+      "file": "18-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 19,
+      "group": 4,
+      "name": "平台里的专用助手",
+      "file": "19-card.png",
+      "width": 1080,
+      "height": 1101,
+      "logicalHeight": 366.734375
+    },
+    {
+      "number": 20,
+      "group": 4,
+      "name": "能继续接任务的助手（Agent）",
+      "file": "20-card.png",
+      "width": 1080,
+      "height": 1419,
+      "logicalHeight": 472.296875
+    },
+    {
+      "number": 21,
+      "group": 4,
+      "name": "聊天机器人",
+      "file": "21-card.png",
+      "width": 1080,
+      "height": 1419,
+      "logicalHeight": 472.296875
+    },
+    {
+      "number": 22,
+      "group": 4,
+      "name": "AI 技能包（Skill）",
+      "file": "22-card.png",
+      "width": 1080,
+      "height": 1182,
+      "logicalHeight": 393.125
+    },
+    {
+      "number": 23,
+      "group": 4,
+      "name": "给 AI 接工具的服务（MCP）",
+      "file": "23-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 24,
+      "group": 4,
+      "name": "经过专门调整的模型",
+      "file": "24-card.png",
+      "width": 1080,
+      "height": 1101,
+      "logicalHeight": 366.734375
+    },
+    {
+      "number": 25,
+      "group": 5,
+      "name": "整理好的资料库",
+      "file": "25-card.png",
+      "width": 1080,
+      "height": 1182,
+      "logicalHeight": 393.125
+    },
+    {
+      "number": 26,
+      "group": 5,
+      "name": "整理好的数据",
+      "file": "26-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 27,
+      "group": 5,
+      "name": "可查询的数据库",
+      "file": "27-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 28,
+      "group": 5,
+      "name": "带公式的表格",
+      "file": "28-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 29,
+      "group": 5,
+      "name": "可重跑的分析笔记本",
+      "file": "29-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 30,
+      "group": 5,
+      "name": "可导入日历等软件的记录",
+      "file": "30-card.png",
+      "width": 1080,
+      "height": 1101,
+      "logicalHeight": 366.734375
+    },
+    {
+      "number": 31,
+      "group": 6,
+      "name": "文稿与报告",
+      "file": "31-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 32,
+      "group": 6,
+      "name": "PDF 手册与画册",
+      "file": "32-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 33,
+      "group": 6,
+      "name": "电子书",
+      "file": "33-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 34,
+      "group": 6,
+      "name": "演示文稿",
+      "file": "34-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 35,
+      "group": 6,
+      "name": "可填写的表单",
+      "file": "35-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 36,
+      "group": 6,
+      "name": "可打印的卡片与教具",
+      "file": "36-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 37,
+      "group": 7,
+      "name": "图片与透明素材",
+      "file": "37-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 38,
+      "group": 7,
+      "name": "矢量图与图标",
+      "file": "38-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 39,
+      "group": 7,
+      "name": "可编辑平面设计稿",
+      "file": "39-card.png",
+      "width": 1080,
+      "height": 1101,
+      "logicalHeight": 366.734375
+    },
+    {
+      "number": 40,
+      "group": 7,
+      "name": "可点击的界面原型",
+      "file": "40-card.png",
+      "width": 1080,
+      "height": 1101,
+      "logicalHeight": 366.734375
+    },
+    {
+      "number": 41,
+      "group": 7,
+      "name": "可复用的设计组件",
+      "file": "41-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 42,
+      "group": 8,
+      "name": "声音文件",
+      "file": "42-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 43,
+      "group": 8,
+      "name": "可编辑的声音工程",
+      "file": "43-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 44,
+      "group": 8,
+      "name": "视频成片",
+      "file": "44-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 45,
+      "group": 8,
+      "name": "可继续剪辑的视频工程",
+      "file": "45-card.png",
+      "width": 1080,
+      "height": 1101,
+      "logicalHeight": 366.734375
+    },
+    {
+      "number": 46,
+      "group": 8,
+      "name": "二维动画",
+      "file": "46-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 47,
+      "group": 8,
+      "name": "分镜与字幕文件",
+      "file": "47-card.png",
+      "width": 1080,
+      "height": 1182,
+      "logicalHeight": 393.125
+    },
+    {
+      "number": 48,
+      "group": 9,
+      "name": "三维模型",
+      "file": "48-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 49,
+      "group": 9,
+      "name": "三维场景与动画",
+      "file": "49-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 50,
+      "group": 9,
+      "name": "可改参数的设计模型",
+      "file": "50-card.png",
+      "width": 1080,
+      "height": 1182,
+      "logicalHeight": 393.125
+    },
+    {
+      "number": 51,
+      "group": 9,
+      "name": "三维打印文件",
+      "file": "51-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 52,
+      "group": 9,
+      "name": "切割与加工资料",
+      "file": "52-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 53,
+      "group": 9,
+      "name": "电路与电路板设计",
+      "file": "53-card.png",
+      "width": 1080,
+      "height": 1101,
+      "logicalHeight": 366.734375
+    },
+    {
+      "number": 54,
+      "group": 9,
+      "name": "可编辑的地图工程",
+      "file": "54-card.png",
+      "width": 1080,
+      "height": 1101,
+      "logicalHeight": 366.734375
+    },
+    {
+      "number": 55,
+      "group": 9,
+      "name": "仿真与计算工程",
+      "file": "55-card.png",
+      "width": 1080,
+      "height": 1338,
+      "logicalHeight": 445.90625
+    },
+    {
+      "number": 56,
+      "group": 10,
+      "name": "设备固件",
+      "file": "56-card.png",
+      "width": 1080,
+      "height": 1023,
+      "logicalHeight": 340.34375
+    },
+    {
+      "number": 57,
+      "group": 10,
+      "name": "设备连接程序",
+      "file": "57-card.png",
+      "width": 1080,
+      "height": 1101,
+      "logicalHeight": 366.734375
+    },
+    {
+      "number": 58,
+      "group": 10,
+      "name": "机器人程序模块",
+      "file": "58-card.png",
+      "width": 1080,
+      "height": 1101,
+      "logicalHeight": 366.734375
+    }
+  ]
+}
