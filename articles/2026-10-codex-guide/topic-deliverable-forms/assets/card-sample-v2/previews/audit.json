@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-25",
+  "type": "HTML/CSS静态界面示意，非已开发产品截图",
+  "checks": [
+    {
+      "name": "01-web",
+      "width": 334,
+      "height": 194,
+      "frameWidth": 334,
+      "label": "界面示意 · 内容为虚构示例",
+      "screenHeight": 175,
+      "screenScroll": 175
+    },
+    {
+      "name": "02-phone",
+      "width": 334,
+      "height": 194,
+      "frameWidth": 334,
+      "label": "界面示意 · 内容为虚构示例",
+      "screenHeight": 175,
+      "screenScroll": 175
+    },
+    {
+      "name": "03-desktop",
+      "width": 334,
+      "height": 194,
+      "frameWidth": 334,
+      "label": "界面示意 · 内容为虚构示例",
+      "screenHeight": 175,
+      "screenScroll": 175
+    }
+  ]
+}
