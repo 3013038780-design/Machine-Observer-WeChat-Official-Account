@@ -1,0 +1,65 @@
+{
+  "sourceSha256": "0055cdad03cdf307ed5ea57a49dd78502c749b244559a25f6ece5f9a6030bb11",
+  "sourceTables": 10,
+  "rows": 58,
+  "tableImages": 25,
+  "settings": {
+    "width": 360,
+    "scale": 3,
+    "font": 16,
+    "lineHeight": 1.45,
+    "maxRows": 5,
+    "maxHeight": 880,
+    "columns": [
+      23,
+      42,
+      35
+    ]
+  },
+  "viewports": [
+    {
+      "viewport": 375,
+      "scrollWidth": 375,
+      "imageCount": 26,
+      "brokenImages": [],
+      "h2Count": 11,
+      "bodyFont": "16px",
+      "paragraphLineHeight": "28px",
+      "hasTable": false,
+      "hasExternalStyle": false
+    },
+    {
+      "viewport": 390,
+      "scrollWidth": 390,
+      "imageCount": 26,
+      "brokenImages": [],
+      "h2Count": 11,
+      "bodyFont": "16px",
+      "paragraphLineHeight": "28px",
+      "hasTable": false,
+      "hasExternalStyle": false
+    },
+    {
+      "viewport": 760,
+      "scrollWidth": 760,
+      "imageCount": 26,
+      "brokenImages": [],
+      "h2Count": 11,
+      "bodyFont": "16px",
+      "paragraphLineHeight": "28px",
+      "hasTable": false,
+      "hasExternalStyle": false
+    }
+  ],
+  "pageErrors": [],
+  "checks": [
+    "all table text matches Markdown",
+    "no table cell overflow",
+    "all 58 rows retained",
+    "10 exploration groups retained",
+    "375/390/760 widths no horizontal overflow",
+    "all images load",
+    "final body uses inline styles only"
+  ],
+  "actual135PasteTested": false
+}
